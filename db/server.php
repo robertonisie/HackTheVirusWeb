@@ -52,16 +52,15 @@ if (isset($_POST['reg_user']))
   if ($user)
     if ($user['email'] === $email)
         array_push($errors, "Email already exists");
-  //if (count($errors) == 0) 
-  //{
+  if (count($errors) == 0) 
+  {
     //$password_h = password_hash($password_1, PASSWORD_DEFAULT);
-    $query = "INSERT INTO users(email, password, nume, prenume, judet, oras, adresa, nume_afacere) 
-              VALUES('$email', '$password_1', '$nume', '$prenume', '$judet', '$oras', '$adresa', '$nume_afacere')";
+    $query = "INSERT INTO users(email, password, nume, prenume, judet, oras, adresa, nume_afacere) VALUES('$email', '$password_1', '$nume', '$prenume', '$judet', '$oras', '$adresa', '$nume_afacere')";
     mysqli_query($db, $query);
-    //$_SESSION['nume_sesiune'] = $nume;
-   // $_SESSION['success'] = "You are now logged in";
-   // header('location: index.html');
-  //}
+    $_SESSION['nume_sesiune'] = $nume;
+    $_SESSION['success'] = "You are now logged in";
+    header('location: index.html');
+  }
 }
 
 if (isset($_POST['login_user'])) 
@@ -84,7 +83,7 @@ if (isset($_POST['login_user']))
     {
       $_SESSION['nume_sesiune'] = $nume;
       $_SESSION['success'] = "You are now logged in";
-      //header('location: index.html');
+      header('location: index.html');
     }
     else 
       array_push($errors, "Wrong email/password combination");
