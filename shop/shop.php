@@ -128,6 +128,7 @@ if (isset($_POST['search_user']))
                                 $row2 = mysqli_fetch_assoc($result2);
                                 
                                 $ppoza = $row2['image'];
+                                $pid = $row["id"];
                                 $pname = $row["nume_produs"];
                                 $ppret = $row["pret"];
                                 $pcantitate = $row["cantitate"];
@@ -136,7 +137,7 @@ if (isset($_POST['search_user']))
                                          echo '
                                          <div class="col-md-6 col-lg-3 ftco-animate">
                                             <div class="product">
-                                                <a href="product-single.php" class="img-prod"><img class="img-fluid" src="../uploads/'.$ppoza.'" alt="Colorlib Template">
+                                                <a href="product-single.php?id=<?php echo $pid ?>" class="img-prod"><img class="img-fluid" src="../uploads/'.$ppoza.'" alt="Colorlib Template">
                                                     <span class="status">30%</span>
                                                     <div class="overlay"></div>
                                                 </a>
