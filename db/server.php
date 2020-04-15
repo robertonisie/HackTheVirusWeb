@@ -103,14 +103,14 @@ if (isset($_POST['adauga_anunt']))
 
   $poza = $_FILES['image']['name'];
 
-    $target = "uploads/";//.basename($poza);
+    $target = "uploads/".basename($poza);
 
     $sql = "INSERT INTO image_upload(image) VALUES ('$poza')";
     mysqli_query($db, $sql);
 
     if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) 
     {
-      //$msg = "Image uploaded successfully";
+      $msg = "Image uploaded successfully";
       $sql = "SELECT * FROM image_upload WHERE image='$poza'";
       $result = mysqli_query($db, $sql);
       $row = mysqli_fetch_assoc($result);
