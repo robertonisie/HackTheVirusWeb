@@ -9,10 +9,10 @@ $result = mysqli_query($db, $id_oras);
 while($row = mysqli_fetch_array($result))
 	{
 		$judet_id = $row['id'];
-		echo $row['id'];
+		//echo $row['id'];
 	}	
 
-echo $judet_id;
+//echo $judet_id;
 $sql = "SELECT id, name FROM orase WHERE county_id='".$judet_id."'";
 
 $result = mysqli_query($db, $sql);
