@@ -63,8 +63,36 @@ $pid = $_GET["id"];
     				<a href="images/product-1.jpg" class="image-popup"><img src="images/product-1.jpg" class="img-fluid" alt="Colorlib Template"></a>
     			</div>
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
-				<p><?php echo $pid ?></p>
-				<p> Localitate, Judet</p>
+            <?php 
+            $query = "SELECT * FROM anunturi WHERE id='$pid'";
+            $result=mysqli_query($db, $query);
+            $row = mysqli_fetch_assoc($result);
+
+            $ppoza = $row["poza"];
+            $sql = "SELECT * FROM image_upload WHERE id='$ppoza'";
+            $result2 = mysqli_query($db, $sql);
+            $row2 = mysqli_fetch_assoc($result2);
+
+            $puser = $row["user_id"];
+            $sql = "SELECT * FROM users WHERE id='$user_id'";
+            $result3 = mysqli_query($db, $sql);
+            $row3 = mysqli_fetch_assoc($result3);
+
+            $poras = $row3['oras'];
+            $pjudet = $row3['judet'];
+            $padresa = $row3['adresa'];
+            $pnume = $row3['nume'];
+            $pprenume = $row3['prenume'];
+            $pnume_afacere = $row3['nume_afacere'];
+            $ppoza = $row2['image'];
+            $pid = $row["id"];
+            $pname = $row["nume_produs"];
+            $ppret = $row["pret"];
+            $pcantitate = $row["cantitate"];
+            $pdescriere = $row['descriere'];
+            ?>
+				<p><?php echo $pname ?></p>
+				<p> <?php echo ''.$poras.' , '.$pjudet.'';?> </p>
     				<h3>Bell Pepper</h3>
     			
     				<p class="price"><span>$120.00</span></p>
