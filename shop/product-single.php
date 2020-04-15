@@ -1,5 +1,7 @@
+<?php
+$pid = $_GET["id"];
 
-
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -61,7 +63,7 @@
     				<a href="images/product-1.jpg" class="image-popup"><img src="images/product-1.jpg" class="img-fluid" alt="Colorlib Template"></a>
     			</div>
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
-				<p>Nume Producator </p>
+				<p><?php echo $pid ?></p>
 				<p> Localitate, Judet</p>
     				<h3>Bell Pepper</h3>
     			
