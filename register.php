@@ -30,7 +30,7 @@ if(isset($_SESSION['nume_sesiune']))
 
                 $.ajax({
                     url: 'getoras.php',
-                    type: 'post',
+                    type: 'POST',s
                     data: {
                     	judet:judetid
                     	},
