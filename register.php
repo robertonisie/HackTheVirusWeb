@@ -34,12 +34,15 @@ if(isset($_SESSION['nume_sesiune']))
                     dataType: 'json',
                     success:function(response)
                     {
+                    	$("#sel_oras").empty();
+                    	 var opts = $.parseJSON(respose);
 
-                        $("#sel_oras").empty();
-                        for( var i = 0; i<response.length; i++)
+                        
+                        //for( var i = 0; i<response.length; i++)
+                        $.each(opts, function(i, d)
                         {
-                            var id = response[i].oras_id;
-                            var name = response[i].oras_name;
+                            var id = d.oras_id;
+                            var name = d.oras_name;
 
                             $("#sel_oras").append("<option value='"+id+"'>"+name+"</option>");
                         }
