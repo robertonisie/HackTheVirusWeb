@@ -22,8 +22,6 @@ if(isset($_SESSION['nume_sesiune']))
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
 <script src="js/jquery-1.12.0.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
     <script type="text/javascript">
         $(document).ready(function(){
 
@@ -55,6 +53,10 @@ if(isset($_SESSION['nume_sesiune']))
 
         });
     </script>
+
+    <script>
+	document.write(judetid);
+</script>
 </head>
 <body>
 	<div class="main-w3layouts wrapper">
@@ -81,7 +83,6 @@ if(isset($_SESSION['nume_sesiune']))
 					   {
 					      $judetid = $row['id'];
 					      $judet_name = $row['name'];
-					      
 					      echo "<option value='".$judetid."' >".$judet_name."</option>";
 					   }
 					   ?>
