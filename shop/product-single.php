@@ -97,7 +97,7 @@ $pid = $_GET["id"];
 				<p> <?php echo "$poras , $pjudet"; ?> </p>
     				<h3><?php echo $pnume_produs ?></h3>
     			
-    				<p class="price"><span><?php echo $ppret ?></span></p>
+    				<p class="price"><span><?php echo "$ppret RON"?></span></p>
     				<p><?php echo $pdescriere ?></p>
 						<div class="row mt-4">
 							<div class="col-md-6">
@@ -180,14 +180,11 @@ $pid = $_GET["id"];
 		    });
 
 		     $('.quantity-left-minus').click(function(e){
-		        // Stop acting like a button
+
 		        e.preventDefault();
-		        // Get the field name
+		       
 		        var quantity = parseInt($('#quantity').val());
 		        
-		        // If is not undefined
-		      
-		            // Increment
 		            if(quantity>0){
 		            $('#quantity').val(quantity - 1);
 		            }
