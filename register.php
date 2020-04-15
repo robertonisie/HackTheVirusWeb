@@ -35,7 +35,6 @@ if(isset($_SESSION['nume_sesiune']))
                     success:function(response)
                     {
                         var len = response.length;
-                        document.getElementById("myText").innerHTML = len;
 
                         $("#sel_oras").empty();
                         for( var i = 0; i<len; i++)
@@ -83,7 +82,6 @@ if(isset($_SESSION['nume_sesiune']))
 					   ?>
 					</select>
 					<div class="clear"></div>
-					<h1>"The value for number is: " <span id="myText"></span></h1>
 					<div>Oras </div>
 						<select id="sel_oras">
 						   <option value="0">- Select -</option>
