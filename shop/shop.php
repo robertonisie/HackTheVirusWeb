@@ -1,3 +1,51 @@
+<?php
+include ("/var/db/dbconfig.php");
+include('/var/www/html/HackTheVirusWeb/db/errors.php');
+
+$nume_produs = "";
+$pret = "";
+$descriere = "";
+$cantitate = "";
+$errors = array(); 
+$available_users = array();
+$index=1;
+
+if (isset($_POST['search_user']))
+{
+  $nume_produs = mysqli_real_escape_string($db, $_POST['nume_produs']);
+  $pret = mysqli_real_escape_string($db, $_POST['pret']);
+  $descriere = mysqli_real_escape_string($db, $_POST['descriere']);
+  $cantitate = mysqli_real_escape_string($db, $_POST['cantitate']);
+
+  if (empty($nume_produs)) { array_push($errors, "Specificati un nume_produs"); }
+  if (empty($pret)) { array_push($errors, "Specificati de cand"); }
+  if (empty($descriere)) { array_push($errors, "Specificati pana cand"); }
+  if (empty($cantitate)) { array_push($errors, "Specificati talia animalului"); }
+  
+
+  $user_check_query = "SELECT * FROM anunturi";
+  $result = mysqli_query($db, $user_check_query);
+  
+
+  if ($result) {
+    $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    foreach($user AS $row)
+    {
+        $available_users[$index]=$row['nume_produs'];
+        $index++;
+    }
+  }
+  else{
+    echo "<script type='text/javascript'>
+          alert('Nu s-a gasit anunt.');
+          window.location = 'index.php';
+          </script>";
+  }
+
+}
+?>
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -63,6 +111,98 @@
     			</div>
     		</div>
     		<div class="row">
+                <?php
+                    $index--;
+                    echo '<section class="single_product_list">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">';
+
+                    $ok = 0;
+                    while($index){
+                            $query = "SELECT users.*,animal.* FROM users,animal WHERE username='$available_users[$index]'";
+                            $result=mysqli_query($db,$query);
+                            $ok = 1;
+                           
+
+                          if ($result) {
+                              while ($row = $result->fetch_assoc()) {
+                                  $pname = $row["nume_prdus"];
+                                  $ppret = $row["pret"];
+                                  $pcantitate = $row["cantitate"];
+                                  $pdescriere = $row['descriere'];
+                           
+                                  /*echo '<tr> 
+                                            <td>'.$field1name.'</td> 
+                                            <td>'.$field3name.'</td>
+                                            <td>'.$field2name.'</td> 
+                                        </tr>';
+                                        */
+
+                                         echo '
+                                         <div class="col-md-6 col-lg-3 ftco-animate">
+                                            <div class="product">
+                                                <a href="#" class="img-prod"><img class="img-fluid" src="images/product-1.jpg" alt="Colorlib Template">
+                                                    <span class="status">30%</span>
+                                                    <div class="overlay"></div>
+                                                </a>
+                                                <div class="text py-3 pb-4 px-3 text-center">
+                                                    <h3><a href="#">'.$pname.'</a></h3>
+                                                    <div class="d-flex">
+                                                        <div class="pricing">
+                                                            <p class="price"><span class="mr-2 price-dc">'.$ppret.'</span></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="bottom-area d-flex px-3">
+                                                        <div class="m-auto d-flex">
+                                                            <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                                                <span><i class="ion-ios-menu"></i></span>
+                                                            </a>
+                                                            <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                                                <span><i class="ion-ios-cart"></i></span>
+                                                            </a>
+                                                            <a href="#" class="heart d-flex justify-content-center align-items-center ">
+                                                                <span><i class="ion-ios-heart"></i></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>';
+                              }
+                      }
+
+
+                            
+
+                            /*if ($result) { // if user exists
+                              while($user = mysqli_fetch_assoc($result)){
+
+                            $available_users[$index]=$user['user'];
+                            echo $available_users[$index];
+                            $index2++;
+                            */
+
+                              $result->free();
+                              $index--;
+                      }
+
+                    echo '</div></div></div></section>';
+                    if(!$ok)
+                    {
+                      ?><script type="text/javascript">
+                              window.location='index.php#about';
+                              alert("Nu s-a gasit anunt.");
+
+                              </script><?php
+                    }
+                    ?>
+
+
+
+
+
+
     			<div class="col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
     					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-1.jpg" alt="Colorlib Template">
