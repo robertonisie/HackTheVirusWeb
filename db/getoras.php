@@ -1,7 +1,7 @@
 <?php
 include ("/var/db/dbconfig.php");
 
-$judetid = 1;//$_POST['judet']; 
+$judetid =$_POST['judet']; 
 echo $_POST['judet'];
 echo $judetid;
 $sql = "SELECT id, name FROM orase WHERE county_id='".$judetid."'";
