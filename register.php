@@ -25,7 +25,7 @@ if(isset($_SESSION['nume_sesiune']))
         $(document).ready(function(){
 
             $("#sel_judet").change(function(){
-                var judetid = $(this).val();
+                var judetid = 1;
 
                 $.ajax({
                     url: '/db/getoras.php',
