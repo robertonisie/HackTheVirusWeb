@@ -1,6 +1,6 @@
  <?php
 session_start();
-include ("/db/dbconfig.php");
+include ("/var/db/dbconfig.php");
 
 $username = "";
 $email    = "";
@@ -66,11 +66,11 @@ if (isset($_POST['login_user']))
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
 
   if (empty($email)) { array_push($errors, "Username is required"); }
-  if (empty($password_1)) { array_push($errors, "Password is required"); }
+  if (empty($password)) { array_push($errors, "Password is required"); }
 
   if (count($errors) == 0) 
   {
-    $password_h = password_hash($password_1, PASSWORD_DEFAULT);
+    $password_h = password_hash($password, PASSWORD_DEFAULT);
     $query = "SELECT * FROM users WHERE email='$email' AND password='$password_h'";
     $results = mysqli_query($db, $query);
 
