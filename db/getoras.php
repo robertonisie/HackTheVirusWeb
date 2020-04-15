@@ -24,7 +24,7 @@ $oras_arr = array();
 while( $row = mysqli_fetch_array($result) )
 {
     //echo $row['id'];
-    //echo $row['name'];
+    echo $row['name'];
 
     $oras_arr[] = array('id' => $row['id'], 
     	'name' => $row['name']
