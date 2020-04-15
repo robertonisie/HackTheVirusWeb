@@ -27,12 +27,12 @@ while( $row = mysqli_fetch_array($result2))
     //echo $row['name'];
     //echo 'test';
 
-    $oras_arr[] = array('jud_id' => $row['id'], 
-    	'jud_name' => $row['name']
+    $oras_arr[] = array('oras_id' => $row['id'], 
+    	'oras_name' => $row['name']
     );
 
 }
 echo print_r($oras_arr);
-echo json_encode($oras_arr);
+//echo json_encode($oras_arr);
 
 ?>
