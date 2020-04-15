@@ -121,12 +121,12 @@ if (isset($_POST['adauga_anunt']))
       array_push($errors, "Please select an image");
 
     if (count($errors) == 0) 
-    {      
+    { 
+      $sql = "INSERT INTO image_upload(image) VALUES ('$poza')";
+        mysqli_query($db, $sql);    
+
       if (move_uploaded_file($_FILES["file"]["tmp_name"], "uploads/" . $newfilename)) 
       {
-        $sql = "INSERT INTO image_upload(image) VALUES ('$poza')";
-        mysqli_query($db, $sql);
-
         $sql = "SELECT * FROM image_upload WHERE image='$poza'";
         $result = mysqli_query($db, $sql);
         $row = mysqli_fetch_assoc($result);
