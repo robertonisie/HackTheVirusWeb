@@ -156,7 +156,7 @@ if (isset($_POST['search_user']))
                                                     <h3><a href="#">'.$pname.'</a></h3>
                                                     <div class="d-flex">
                                                         <div class="pricing">
-                                                            <p class="price"><span class="mr-2 price-dc">'.$ppret.'</span></p>
+                                                            <p class="price"><span class="mr-2 price">'.$ppret.'</span></p>
                                                         </div>
                                                     </div>
                                                     <div class="bottom-area d-flex px-3">
