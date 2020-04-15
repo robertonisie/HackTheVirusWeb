@@ -1,6 +1,5 @@
 <?php 
 include('/var/www/html/HackTheVirusWeb/db/server.php');
-include ("/var/db/dbconfig.php");
 
 session_start();
 if(isset($_SESSION['nume_sesiune']))
