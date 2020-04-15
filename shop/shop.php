@@ -118,24 +118,21 @@ if (isset($_POST['search_user']))
                     */
                     $ok = 0;
                     while($index)
-                    {       
+                    {
+                            $query = "SELECT * FROM anunturi WHERE id='$available_users[$index]'";
+                            $result=mysqli_query($db, $query);
+                            $ok = 1;
+                           
 
-                        $query = "SELECT * FROM anunturi WHERE id='$available_users[$index]'";
-                        $result=mysqli_query($db, $query);
-                        $ok = 1;
-                        
                           if ($result) {
                               while ($row = $result->fetch_assoc()) {
 
                                 $ppoza = $row["poza"];
                                 $sql = "SELECT * FROM image_upload WHERE id='$ppoza'";
-                                $result = mysqli_query($db, $sql);
-                                $row = mysqli_fetch_assoc($result);
-                                $ppoza = $row['image'];
-
-                                $query = "SELECT * FROM anunturi WHERE id='$available_users[$index]'";
-                                $result=mysqli_query($db, $query);
-
+                                $result2 = mysqli_query($db, $sql);
+                                $row2 = mysqli_fetch_assoc($result2);
+                                  
+                                $ppoza = $row2['image'];
                                 $pname = $row["nume_produs"];
                                 $ppret = $row["pret"];
                                 $pcantitate = $row["cantitate"];
