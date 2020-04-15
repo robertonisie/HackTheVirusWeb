@@ -69,6 +69,16 @@ $pid = $_GET["id"];
       </div>
     </div>
 
+    <?php
+
+    $pnume_produs = $_GET["produs"];
+    $ppret = $_GET["pret"];
+    $pcantitate = $_COOKIE["cantitate_aleasa"];
+    $pdescriere = $_GET['desc'];
+    $ppoza = $_GET['poza'];
+
+    ?>
+
     <section class="ftco-section ftco-cart">
 			<div class="container">
 				<div class="row">
@@ -89,14 +99,14 @@ $pid = $_GET["id"];
 						      <tr class="text-center">
 						        <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
 						        
-						        <td class="image-prod"><div class="img" style="background-image:url(images/product-3.jpg);"></div></td>
+						        <?php echo '<td class="image-prod"><div class="img" style="background-image:url(../uploads/'.$ppoza.');"></div></td>'; ?>
 						        
 						        <td class="product-name">
-						        	<h3>Bell Pepper</h3>
-						        	<p>Far far away, behind the word mountains, far from the countries</p>
+						        	<h3> <?php echo $pnume_produs ?> </h3>
+						        	<p> <?php echo $pdescriere ?> </p>
 						        </td>
 						        
-						        <td class="price">$4.90</td>
+						        <td class="price"> <?php echo "$ppret RON"?> </td>
 						        
 						        <td class="quantity">
 						        	<div class="input-group mb-3">
