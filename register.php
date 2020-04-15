@@ -25,13 +25,13 @@ if(isset($_SESSION['nume_sesiune']))
         $(document).ready(function(){
 
             $("#sel_judet").change(function(){
-                var judetid = 1;
+                var judet_id = $(this).val();
 
                 $.ajax({
                     url: '/db/getoras.php',
                     type: "POST",
                     data: {
-                    	judet:judetid
+                    	judet:judet_id
                     	},
                     dataType: 'json',
                     success:function(response){
@@ -80,6 +80,7 @@ if(isset($_SESSION['nume_sesiune']))
 					      $judet_name = $row['name'];
 					      echo "<option value='".$judetid."' >".$judet_name."</option>";
 					   }
+					   
 					   ?>
 					</select>
 					<div class="clear"></div>
