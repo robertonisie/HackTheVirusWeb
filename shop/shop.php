@@ -111,11 +111,6 @@ if (isset($_POST['search_user']))
     		<div class="row">
                 <?php
                     $index--;
-                    /*echo '<section class="single_product_list">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-12">';
-                    */
                     $ok = 0;
                     while($index)
                     {
@@ -137,14 +132,7 @@ if (isset($_POST['search_user']))
                                 $ppret = $row["pret"];
                                 $pcantitate = $row["cantitate"];
                                 $pdescriere = $row['descriere'];
-                           
-                                  /*echo '<tr> 
-                                            <td>'.$field1name.'</td> 
-                                            <td>'.$field3name.'</td>
-                                            <td>'.$field2name.'</td> 
-                                        </tr>';
-                                        */
-
+                
                                          echo '
                                          <div class="col-md-6 col-lg-3 ftco-animate">
                                             <div class="product">
@@ -177,17 +165,6 @@ if (isset($_POST['search_user']))
                                         </div>';
                               }
                       }
-
-
-                            
-
-                            /*if ($result) { // if user exists
-                              while($user = mysqli_fetch_assoc($result)){
-
-                            $available_users[$index]=$user['user'];
-                            echo $available_users[$index];
-                            $index2++;
-                            */
 
                               $result->free();
                               $index--;
