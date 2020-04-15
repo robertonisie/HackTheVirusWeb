@@ -37,20 +37,19 @@ if(isset($_SESSION['nume_sesiune']))
                         var len = response.length;
 
                         $("#sel_oras").empty();
-                        for( var i = 0; i<len; i++)
+                        for(var i = 0; i<len; i++)
                         {
                             //var id = response[i]['oras_id'];
                             //var name = response[i]['oras_name'];
                             var name = response[i];
 
-                            $("#sel_oras").append("<option >"+name+"</option>");
+                            $("#sel_oras").append("<option>"+name+"</option>");
                         }
                     },
 
                     error: function(xhr, status, error) {
-  var err = eval("(" + xhr.responseText + ")");
-  alert(err.Message);
-}
+					  alert(xhr.responseText);
+					}
                 });
             });
 
