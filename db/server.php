@@ -119,7 +119,7 @@ if (isset($_POST['adauga_anunt']))
 
   if (count($errors) == 0) 
   {
-    $user_check_query = "SELECT id FROM users WHERE 'email'='{$_SESSION['nume_sesiune']}'";
+    $user_check_query = "SELECT id FROM users WHERE 'email'='".$_SESSION['nume_sesiune']}"'";
     $result = mysqli_query($db, $user_check_query);
     $user_id = mysqli_fetch_assoc($result);
   
