@@ -104,21 +104,5 @@ if(isset($_SESSION['nume_sesiune']))
 				<p>Already a member? <a href="login.php"> Login Now!</a></p>
 			</div>
 		</div>
-		<div class="colorlibcopy-agile">
-			<p>© 2018 Colorlib Signup Form. All rights reserved | Design by <a href="https://colorlib.com/" target="_blank">Colorlib</a></p>
-		</div>
-		<ul class="colorlib-bubbles">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-	</div>
 </body>
 </html>
