@@ -20,7 +20,7 @@ if(isset($_SESSION['nume_sesiune']))
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/register.css" rel="stylesheet" type="text/css" media="all"/>
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
-<script src="/js/jquery-1.12.0.min.js" type="text/javascript"></script>
+<script src="js/jquery-1.12.0.min.js" type="text/javascript"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -29,9 +29,11 @@ if(isset($_SESSION['nume_sesiune']))
                 var judetid = $(this).val();
 
                 $.ajax({
-                    url: 'getoras.php',
+                    url: 'db/getoras.php',
                     type: 'post',
-                    data: {judet:judetid},
+                    data: {
+                    	judet:judetid
+                    	},
                     dataType: 'json',
                     success:function(response){
 
