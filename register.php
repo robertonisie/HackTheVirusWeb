@@ -23,13 +23,13 @@ if(isset($_SESSION['nume_sesiune']))
     <script type="text/javascript">
         $(document).ready(function(){
             $("#sel_judet").change(function(){
-                var judet_id = $("#sel_judet option:selected").text();
+                var judet_nume = $("#sel_judet option:selected").text();
 
                 $.ajax({
                     url: '/db/getoras.php',
                     type: "POST",
                     data: {
-                    	judet:judet_id
+                    	judet:judet_nume
                     	},
                     dataType: 'json',
                     success:function(response)
