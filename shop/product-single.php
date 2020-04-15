@@ -50,7 +50,7 @@ $pid = $_GET["id"];
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span class="mr-2"><a href="index.html">Product</a></span> <span>Product Single</span></p>
+          	<p class="breadcrumbs"><span class="mr-2"><a href="../index.html">Home</a></span> <span class="mr-2"><a href="index.html">Product</a></span> <span>Product Single</span></p>
             <h1 class="mb-0 bread">Product Single</h1>
           </div>
         </div>
@@ -88,7 +88,7 @@ $pid = $_GET["id"];
     	<div class="container">
     		<div class="row">
     			<div class="col-lg-6 mb-5 ftco-animate">
-            <?php echo '
+            <?php echo ' 
     				<a href="../uploads/'.$ppoza.'" class="image-popup"><img src="../uploads/'.$ppoza.'" class="img-fluid" alt="Colorlib Template"></a>'; ?>
     			</div>
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
