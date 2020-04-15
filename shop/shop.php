@@ -119,7 +119,7 @@ if (isset($_POST['search_user']))
                     $ok = 0;
                     while($index)
                     {
-                            $query = "SELECT users.*,anunturi.* FROM users,animal WHERE nume_produs='$available_users[$index]'";
+                            $query = "SELECT users.*,anunturi.* FROM users,anunturi WHERE nume_produs='$available_users[$index]'";
                             $result=mysqli_query($db,$query);
                             $ok = 1;
                            
