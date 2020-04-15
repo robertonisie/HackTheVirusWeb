@@ -8,7 +8,7 @@ include('/db/errors.php');
 <head>
 <title>Login</title>
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
-<link href="login.css" rel="stylesheet" type="text/css" media="all" />
+<link href="login.css" rel="stylesheet" type="text/css" media="all" href="css/login.css" />
 </head>
 
 <div class="login-page">
