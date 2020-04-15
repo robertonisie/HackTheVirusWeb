@@ -39,7 +39,7 @@ if (isset($_POST['reg_user']))
   if ($password_1 != $password_2)
     array_push($errors, "The passwords do not match");
 
-  $user_check_query = "SELECT * FROM users WHERE email='$email' LIMIT 1";
+  $user_check_query = "SELECT * FROM users WHERE 'email'='$email' LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
   
@@ -70,7 +70,7 @@ if (isset($_POST['login_user']))
   if (count($errors) == 0) 
   {
     //$password_h = password_hash($password, PASSWORD_DEFAULT);
-    $query = "SELECT * FROM users WHERE email ='$email' AND password ='$password'";
+    $query = "SELECT * FROM users WHERE 'email' ='$email' AND 'password' ='$password'";
     $results = mysqli_query($db, $query);
 
     if (mysqli_num_rows($results) == 1) 
@@ -106,7 +106,7 @@ if (isset($_POST['adauga_anunt']))
     if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) 
     {
       $msg = "Image uploaded successfully";
-      $sql = "SELECT id FROM image_upload WHERE image='$poza'";
+      $sql = "SELECT id FROM image_upload WHERE 'image'='$poza'";
       $result = mysqli_query($db, $sql);
       $row = mysqli_fetch_assoc($result);
       $poza_id = $row['id'];
@@ -121,7 +121,7 @@ echo $poza_id;
   if (count($errors) == 0) 
   {
     $email = $_SESSION['nume_sesiune'];
-    $user_check_query = "SELECT id FROM users WHERE email='.$_SESSION['nume_sesiune'].'";
+    $user_check_query = "SELECT id FROM users WHERE 'email'='$_SESSION[nume_sesiune]'";
     $result = mysqli_query($db, $user_check_query);
     $user_id = mysqli_fetch_assoc($result);
     echo $user_id;
