@@ -1,4 +1,7 @@
  <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL)
 session_start();
 include ("/var/db/dbconfig.php");
 include('errors.php');
@@ -72,7 +75,7 @@ if (isset($_POST['login_user']))
   if (count($errors) == 0) 
   {
     //$password_h = password_hash($password, PASSWORD_DEFAULT);
-    $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+    $query = "SELECT * FROM users WHERE email ='$email' AND password ='$password'";
     $results = mysqli_query($db, $query);
 
     if (mysqli_num_rows($results) == 1) 
