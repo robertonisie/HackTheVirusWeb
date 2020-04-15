@@ -190,7 +190,7 @@ if (isset($_POST['search_user']))
                     if(!$ok)
                     {
                       ?><script type="text/javascript">
-                              window.location='index.php#about';
+                              window.location='/shop/shop.php';
                               alert("Nu s-a gasit anunt.");
 
                               </script><?php
