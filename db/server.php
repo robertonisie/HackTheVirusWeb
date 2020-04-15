@@ -106,7 +106,7 @@ if (isset($_POST['adauga_anunt']))
     if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) 
     {
       $msg = "Image uploaded successfully";
-      $sql = "SELECT id FROM image_upload WHERE image='$poza'";
+      $sql = "SELECT * FROM image_upload WHERE image='$poza'";
       $result = mysqli_query($db, $sql);
       $row = mysqli_fetch_assoc($result);
       $poza_id = $row['id'];
@@ -119,7 +119,7 @@ if (isset($_POST['adauga_anunt']))
   if (count($errors) == 0) 
   {
     //$email =  mysqli_real_escape_string($db, $_SESSION['nume_sesiune']);
-    $user_check_query = "SELECT id FROM users WHERE email='".$_SESSION['nume_sesiune']."'";
+    $user_check_query = "SELECT * FROM users WHERE email='".$_SESSION['nume_sesiune']."'";
     $result = mysqli_query($db, $user_check_query);
     $row = mysqli_fetch_assoc($result);
     $user_id = $row['id'];
