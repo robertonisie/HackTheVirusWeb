@@ -6,6 +6,7 @@ echo $judet_num;
 
 $id_oras = "SELECT id from judete where name = '".$judet_num."'";
 $result = mysqli_query($db, $id_oras);
+echo $result;
 while($row = mysqli_fetch_array($result))
 	{
 		$judet_id = $row['id'];
