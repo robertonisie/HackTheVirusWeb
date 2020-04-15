@@ -12,7 +12,7 @@ include('/db/errors.php');
 </head>
 
 <div class="login-page">
-    <form class="login-form">
+    <form class="login-form" method="post">
       <input type="text" name="email" placeholder="Email" required/>
       <input type="password" name="password" placeholder="Password"/>
       <button type="submit" name="login_user">login</button>
