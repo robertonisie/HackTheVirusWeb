@@ -1,6 +1,6 @@
 <?php 
-include('server.php')
-include('errors.php');      
+include('/db/server.php');
+include('/db/errors.php');      
 ?>
 
 <!DOCTYPE html>
