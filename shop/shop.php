@@ -126,7 +126,7 @@ if (isset($_POST['search_user']))
                                 $sql = "SELECT * FROM image_upload WHERE id='$ppoza'";
                                 $result2 = mysqli_query($db, $sql);
                                 $row2 = mysqli_fetch_assoc($result2);
-                                  
+                                
                                 $ppoza = $row2['image'];
                                 $pname = $row["nume_produs"];
                                 $ppret = $row["pret"];
