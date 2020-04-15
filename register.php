@@ -67,7 +67,7 @@ if(isset($_SESSION['nume_sesiune']))
 						                    <select class="form-control" id="authors" name="authors">
 						                    	<option selected="" disabled="">Select Author</option>
 						                    	<?php 
-						                    		require '/var/www/html/HackTheViruWeb/db/data.php';
+						                    		require 'data.php';
 						                    		$authors = loadAuthors();
 						                    		foreach ($authors as $author) {
 						                    			echo "<option id='".$author['id']."' value='".$author['id']."'>".$author['name']."</option>";
