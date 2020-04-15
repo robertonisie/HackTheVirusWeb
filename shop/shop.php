@@ -148,7 +148,7 @@ if (isset($_POST['search_user']))
                                          echo '
                                          <div class="col-md-6 col-lg-3 ftco-animate">
                                             <div class="product">
-                                                <a href="#" class="img-prod"><img class="img-fluid" src="uploads/'.$ppoza.'" alt="Colorlib Template">
+                                                <a href="#" class="img-prod"><img class="img-fluid" src="../uploads/'.$ppoza.'" alt="Colorlib Template">
                                                     <span class="status">30%</span>
                                                     <div class="overlay"></div>
                                                 </a>
