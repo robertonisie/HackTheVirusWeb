@@ -18,10 +18,11 @@ while($row = mysqli_fetch_array($result))
 //echo $judet_id;
 $sql = "SELECT id, name FROM orase WHERE county_id='$judet_id.";
 
-$result = mysqli_query($db, $sql);
+$result2 = mysqli_query($db, $sql);
+if($result2) echo '1234';
 $oras_arr = array();
 
-while( $row = mysqli_fetch_array($result) )
+while( $row = mysqli_fetch_array($result2))
 {
     //echo $row['id'];
     echo $row['name'];
