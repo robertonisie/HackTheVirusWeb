@@ -20,7 +20,7 @@ if(isset($_SESSION['nume_sesiune']))
 <link href="css/register.css" rel="stylesheet" type="text/css" media="all"/>
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
 <script src="js/jquery-1.12.0.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
         $(document).ready(function(){
             $("#sel_judet").change(function(){
                 var judet_nume = $("#sel_judet option:selected").text();
@@ -54,7 +54,7 @@ if(isset($_SESSION['nume_sesiune']))
             });
 
         });
-    </script>
+    </script>-->
 </head>
 <body>
 	<div class="main-w3layouts wrapper">
@@ -67,13 +67,14 @@ if(isset($_SESSION['nume_sesiune']))
 					<input class="text w3lpass" type="password" name="password_2" placeholder="Confirm Password" required="">
 					<input class="text" type="text" name="nume" placeholder="Nume" required="">
 					<input class="text" type="text" name="prenume" placeholder="Prenume" required="">
-					<!--<input class="text" type="text" name="judet" placeholder="Judet" required="">
-					<input class="text" type="text" name="localitate" placeholder="Localitate" required="">-->
+					<input class="text" type="text" name="judet" placeholder="Judet" required="">
+					<input class="text" type="text" name="localitate" placeholder="Localitate" required="">
 
+					<!--
 					<div>Judet</div>
 					<select id="sel_judet">
 					   <option value="0">- Select -</option>
-					   <?php 
+					   <?php /*
 					   $sql_judet = "SELECT name FROM judete";
 					   $judet_data = mysqli_query($db, $sql_judet);
 
@@ -84,13 +85,13 @@ if(isset($_SESSION['nume_sesiune']))
 					      echo "<option id='".$judetid."' value='".$judetid."' >".$judet_name."</option>";
 					   }
 
-					   ?>
+					   */?>
 					</select>
 					<div class="clear"></div>
 					<div>Oras </div>
 						<select id="sel_oras">
 						   <option value="0">- Select -</option>
-						</select>
+						</select>-->
 
 					<input class="text" type="text" name="adresa" placeholder="Adresa" required="">
 					<input class="text" type="text" name="nume_afacere" placeholder="Nume Afacere" required="">
