@@ -1,4 +1,5 @@
-<?php 
+<?php
+	session_start();
 	require 'DbConnect.php';
 
 	if(isset($_POST['aid'])) {
