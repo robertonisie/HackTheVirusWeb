@@ -44,7 +44,12 @@ if(isset($_SESSION['nume_sesiune']))
 
                             $("#sel_oras").append("<option value='"+id+"'>"+name+"</option>");
                         }
-                    }
+                    },
+
+                    error: function() {
+                		console.log('Error');
+                		alert('Error');
+            		}
                 });
             });
 
