@@ -49,9 +49,9 @@ if (isset($_POST['reg_user']))
 
   if (count($errors) == 0) 
   {
-    $password_h = password_hash($password_1, PASSWORD_DEFAULT);
+    //$password_h = password_hash($password_1, PASSWORD_DEFAULT);
     $query = "INSERT INTO users (email, password, nume, prenume, judet, oras, adresa, nume_afacere) 
-              VALUES('$email', '$password_h', '$nume', '$prenume', '$judet', '$oras', '$adresa', '$nume_afacere')";
+              VALUES('$email', '$password_1', '$nume', '$prenume', '$judet', '$oras', '$adresa', '$nume_afacere')";
     mysqli_query($db, $query);
     $_SESSION['nume_sesiune'] = $nume;
     $_SESSION['success'] = "You are now logged in";
@@ -71,8 +71,8 @@ if (isset($_POST['login_user']))
 
   if (count($errors) == 0) 
   {
-    $password_h = password_hash($password, PASSWORD_DEFAULT);
-    $query = "SELECT * FROM users WHERE email='$email' AND password='$password_h'";
+    //$password_h = password_hash($password, PASSWORD_DEFAULT);
+    $query = "SELECT * FROM users WHERE email='$email' AND password='$password_1'";
     $results = mysqli_query($db, $query);
 
     if (mysqli_num_rows($results) == 1) 
