@@ -93,7 +93,7 @@ $pid = $_GET["id"];
             $pdescriere = $row['descriere'];
             ?>
 				<p><?php echo $pnume_afacere ?></p>
-				<p> <?php echo $poras ',' $pjudet;?> </p>
+				<p> <?php echo "$poras , $pjudet"; ?> </p>
     				<h3><?php echo $pnume_produs ?></h3>
     			
     				<p class="price"><span><?php echo $ppret ?></span></p>
@@ -120,7 +120,7 @@ $pid = $_GET["id"];
 	          	</div>
 	          	<div class="w-100"></div>
 	          	<div class="col-md-12">
-	          		<p style="color: #000;"><?php echo $pcantitate 'kg disponibile pe stoc';?></p>
+	          		<p style="color: #000;"><?php echo $pcantitate+'kg disponibile pe stoc'; ?></p>
 	          	</div>
           	</div>
           	<p><a href="cart.html" class="btn btn-black py-3 px-5">Baga-n sac</a></p>
