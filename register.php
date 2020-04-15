@@ -25,7 +25,7 @@ if(isset($_SESSION['nume_sesiune']))
         $(document).ready(function(){
 
             $("#sel_judet").change(function(){
-                var judet_id = $(this).val();
+                var judet_id = $("#sel_judet option:selected").val();
 
                 $.ajax({
                     url: '/db/getoras.php',
@@ -80,7 +80,7 @@ if(isset($_SESSION['nume_sesiune']))
 					      $judet_name = $row['name'];
 					      echo "<option value='".$judetid."' >".$judet_name."</option>";
 					   }
-					   
+
 					   ?>
 					</select>
 					<div class="clear"></div>
