@@ -126,7 +126,7 @@ $pid = $_GET["id"];
 	          		<p style="color: #000;"><?php echo "$pcantitate kg disponibile pe stoc"; ?></p>
 	          	</div>
           	</div>
-          	<p> <?php echo '<a href="cart.php?produs='.$pnume_produs.'&cantitate='.$pcantitate_aleasa.'&pret='.$ppret.'&desc='.$pdescriere.'" class="btn btn-black py-3 px-5">Baga-n sac</a>'; ?> </p>
+          	<p> <?php echo '<a href="cart.php?produs='.$pnume_produs.'&pret='.$ppret.'&desc='.$pdescriere.'" class="btn btn-black py-3 px-5">Baga-n sac</a>'; ?> </p>
     			</div>
     		</div>
     	</div>
@@ -180,6 +180,8 @@ $pid = $_GET["id"];
 		            if(quantity < cantitate_max)
 		               $('#quantity').val(quantity + 1);
 
+             createCookie("cantitte_aleasa", quantity, "7");     
+
 		    });
 
 		     $('.quantity-left-minus').click(function(e){
@@ -195,6 +197,33 @@ $pid = $_GET["id"];
 		    
 		});
 	</script>
+
+  <script> 
+
+    // Creating a cookie after the document is ready 
+    $(document).ready(function () { 
+      createCookie("gfg", "GeeksforGeeks", "10"); 
+    }); 
+
+    // Function to create the cookie 
+    function createCookie(name, value, days) { 
+      var expires; 
+      
+      if (days) { 
+        var date = new Date(); 
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); 
+        expires = "; expires=" + date.toGMTString(); 
+      } 
+      else { 
+        expires = ""; 
+      } 
+      
+      document.cookie = escape(name) + "=" + 
+        escape(value) + expires + "; path=/"; 
+    } 
+
+</script> 
+
     
   </body>
 </html>
