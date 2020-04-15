@@ -1,9 +1,4 @@
-/*!
- * Bootstrap v4.2.1 (https://getbootstrap.com/)
- * Copyright 2011-2018 The Bootstrap Authors
- * Copyright 2011-2018 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -8836,16 +8831,12 @@ h1, h2, h3, h4, h5,
     color: #000000;
     background: transparent !important; }
     .product-details .form-group .form-control::-webkit-input-placeholder {
-      /* Chrome/Opera/Safari */
       color: #4d4d4d; }
     .product-details .form-group .form-control::-moz-placeholder {
-      /* Firefox 19+ */
       color: #4d4d4d; }
     .product-details .form-group .form-control:-ms-input-placeholder {
-      /* IE 10+ */
       color: #4d4d4d; }
     .product-details .form-group .form-control:-moz-placeholder {
-      /* Firefox 18- */
       color: #4d4d4d; }
   .product-details .form-group .icon {
     position: absolute;
@@ -9031,16 +9022,12 @@ h1, h2, h3, h4, h5,
   -webkit-box-shadow: none !important;
   box-shadow: none !important; }
   .billing-form .form-control::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
     color: rgba(0, 0, 0, 0.4); }
   .billing-form .form-control::-moz-placeholder {
-    /* Firefox 19+ */
     color: rgba(0, 0, 0, 0.4); }
   .billing-form .form-control:-ms-input-placeholder {
-    /* IE 10+ */
     color: rgba(0, 0, 0, 0.4); }
   .billing-form .form-control:-moz-placeholder {
-    /* Firefox 18- */
     color: rgba(0, 0, 0, 0.4); }
   .billing-form .form-control:focus, .billing-form .form-control:active {
     border-color: #82ae46 !important; }
@@ -9107,16 +9094,12 @@ h1, h2, h3, h4, h5,
       -ms-border-radius: 30px;
       border-radius: 30px; }
       .subscribe-form .form-group input::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
         color: black !important; }
       .subscribe-form .form-group input::-moz-placeholder {
-        /* Firefox 19+ */
         color: black !important; }
       .subscribe-form .form-group input:-ms-input-placeholder {
-        /* IE 10+ */
         color: black !important; }
       .subscribe-form .form-group input:-moz-placeholder {
-        /* Firefox 18- */
         color: black !important; }
     .subscribe-form .form-group .submit {
       border-left: 1px solid #82ae46;
@@ -9675,16 +9658,12 @@ textarea.form-control {
       -ms-border-radius: 0;
       border-radius: 0; }
       .block-17 form .fields .form-control::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
         color: #4d4d4d; }
       .block-17 form .fields .form-control::-moz-placeholder {
-        /* Firefox 19+ */
         color: #4d4d4d; }
       .block-17 form .fields .form-control:-ms-input-placeholder {
-        /* IE 10+ */
         color: #4d4d4d; }
       .block-17 form .fields .form-control:-moz-placeholder {
-        /* Firefox 18- */
         color: #4d4d4d; }
     .block-17 form .fields .icon {
       position: absolute;
@@ -9848,16 +9827,12 @@ textarea.form-control {
     color: black;
     font-size: 13px; }
     .search-form .form-group input::-webkit-input-placeholder {
-      /* Chrome/Opera/Safari */
       color: black; }
     .search-form .form-group input::-moz-placeholder {
-      /* Firefox 19+ */
       color: black; }
     .search-form .form-group input:-ms-input-placeholder {
-      /* IE 10+ */
       color: black; }
     .search-form .form-group input:-moz-placeholder {
-      /* Firefox 18- */
       color: black; }
     .search-form .form-group input:focus, .search-form .form-group input:active {
       border-color: #82ae46 !important; }
