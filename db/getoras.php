@@ -4,7 +4,7 @@ include ("/var/db/dbconfig.php");
 $judet_num =$_POST['judet']; 
 echo $judet_num;
 
-$id_oras = "SELECT id from judete where name = '".$$judet_num."'";
+$id_oras = "SELECT id from judete where name = '".$judet_num."'";
 $result = mysqli_query($db, $id_oras);
 while($row = mysqli_fetch_array($result))
 	{
@@ -12,9 +12,8 @@ while($row = mysqli_fetch_array($result))
 		echo $row['id'];
 	}	
 
-
 echo $judet_id;
-$sql = "SELECT id, name FROM orase WHERE county_id='".$judetid."'";
+$sql = "SELECT id, name FROM orase WHERE county_id='".$judet_id."'";
 
 $result = mysqli_query($db, $sql);
 $oras_arr = array();
