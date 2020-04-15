@@ -13,7 +13,8 @@ if(isset($_SESSION['nume_sesiune']))
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<title>Register</title>
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+<title>Inregistrare</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -58,7 +59,7 @@ if(isset($_SESSION['nume_sesiune']))
 </head>
 <body>
 	<div class="main-w3layouts wrapper">
-		<h1>Creative SignUp Form</h1>
+		<h1>Creaza un cont local's</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
 				<form method="post">
@@ -69,7 +70,14 @@ if(isset($_SESSION['nume_sesiune']))
 					<input class="text" type="text" name="prenume" placeholder="Prenume" required="">
 					<input class="text" type="text" name="judet" placeholder="Judet" required="">
 					<input class="text" type="text" name="oras" placeholder="Localitate" required="">
-
+					<input class="text" type="text" name="adresa" placeholder="Adresa" required="">
+					<input class="text" type="text" name="nume_afacere" placeholder="Nume Afacere" required="">
+					<label class="anim">
+							<input type="checkbox" class="checkbox" required="">
+							<span>Sunt de acord cu termenii si conditiile</span>
+					</label>
+				</form>
+					<button type="submit" name="reg_user">Inregistrare</button>
 					<!--
 					<div>Judet</div>
 					<select id="sel_judet">
@@ -93,20 +101,24 @@ if(isset($_SESSION['nume_sesiune']))
 						   <option value="0">- Select -</option>
 						</select>-->
 
-					<input class="text" type="text" name="adresa" placeholder="Adresa" required="">
-					<input class="text" type="text" name="nume_afacere" placeholder="Nume Afacere" required="">
+					
 
-					<div class="wthree-text">
-						<label class="anim">
-							<input type="checkbox" class="checkbox" required="">
-							<span>I Agree To The Terms & Conditions</span>
-						</label>
-						<div class="clear"> </div>
-					</div>
-					<button type="submit" name="reg_user">Inregistrare</button>
-				</form>
-				<p>Already a member? <a href="login.php"> Login Now!</a></p>
+					
+				<p>Ai deja un cont? <a href="login.php"> Logheaza-te aici!</a></p>
 			</div>
 		</div>
+		
+<div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
