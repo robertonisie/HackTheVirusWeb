@@ -2,7 +2,7 @@
 include ("/var/db/dbconfig.php");
 
 $judetid = $_POST['judet']; 
-
+echo $_POST['judet'];
 $sql = "SELECT id, name FROM orase WHERE county_id='".$judetid."'";
 
 $result = mysqli_query($db, $sql);

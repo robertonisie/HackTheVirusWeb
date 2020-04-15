@@ -23,7 +23,6 @@ if(isset($_SESSION['nume_sesiune']))
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-
             $("#sel_judet").change(function(){
                 var judet_id = $("#sel_judet option:selected").val();
 
