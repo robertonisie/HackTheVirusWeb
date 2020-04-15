@@ -3,14 +3,6 @@ include ("/var/db/dbconfig.php");
 include('errors.php');
 session_start();
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-
-
-$username = "";
-$email    = "";
 $errors = array(); 
 
 if (isset($_POST['reg_user'])) 
