@@ -20,7 +20,6 @@ if(isset($_SESSION['nume_sesiune']))
 <link href="css/register.css" rel="stylesheet" type="text/css" media="all"/>
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
 <script src="js/jquery-1.12.0.min.js" type="text/javascript"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $("#sel_judet").change(function(){
@@ -33,17 +32,17 @@ if(isset($_SESSION['nume_sesiune']))
                     	judet:judet_id
                     	},
                     dataType: 'json',
-                    success:function(response){
-
+                    success:function(response)
+                    {
                         var len = response.length;
 
                         $("#sel_oras").empty();
-                        for( var i = 0; i<len; i++){
+                        for( var i = 0; i<len; i++)
+                        {
                             var id = response[i]['id'];
                             var name = response[i]['name'];
 
                             $("#sel_oras").append("<option value='"+id+"'>"+name+"</option>");
-
                         }
                     }
                 });
