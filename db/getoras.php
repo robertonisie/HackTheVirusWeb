@@ -1,9 +1,12 @@
 <?php
 include ("/var/db/dbconfig.php");
 
-$judetid =$_POST['judet']; 
-echo $_POST['judet'];
-echo $judetid;
+$judet_num =$_POST['judet']; 
+echo $judet_num;
+
+$id_oras = "SELECT id from judete where name = ".$$judet_num."'";
+$result = mysqli_query($db, $sql);
+echo $result;
 $sql = "SELECT id, name FROM orase WHERE county_id='".$judetid."'";
 
 $result = mysqli_query($db, $sql);
