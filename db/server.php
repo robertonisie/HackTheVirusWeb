@@ -50,7 +50,7 @@ if (isset($_POST['reg_user']))
   if (count($errors) == 0) 
   {
     $password_h = password_hash($password_1, PASSWORD_DEFAULT);
-    $query = "INSERT INTO users (email, password, email, nume, prenume, judet, oras, adresa, nume_afacere) 
+    $query = "INSERT INTO users (email, password, nume, prenume, judet, oras, adresa, nume_afacere) 
               VALUES('$email', '$password_h', '$nume', '$prenume', '$judet', '$oras', '$adresa', '$nume_afacere')";
     mysqli_query($db, $query);
     $_SESSION['nume_sesiune'] = $nume;
