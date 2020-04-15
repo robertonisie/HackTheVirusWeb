@@ -26,7 +26,7 @@ if(isset($_SESSION['nume_sesiune']))
 			$("#authors").change(function(){
 				var aid = $("#authors").val();
 				$.ajax({
-					url: '/db/data.php',
+					url: 'data.php',
 					method: 'post',
 					data: 'aid=' + aid
 				}).done(function(books){
