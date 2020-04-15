@@ -1,6 +1,6 @@
 <?php 
 include('/db/server.php');
-include('/db/errors.php');
+include('/db/getuser.php');
 include ("/var/db/dbconfig.php");
 
 session_start();
