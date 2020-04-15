@@ -110,7 +110,7 @@ $pid = $_GET["id"];
 						        
 						        <td class="quantity">
 						        	<div class="input-group mb-3">
-					             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
+					             	<?php echo '<input type="text" name="quantity" class="quantity form-control input-number" value="'.$pcantitate.'" min="1" max="100">'; ?>
 					          	</div>
 					          </td>
 						        
