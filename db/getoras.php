@@ -33,6 +33,6 @@ while( $row = mysqli_fetch_array($result2))
 
 }
 echo print_r($oras_arr);
-//echo json_encode($oras_arr);
+echo json_encode($oras_arr);
 
 ?>

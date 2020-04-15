@@ -39,10 +39,7 @@ if(isset($_SESSION['nume_sesiune']))
                         $("#sel_oras").empty();
                         for( var i = 0; i<len; i++)
                         {
-                            var id = response[i]['oras_id'];
-                            var name = response[i]['oras_name'];
-
-                            $("#sel_oras").append("<option value='"+oras_id+"'>"+oras_name+"</option>");
+                            $("#sel_oras").append("<option value='"+response[i]['oras_id']+"'>"+response[i]['oras_name']+"</option>");
                         }
                     }
                 });
