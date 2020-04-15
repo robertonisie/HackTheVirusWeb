@@ -170,7 +170,7 @@ $pid = $_GET["id"];
   <script>
 		$(document).ready(function(){
 
-		var quantitiy=0;
+		    var quantitiy=0;
 		   $('.quantity-right-plus').click(function(e){
 		        
 		        var cantitate_max = "<?php echo $pcantitate ?>";
@@ -179,9 +179,6 @@ $pid = $_GET["id"];
 		        
 		            if(quantity < cantitate_max)
 		               $('#quantity').val(quantity + 1);
-
-             createCookie("cantitte_aleasa", quantity, "7");     
-
 		    });
 
 		     $('.quantity-left-minus').click(function(e){
@@ -194,7 +191,7 @@ $pid = $_GET["id"];
 		            $('#quantity').val(quantity - 1);
 		            }
 		    });
-		    
+		    createCookie("cantitte_aleasa", quantity, "7"); 
 		});
 	</script>
   </body>
