@@ -20,7 +20,7 @@ if(isset($_SESSION['nume_sesiune']))
 <body>
 <div class="form">
 <div class="login-page">
-    <form class="login-form" method="post">
+    <form class="login-form">
       <input type="text" name="email" placeholder="Email" required/>
       <input type="password" name="password" placeholder="Parola" required/>
       <button type="submit" name="login_user">Logare</button>
@@ -29,5 +29,17 @@ if(isset($_SESSION['nume_sesiune']))
   </div>
 </div>
 </div>
+<div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
