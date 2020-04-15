@@ -114,21 +114,22 @@ if (isset($_POST['adauga_anunt']))
       $msg = "Failed to upload image";
     }
 
-
+echo $poza_id;
 
   if (count($errors) == 0) 
   {
     $user_check_query = "SELECT id FROM users WHERE email='$email'";
     $result = mysqli_query($db, $user_check_query);
     $user_id = mysqli_fetch_assoc($result);
+    echo $user_id;
 
     $query = "INSERT INTO anunturi(nume_produs, pret, descriere, cantitate, poza, user_email) 
           VALUES('$nume_produs', '$pret', '$descriere', '$cantitate', '$poza_id', '$user_id')";
     mysqli_query($db, $query);
-    echo "<script type='text/javascript'>
+    /*echo "<script type='text/javascript'>
           alert('Anunt adaugat cu succes.');
           window.location = 'index.html';
-          </script>";
+          </script>";*/
   }
 }
 
