@@ -1,4 +1,5 @@
 <?php
+include ("/var/db/dbconfig.php");
 $pid = $_GET["id"];
 
 ?>
