@@ -118,8 +118,8 @@ if (isset($_POST['adauga_anunt']))
 
   if (count($errors) == 0) 
   {
-    $email =  mysqli_real_escape_string($db, $_SESSION['nume_sesiune']);
-    $user_check_query = "SELECT id FROM users WHERE email='$email'";
+    //$email =  mysqli_real_escape_string($db, $_SESSION['nume_sesiune']);
+    $user_check_query = "SELECT id FROM users WHERE email='".$_SESSION['nume_sesiune']."'";
     $result = mysqli_query($db, $user_check_query);
     $row = mysqli_fetch_assoc($result);
     $user_id = $row['id'];
@@ -128,6 +128,7 @@ if (isset($_POST['adauga_anunt']))
     $query = "INSERT INTO anunturi(nume_produs, pret, descriere, cantitate, poza, user_email) 
           VALUES('$nume_produs', '$pret', '$descriere', '$cantitate', '$poza_id', '$user_id')";
     mysqli_query($db, $query);
+
     /*echo "<script type='text/javascript'>
           alert('Anunt adaugat cu succes.');
           window.location = 'index.html';
