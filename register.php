@@ -1,6 +1,6 @@
 <?php 
-include('/db/server.php');
-include('/db/getuser.php');
+include('/var/www/html/HackTheVirusWeb/db/server.php');
+include('/var/www/html/HackTheVirusWeb/db/getuser.php');
 include ("/var/db/dbconfig.php");
 
 session_start();
