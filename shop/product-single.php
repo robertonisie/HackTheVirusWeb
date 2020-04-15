@@ -124,7 +124,7 @@ $pid = $_GET["id"];
 	          		<p style="color: #000;"><?php echo "$pcantitate kg disponibile pe stoc"; ?></p>
 	          	</div>
           	</div>
-          	<p><a href="cart.html" class="btn btn-black py-3 px-5">Baga-n sac</a></p>
+          	<p> <?php echo '<a href="cart.php?produs='.$pnume_produs.'&cantitate='.$pcantitate.'&pret='.$ppret.'&desc='.$pdescriere.'" class="btn btn-black py-3 px-5">Baga-n sac</a>'; ?> </p>
     			</div>
     		</div>
     	</div>

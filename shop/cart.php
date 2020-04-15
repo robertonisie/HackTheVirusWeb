@@ -1,3 +1,9 @@
+<?php
+include ("/var/db/dbconfig.php");
+$pid = $_GET["id"];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
