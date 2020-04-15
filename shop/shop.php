@@ -119,7 +119,7 @@ if (isset($_POST['search_user']))
                     $ok = 0;
                     while($index)
                     {
-                            $query = "SELECT * FROM anunturi WHERE nume_produs='$available_users[$index]'";
+                            $query = "SELECT * FROM anunturi WHERE id='$available_users[$index]'";
                             $result=mysqli_query($db, $query);
                             $ok = 1;
                            
