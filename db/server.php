@@ -125,8 +125,7 @@ if (isset($_POST['adauga_anunt']))
     $user_id = $row['id'];
   
 
-    $query = "INSERT INTO anunturi(nume_produs, pret, descriere, cantitate, poza, user_email) 
-          VALUES('$nume_produs', '$pret', '$descriere', '$cantitate', '$poza_id', '$user_id')";
+    $query = "INSERT INTO anunturi(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$nume_produs', '$pret', '$descriere', '$cantitate', '$poza_id', '$user_id')";
     mysqli_query($db, $query);
 
     /*echo "<script type='text/javascript'>
