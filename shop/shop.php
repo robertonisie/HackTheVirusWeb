@@ -31,7 +31,7 @@ if (isset($_POST['search_user']))
     $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
     foreach($user AS $row)
     {
-        $available_users[$index]=$row['nume_produs'];
+        $available_users[$index]=$row['id'];
         $index++;
     }
   }
