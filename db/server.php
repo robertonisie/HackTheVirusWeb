@@ -112,13 +112,13 @@ if (isset($_POST['adauga_anunt']))
   
 
   if (file_exists("uploads/" . $newfilename))
-          array_push($errors, "Image name already exists");
+      array_push($errors, "Image name already exists");
 
-  if (in_array($file_ext,$allowed_file_types)
+  if (in_array($file_ext,$allowed_file_types))
       array_push($errors, "Image extension invalid");
 
   if (empty($file_basename))
-    array_push($errors, "Please select an image");
+      array_push($errors, "Please select an image");
 
     if (count($errors) == 0) 
     {      
