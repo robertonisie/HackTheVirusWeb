@@ -25,6 +25,7 @@ while( $row = mysqli_fetch_array($result) )
 {
     //echo $row['id'];
     echo $row['name'];
+    echo 'test';
 
     $oras_arr[] = array('id' => $row['id'], 
     	'name' => $row['name']
