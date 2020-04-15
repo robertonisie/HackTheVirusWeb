@@ -120,7 +120,7 @@ if (isset($_POST['search_user']))
                     while($index)
                     {
                             $query = "SELECT * FROM anunturi WHERE nume_produs='$available_users[$index]'";
-                            $result=mysqli_query($db,$query);
+                            $result=mysqli_query($db, $query);
                             $ok = 1;
                            
 
