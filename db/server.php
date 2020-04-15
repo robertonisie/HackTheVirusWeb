@@ -101,35 +101,38 @@ if (isset($_POST['adauga_anunt']))
   if (empty($descriere)) { array_push($errors, "Descrieti anuntul"); }
   if (empty($cantitate)) { array_push($errors, "Specificati cantitatea"); }
 
-  $poza = $_FILES['image']['name'];
+  $filename = $_FILES["file"]["name"];
+  $file_basename = substr($filename, 0, strripos($filename, '.')); // get file extention
+  $file_ext = substr($filename, strripos($filename, '.')); // get file name
+  $filesize = $_FILES["file"]["size"];
+  $allowed_file_types = array('.png','.jpg','.jpeg','.pdf');
 
     //$target = "uploads/";.basename($poza);
+  $newfilename = md5($file_basename) . $file_ext;
+  
 
-    $sql = "INSERT INTO image_upload(image) VALUES ('$poza')";
-    mysqli_query($db, $sql);
+  if (file_exists("uploads/" . $newfilename))
+          array_push($errors, "Image name already exists");
 
-    if (file_exists("uploads/" . $_FILES["image"]["name"]))
-            array_push($errors, "Image name already exists");
+  if (in_array($file_ext,$allowed_file_types)
+      array_push($errors, "Image extension invalid");
+
+  if (empty($file_basename))
+    array_push($errors, "Please select an image");
 
     if (count($errors) == 0) 
-    {
-      $temp = explode(".", $_FILES["image"]["name"]);
-      $newfilename = round(microtime(true)) . '.' . end($temp);        
-      if (move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/" . $newfilename)) 
+    {      
+      if (move_uploaded_file($_FILES["file"]["tmp_name"], "uploads/" . $newfilename)) 
       {
-        //$msg = "Image uploaded successfully";
+        $sql = "INSERT INTO image_upload(image) VALUES ('$poza')";
+        mysqli_query($db, $sql);
+
         $sql = "SELECT * FROM image_upload WHERE image='$poza'";
         $result = mysqli_query($db, $sql);
         $row = mysqli_fetch_assoc($result);
         $poza_id = $row['id'];
       }
 
-      else
-        array_push($errors, "Eroare poza");
-    }
-
-  if (count($errors) == 0) 
-  {
     //$email =  mysqli_real_escape_string($db, $_SESSION['nume_sesiune']);
     $user_check_query = "SELECT * FROM users WHERE email='".$_SESSION['nume_sesiune']."'";
     $result = mysqli_query($db, $user_check_query);
