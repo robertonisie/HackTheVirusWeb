@@ -93,7 +93,7 @@ $pid = $_GET["id"];
             $pdescriere = $row['descriere'];
             ?>
 				<p><?php echo $pnume_produs ?></p>
-				<p> <?php echo ''.$poras.' , '.$pjudet.'';?> </p>
+				<p> <?php echo $poras ',' $pjudet;?> </p>
     				<h3>Bell Pepper</h3>
     			
     				<p class="price"><span>$120.00</span></p>
