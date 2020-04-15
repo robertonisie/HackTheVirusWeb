@@ -121,7 +121,8 @@ if (isset($_POST['adauga_anunt']))
     $email =  mysqli_real_escape_string($db, $_SESSION['nume_sesiune']);
     $user_check_query = "SELECT id FROM users WHERE email='$email'";
     $result = mysqli_query($db, $user_check_query);
-    $user_id = mysqli_fetch_assoc($result);
+    $row = mysqli_fetch_assoc($result);\
+    $user_id = $row['id'];
   
 
     $query = "INSERT INTO anunturi(nume_produs, pret, descriere, cantitate, poza, user_email) 
