@@ -1,6 +1,7 @@
  <?php
 session_start();
 include ("/var/db/dbconfig.php");
+include('errors.php');
 
 $username = "";
 $email    = "";
