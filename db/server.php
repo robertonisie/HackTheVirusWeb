@@ -101,7 +101,7 @@ if (isset($_POST['adauga_anunt']))
     $target = "uploads/".basename($poza);
 
     $sql = "INSERT INTO image_upload(image) VALUES ('$poza')";
-    mysqli_query($db, $id_oras);
+    mysqli_query($db, $sql);
 
     if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) 
     {
@@ -121,7 +121,7 @@ echo $poza_id;
   if (count($errors) == 0) 
   {
     $email = $_SESSION['nume_sesiune'];
-    $user_check_query = "SELECT id FROM users WHERE email='$email'";
+    $user_check_query = "SELECT id FROM users WHERE email='.$_SESSION['nume_sesiune'].'";
     $result = mysqli_query($db, $user_check_query);
     $user_id = mysqli_fetch_assoc($result);
     echo $user_id;
