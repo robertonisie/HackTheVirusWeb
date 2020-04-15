@@ -39,10 +39,13 @@ if(isset($_SESSION['nume_sesiune']))
                         $("#sel_oras").empty();
                         for( var i = 0; i<len; i++)
                         {
-                            
-                        }
+                        	if (response.oras_id == 'Arad') {
+            				alert('captcha');}
+                            var id = response[i]['oras_id'];
+                            var name = response[i]['oras_name'];
 
-                        $("#sel_oras").append("<option value='"+response[1]['oras_id']+"'>"+response[1]['oras_name']+"</option>");
+                            $("#sel_oras").append("<option value='"+id+"'>"+name+"</option>");
+                        }
                     }
                 });
             });
