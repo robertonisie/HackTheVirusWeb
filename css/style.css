@@ -254,14 +254,14 @@ h3 {
 .bradcam_overlay::before {
   position: absolute;
   content: "";
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5db2ff+0,7db9e8+100&1+24,0+96 */
-  background: -moz-linear-gradient(left, #5db2ff 0%, #65b4f9 24%, rgba(124, 185, 233, 0) 96%, rgba(125, 185, 232, 0) 100%);
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000+0,7db9e8+100&1+24,0+96 */
+  background: -moz-linear-gradient(left, #000 0%, #65b4f9 24%, rgba(124, 185, 233, 0) 96%, rgba(125, 185, 232, 0) 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #5db2ff 0%, #65b4f9 24%, rgba(124, 185, 233, 0) 96%, rgba(125, 185, 232, 0) 100%);
+  background: -webkit-linear-gradient(left, #000 0%, #65b4f9 24%, rgba(124, 185, 233, 0) 96%, rgba(125, 185, 232, 0) 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #5db2ff 0%, #65b4f9 24%, rgba(124, 185, 233, 0) 96%, rgba(125, 185, 232, 0) 100%);
+  background: linear-gradient(to right, #000 0%, #65b4f9 24%, rgba(124, 185, 233, 0) 96%, rgba(125, 185, 232, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5db2ff', endColorstr='#007db9e8',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000', endColorstr='#007db9e8',GradientType=1 );
   /* IE6-9 */
   top: 0;
   left: 0;
@@ -337,7 +337,7 @@ h3 {
 /* line 274, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/theme-default.scss */
 .owl-carousel:hover .owl-nav div:hover {
   color: #fff;
-  background: #5DB2FF;
+  background: #000;
   border: 1px solid transparent;
 }
 
@@ -376,19 +376,19 @@ h3 {
   font-size: 14px;
   font-weight: 400;
   border: 0;
-  border: 1px solid #5DB2FF;
+  border: 1px solid #000;
   letter-spacing: 3px;
   text-align: center;
-  color: #5DB2FF !important;
+  color: #000 !important;
   text-transform: uppercase;
   cursor: pointer;
 }
 
 /* line 17, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_btn.scss */
 .boxed-btn:hover {
-  background: #5DB2FF;
+  background: #000;
   color: #fff !important;
-  border: 1px solid #5DB2FF;
+  border: 1px solid #000;
 }
 
 /* line 22, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_btn.scss */
@@ -403,14 +403,7 @@ h3 {
 
 /* line 29, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_btn.scss */
 .boxed-btn3 {
-  background: -moz-linear-gradient(top, #0181f5 0%, rgba(93, 178, 255, 0.99) 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #0181f5 0%, rgba(93, 178, 255, 0.99) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #0181f5 0%, rgba(93, 178, 255, 0.99) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0181f5', endColorstr='#fc5db2ff',GradientType=0 );
-  /* IE6-9 */
+  background: rgb(0,0,0);
   color: #fff;
   display: inline-block;
   padding: 19px 41px;
@@ -433,16 +426,7 @@ h3 {
 
 /* line 52, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_btn.scss */
 .boxed-btn3:hover {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0181f5+0,5db2ff+100&0.96+0,0.96+100 */
-  background: -moz-linear-gradient(right, rgba(1, 129, 245, 0.96) 0%, rgba(93, 178, 255, 0.96) 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(right, rgba(1, 129, 245, 0.96) 0%, rgba(93, 178, 255, 0.96) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to left, rgba(1, 129, 245, 0.96) 0%, rgba(93, 178, 255, 0.96) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f50181f5', endColorstr='#f55db2ff',GradientType=0 );
-  /* IE6-9 */
-  color: #fff !important;
+background: rgb(0,0,0);
 }
 
 /* line 62, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_btn.scss */
@@ -503,14 +487,14 @@ h3 {
 
 /* line 103, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_btn.scss */
 .boxed-btn3-line {
-  color: #5DB2FF !important;
+  color: #000 !important;
   display: inline-block;
   padding: 14px 31px;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   font-weight: 500;
   border: 0;
-  border: 1px solid #5DB2FF;
+  border: 1px solid #000;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
@@ -526,7 +510,7 @@ h3 {
 
 /* line 119, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_btn.scss */
 .boxed-btn3-line:hover {
-  background: #5DB2FF;
+  background: #000;
   color: #fff !important;
   border: 1px solid transparent;
 }
@@ -707,12 +691,12 @@ h3 {
 /* line 28, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav a:hover {
   background: transparent;
-  color: #5DB2FF;
+  color: #626e60;
 }
 
 /* line 32, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav a.active {
-  color: #5DB2FF;
+  color: #626e60;
 }
 
 @media (max-width: 767px) {
@@ -948,17 +932,8 @@ h3 {
 
 /* line 113, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_header.scss */
 .header-area .main-header-area .Appointment .book_btn a {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0181f5+0,5db2ff+100 */
-  background: #0181f5;
-  /* Old browsers */
-  background: -moz-linear-gradient(left, #0181f5 0%, #5db2ff 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #0181f5 0%, #5db2ff 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #0181f5 0%, #5db2ff 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0181f5', endColorstr='#5db2ff',GradientType=1 );
-  /* IE6-9 */
+ /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#73880a+0,73880a+100;Olive+Flat */
+  background: rgb(0,0,0);
   padding: 13px 26px;
   font-size: 14px;
   font-weight: 400;
@@ -978,17 +953,9 @@ h3 {
 
 /* line 130, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_header.scss */
 .header-area .main-header-area .Appointment .book_btn a:hover {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0181f5+0,5db2ff+100&0.96+0,0.96+100 */
-  background: -moz-linear-gradient(right, rgba(1, 129, 245, 0.96) 0%, rgba(93, 178, 255, 0.96) 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(right, rgba(1, 129, 245, 0.96) 0%, rgba(93, 178, 255, 0.96) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to left, rgba(1, 129, 245, 0.96) 0%, rgba(93, 178, 255, 0.96) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f50181f5', endColorstr='#f55db2ff',GradientType=0 );
-  /* IE6-9 */
+  background: rgb(0,0,0);
   color: #fff;
-  border: 1px solid #5DB2FF;
+  border: 1px solid #000;
 }
 
 /* line 142, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_header.scss */
@@ -1054,7 +1021,7 @@ h3 {
 .header-area .main-header-area .main-menu ul li a::before {
   position: absolute;
   content: "";
-  background: #5DB2FF;
+  background: #000;
   width: 100%;
   height: 3px;
   bottom: -33px;
@@ -1185,7 +1152,7 @@ h3 {
 .header-area .main-header-area.sticky ul li a::before {
   position: absolute;
   content: "";
-  background: #5DB2FF;
+  background: #000;
   width: 100%;
   height: 3px;
   bottom: -27px;
@@ -1220,7 +1187,7 @@ h3 {
 
 /* line 323, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_header.scss */
 .header-area  a:hover {
-  color: #5DB2FF;
+  color: #000;
 }
 
 /* line 329, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_header.scss */
@@ -1265,7 +1232,7 @@ h3 {
 
 /* line 353, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_header.scss */
 .header-area  .short_contact_list ul li a i {
-  color: #5DB2FF;
+  color: #000;
   margin-right: 7px;
 }
 
@@ -1466,13 +1433,13 @@ h3 {
 .counter_area .single_counter h3 span {
   font-size: 46px;
   font-weight: 300;
-  color: #fff;
+  color: #000000;
 }
 
 /* line 20, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_counter.scss */
 .counter_area .single_counter p {
-  font-weight: 15px;
-  color: #E8E8E8;
+  font-weight:bold;
+  color: #000000;
   margin-bottom: 0;
 }
 
@@ -1509,8 +1476,8 @@ h3 {
 
 /* line 119, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_counter.scss */
 .portfolio-menu button.active {
-  border: 1px solid #5DB2FF;
-  color: #5DB2FF;
+  border: 1px solid #626e60;
+  color: #626e60;
 }
 
 /* line 123, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_counter.scss */
@@ -1581,7 +1548,7 @@ h3 {
 
 /* line 46, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_team.scss */
  .border_bottom li a:hover {
-  color: #5DB2FF;
+  color: #000;
 }
 
 /* line 55, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_team.scss */
@@ -2833,7 +2800,7 @@ h3 {
 
 /* line 49, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget p a:hover {
-  color: #5DB2FF;
+  color: #000;
 }
 
 /* line 55, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_footer.scss */
@@ -2853,8 +2820,8 @@ h3 {
 
 /* line 64, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget p.footer_text a.domain:hover {
-  color: #5DB2FF;
-  border-bottom: 1px solid #5DB2FF;
+  color: #000;
+  border-bottom: 1px solid #000;
 }
 
 /* line 70, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_footer.scss */
@@ -2865,8 +2832,8 @@ h3 {
 
 /* line 74, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget p.footer_text.doanar a:hover {
-  color: #5DB2FF;
-  border-bottom: 1px solid #5DB2FF;
+  color: #000;
+  border-bottom: 1px solid #000;
 }
 
 /* line 78, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_footer.scss */
@@ -2889,7 +2856,7 @@ h3 {
 
 /* line 93, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget ul li a:hover {
-  color: #5DB2FF;
+  color: #000;
 }
 
 /* line 99, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_footer.scss */
@@ -2926,7 +2893,7 @@ h3 {
   border: none;
   font-size: 14px;
   color: #fff;
-  background: #5DB2FF;
+  background: #000;
   padding: 10px;
   padding: 0 22px;
   cursor: pointer;
@@ -2973,7 +2940,7 @@ h3 {
 
 /* line 158, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_footer.scss */
 .footer .copy-right_text .copy_right a {
-  color: #5DB2FF;
+  color: #000;
 }
 
 /* line 163, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_footer.scss */
@@ -3016,7 +2983,7 @@ h3 {
 /* line 187, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_footer.scss */
 .footer .socail_links ul li a:hover {
   color: #fff !important;
-  background: #5DB2FF;
+  background: #000;
   border-color: transparent;
 }
 
@@ -3334,7 +3301,7 @@ h3 {
 
 /* line 28, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_department.scss */
 .our_department_area .single_department .department_content h3 a:hover {
-  color: #5DB2FF;
+  color: #000;
 }
 
 /* line 33, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_department.scss */
@@ -3348,7 +3315,7 @@ h3 {
 
 /* line 40, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_department.scss */
 .our_department_area .single_department .department_content a.learn_more {
-  color: #5DB2FF;
+  color: #000;
   font-size: 16px;
 }
 
@@ -3439,17 +3406,17 @@ h3 {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0181f5+0,5db2ff+100 */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0181f5+0,000+100 */
   background: #F0F8FF;/*#0181f5;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #0181f5 0%, #5db2ff 100%);
+  background: -moz-linear-gradient(top, #0181f5 0%, #000 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #0181f5 0%, #5db2ff 100%);
+  background: -webkit-linear-gradient(top, #0181f5 0%, #000 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #F0F8FF 0%, #5db2ff 100%);
+  background: linear-gradient(to bottom, #F0F8FF 0%, #000 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0181f5', endColorstr='#5db2ff',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0181f5', endColorstr='#000',GradientType=0 );
   /* IE6-9 */
 }
 
@@ -3473,7 +3440,7 @@ h3 {
 
 /* line 41, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_service.scss */
 .service_area .single_service a.learn_more {
-  color: #5DB2FF;
+  color: #000;
   font-weight: 400;
   font-size: 15px;
 }
@@ -3639,7 +3606,7 @@ h3 {
 
 /* line 55, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_experts.scss */
 .expert_doctors_area .single_expert:hover .experts_name {
-  background: #5DB2FF;
+  background: #000;
 }
 
 /* line 57, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_experts.scss */
@@ -5248,7 +5215,7 @@ h6 {
 
 /* line 14, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_blog.scss */
 .blog_area a:hover, .blog_area a :hover {
-  background: -webkit-linear-gradient(131deg, #5DB2FF 0%, #5DB2FF 99%);
+  background: -webkit-linear-gradient(131deg, #000 0%, #000 99%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: none;
@@ -5759,7 +5726,7 @@ h6 {
 
 /* line 544, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_blog.scss */
 .blog_details a:hover {
-  color: #5DB2FF;
+  color: #000;
 }
 
 /* line 549, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_blog.scss */
@@ -5827,7 +5794,7 @@ h6 {
   left: 10px;
   display: block;
   color: #fff;
-  background-color: #5DB2FF;
+  background-color: #000;
   padding: 8px 15px;
   border-radius: 5px;
 }
@@ -6055,7 +6022,7 @@ h6 {
 
 /* line 842, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_blog.scss */
 .blog_right_sidebar .tag_cloud_widget ul li a:hover {
-  background: #5DB2FF;
+  background: #000;
   color: #fff !important;
   -webkit-text-fill-color: #fff;
   text-decoration: none;
@@ -6303,7 +6270,7 @@ h6 {
 
 /* line 1208, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_blog.scss */
 .single-post-area .blog-author a:hover {
-  color: #5DB2FF;
+  color: #000;
 }
 
 /* line 1213, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_blog.scss */
@@ -6732,7 +6699,7 @@ h6 {
 
 /* line 72, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_blog_part.scss */
 .blog_part .single-home-blog .card .card-body a {
-  color: #5DB2FF;
+  color: #000;
   text-transform: uppercase;
   -webkit-transition: 0.8s;
   transition: 0.8s;
@@ -6759,7 +6726,7 @@ h6 {
   height: 10px;
   top: 5px;
   left: 0;
-  background-color: #5DB2FF;
+  background-color: #000;
   border-radius: 50%;
 }
 
