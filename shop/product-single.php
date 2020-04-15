@@ -171,18 +171,12 @@ $pid = $_GET["id"];
 		var quantitiy=0;
 		   $('.quantity-right-plus').click(function(e){
 		        
-		        // Stop acting like a button
+		        var cantitate_max = "<?php echo $pcantitate ?>";
 		        e.preventDefault();
-		        // Get the field name
 		        var quantity = parseInt($('#quantity').val());
 		        
-		        // If is not undefined
-		            
-		            $('#quantity').val(quantity + 1);
-
-		          
-		            // Increment
-		        
+		            if(quantity < cantitate_max)
+		               $('#quantity').val(quantity + 1);   
 		    });
 
 		     $('.quantity-left-minus').click(function(e){
