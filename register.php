@@ -34,13 +34,15 @@ if(isset($_SESSION['nume_sesiune']))
                     dataType: 'json',
                     success:function(response)
                     {
-                        //var len = response.length;
+                        var len = response.length;
 
                         $("#sel_oras").empty();
-                        for( var i = 0; i<10; i++)
+                        for( var i = 0; i<len; i++)
                         {
-                            $("#sel_oras").append("<option value='"+response[i]['oras_id']+"'>"+response[i]['oras_name']+"</option>");
+                            
                         }
+
+                        $("#sel_oras").append("<option value='"+response[1]['oras_id']+"'>"+response[1]['oras_name']+"</option>");
                     }
                 });
             });
