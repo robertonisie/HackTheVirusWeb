@@ -9,7 +9,7 @@ if(isset($_SESSION['nume_sesiune']))
  die("Already logged in"); 
 }      
 ?>
-
+ 
 <!DOCTYPE html>
 <html lang="ro">
 <head>
