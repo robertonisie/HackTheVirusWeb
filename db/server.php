@@ -70,15 +70,20 @@ if (isset($_POST['login_user']))
   if (count($errors) == 0) 
   {
     $password_h = password_hash($password, PASSWORD_DEFAULT);
-    $query = "SELECT * FROM users WHERE email ='$email' AND password ='$password_h'";
-    $results = mysqli_query($db, $query);
 
-    if (mysqli_num_rows($results) == 1) 
+    if (password_verify($password, $password_h)) 
     {
-      $_SESSION['nume_sesiune'] = $email;
-      $_SESSION['success'] = "You are now logged in";
-      header('location: index.html');
+      $query = "SELECT * FROM users WHERE email ='$email'";
+      $results = mysqli_query($db, $query);
+
+      if (mysqli_num_rows($results) == 1) 
+      {
+        $_SESSION['nume_sesiune'] = $email;
+        $_SESSION['success'] = "You are now logged in";
+        header('location: index.html');
+      }
     }
+
     else 
       array_push($errors, "Wrong email/password combination");
   }
