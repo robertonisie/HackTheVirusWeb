@@ -111,15 +111,15 @@ if (isset($_POST['adauga_anunt']))
       $row = mysqli_fetch_assoc($result);
       $poza_id = $row['id'];
     }
-      else
-      {
-      $msg = "Failed to upload image";
-    }
+
+    else
+      array_push($errors, "Eroare poza");
 
 
   if (count($errors) == 0) 
   {
-    $user_check_query = "SELECT id FROM users WHERE 'email'='".$_SESSION['nume_sesiune']."'";
+    $email =  mysql_real_escape_string($_SESSION['nume_sesiune']);
+    $user_check_query = "SELECT id FROM users WHERE 'email'='$email'";
     $result = mysqli_query($db, $user_check_query);
     $user_id = mysqli_fetch_assoc($result);
   
