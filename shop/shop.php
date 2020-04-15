@@ -12,6 +12,7 @@ $index=1;
 
 if (isset($_POST['search_user']))
 {
+    /*
   $nume_produs = mysqli_real_escape_string($db, $_POST['nume_produs']);
   $pret = mysqli_real_escape_string($db, $_POST['pret']);
   $descriere = mysqli_real_escape_string($db, $_POST['descriere']);
@@ -20,7 +21,7 @@ if (isset($_POST['search_user']))
   if (empty($nume_produs)) { array_push($errors, "Specificati un nume_produs"); }
   if (empty($pret)) { array_push($errors, "Specificati de cand"); }
   if (empty($descriere)) { array_push($errors, "Specificati pana cand"); }
-  if (empty($cantitate)) { array_push($errors, "Specificati talia animalului"); }
+  if (empty($cantitate)) { array_push($errors, "Specificati talia animalului"); } */
   
 
   $user_check_query = "SELECT * FROM anunturi";
