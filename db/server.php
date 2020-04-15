@@ -8,8 +8,8 @@ $errors = array();
 
 if (isset($_POST['reg_user'])) 
 {
-  $nume = mysqli_real_escape_string($db, $_POST['name']);
-  $prenume = mysqli_real_escape_string($db, $_POST['prename']);
+  $nume = mysqli_real_escape_string($db, $_POST['nume']);
+  $prenume = mysqli_real_escape_string($db, $_POST['prenume']);
 
   $email = mysqli_real_escape_string($db, $_POST['email']);
   $email = filter_var($email, FILTER_SANITIZE_EMAIL);
