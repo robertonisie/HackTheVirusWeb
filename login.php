@@ -13,7 +13,8 @@ if(isset($_SESSION['nume_sesiune']))
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login</title>
+<title>Logare</title>
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
 <link href="css/login.css" rel="stylesheet" type="text/css" media="all"/>
 </head>
