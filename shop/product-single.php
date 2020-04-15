@@ -83,7 +83,7 @@ $pid = $_GET["id"];
             $ppret = $row["pret"];
             $pcantitate = $row["cantitate"];
             $pdescriere = $row['descriere'];
-            $pcantitate_aleasa = "<script>document.write(quantity)</script>"
+            $pcantitate_aleasa = "<script>document.write(quantity)</script>";
 
             ?>
     <section class="ftco-section">
@@ -178,7 +178,8 @@ $pid = $_GET["id"];
 		        var quantity = parseInt($('#quantity').val());
 		        
 		            if(quantity < cantitate_max)
-		               $('#quantity').val(quantity + 1);   
+		               $('#quantity').val(quantity + 1);
+
 		    });
 
 		     $('.quantity-left-minus').click(function(e){
