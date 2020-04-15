@@ -16,7 +16,6 @@ while( $row = mysqli_fetch_array($result) ){
     $oras_arr[] = array("id" => $orasid, "name" => $oras_name);
 }
 
-// encoding array to json format
 echo json_encode($oras_arr);
 
 ?>

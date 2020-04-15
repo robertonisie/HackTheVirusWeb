@@ -12,7 +12,7 @@ if(isset($_SESSION['nume_sesiune']))
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="ro">
 <head>
 <title>Register</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +31,7 @@ if(isset($_SESSION['nume_sesiune']))
                 $.ajax({
                     url: 'getoras.php',
                     type: 'post',
-                    data: {depart:deptid},
+                    data: {judet:judetid},
                     dataType: 'json',
                     success:function(response){
 
@@ -62,10 +62,10 @@ if(isset($_SESSION['nume_sesiune']))
 					<input class="text" type="password" name="password" placeholder="Password" required="">
 					<input class="text" type="text" name="nume" placeholder="Nume" required="">
 					<input class="text" type="text" name="prenume" placeholder="Prenume" required="">
-					//<input class="text" type="text" name="judet" placeholder="Judet" required="">
-					//<input class="text" type="text" name="localitate" placeholder="Localitate" required="">
+					<!--<input class="text" type="text" name="judet" placeholder="Judet" required="">
+					<input class="text" type="text" name="localitate" placeholder="Localitate" required="">-->
 
-					<div>Departments </div>
+					<div>Judet</div>
 					<select id="sel_judet">
 					   <option value="0">- Select -</option>
 					   <?php 
