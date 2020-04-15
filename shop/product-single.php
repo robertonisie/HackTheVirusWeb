@@ -83,6 +83,8 @@ $pid = $_GET["id"];
             $ppret = $row["pret"];
             $pcantitate = $row["cantitate"];
             $pdescriere = $row['descriere'];
+            $pcantitate_aleasa = "<script>document.write(quantity)</script>"
+
             ?>
     <section class="ftco-section">
     	<div class="container">
@@ -124,7 +126,7 @@ $pid = $_GET["id"];
 	          		<p style="color: #000;"><?php echo "$pcantitate kg disponibile pe stoc"; ?></p>
 	          	</div>
           	</div>
-          	<p> <?php echo '<a href="cart.php?produs='.$pnume_produs.'&cantitate='.$pcantitate.'&pret='.$ppret.'&desc='.$pdescriere.'" class="btn btn-black py-3 px-5">Baga-n sac</a>'; ?> </p>
+          	<p> <?php echo '<a href="cart.php?produs='.$pnume_produs.'&cantitate='.$pcantitate_aleasa.'&pret='.$ppret.'&desc='.$pdescriere.'" class="btn btn-black py-3 px-5">Baga-n sac</a>'; ?> </p>
     			</div>
     		</div>
     	</div>
