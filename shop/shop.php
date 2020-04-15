@@ -111,22 +111,22 @@ if (isset($_POST['search_user']))
     		<div class="row">
                 <?php
                     $index--;
-                    echo '<section class="single_product_list">
+                    /*echo '<section class="single_product_list">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12">';
-
+                    */
                     $ok = 0;
                     while($index)
                     {
-                            $query = "SELECT users.*,anunturi.* FROM users,anunturi WHERE nume_produs='$available_users[$index]'";
+                            $query = "SELECT * FROM anunturi WHERE nume_produs='$available_users[$index]'";
                             $result=mysqli_query($db,$query);
                             $ok = 1;
                            
 
                           if ($result) {
                               while ($row = $result->fetch_assoc()) {
-                                  $pname = $row["nume_prdus"];
+                                  $pname = $row["nume_produs"];
                                   $ppret = $row["pret"];
                                   $pcantitate = $row["cantitate"];
                                   $pdescriere = $row['descriere'];
