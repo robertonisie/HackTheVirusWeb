@@ -117,8 +117,9 @@ if (isset($_POST['search_user']))
                                     <div class="col-lg-12">';
 
                     $ok = 0;
-                    while($index){
-                            $query = "SELECT users.*,animal.* FROM users,animal WHERE username='$available_users[$index]'";
+                    while($index)
+                    {
+                            $query = "SELECT users.*,anunturi.* FROM users,animal WHERE nume_produs='$available_users[$index]'";
                             $result=mysqli_query($db,$query);
                             $ok = 1;
                            
