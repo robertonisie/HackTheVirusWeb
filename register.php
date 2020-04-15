@@ -47,10 +47,10 @@ if(isset($_SESSION['nume_sesiune']))
                         }
                     },
 
-                    error: function() {
-                		console.log('Error');
-                		alert('Error');
-            		}
+                    error: function(xhr, status, error) {
+  var err = eval("(" + xhr.responseText + ")");
+  alert(err.Message);
+}
                 });
             });
 
