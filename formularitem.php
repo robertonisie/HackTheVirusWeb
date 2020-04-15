@@ -20,8 +20,6 @@ include('/var/www/html/HackTheVirusWeb/db/server.php');
   	<div>
   	  <input type="file" name="image">
   	</div></p>
-  </form>
-  <form action="shop/shop.php" method="post">
 	<p><button type="submit" class="registerbtn" name="adauga_anunt">Vinde</button></p>
 </form> 
 </body>

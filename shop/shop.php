@@ -136,12 +136,12 @@ if (isset($_POST['search_user']))
                                          echo '
                                          <div class="col-md-6 col-lg-3 ftco-animate">
                                             <div class="product">
-                                                <a href="#" class="img-prod"><img class="img-fluid" src="../uploads/'.$ppoza.'" alt="Colorlib Template">
+                                                <a href="product-single.php" class="img-prod"><img class="img-fluid" src="../uploads/'.$ppoza.'" alt="Colorlib Template">
                                                     <span class="status">30%</span>
                                                     <div class="overlay"></div>
                                                 </a>
                                                 <div class="text py-3 pb-4 px-3 text-center">
-                                                    <h3><a href="#">'.$pname.'</a></h3>
+                                                    <h3><a href="product-single.php">'.$pname.'</a></h3>
                                                     <div class="d-flex">
                                                         <div class="pricing">
                                                             <p class="price"><span class="mr-2 price">'.$ppret.'</span></p>
@@ -149,9 +149,6 @@ if (isset($_POST['search_user']))
                                                     </div>
                                                     <div class="bottom-area d-flex px-3">
                                                         <div class="m-auto d-flex">
-                                                            <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                                                <span><i class="ion-ios-menu"></i></span>
-                                                            </a>
                                                             <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
                                                                 <span><i class="ion-ios-cart"></i></span>
                                                             </a>
@@ -174,7 +171,7 @@ if (isset($_POST['search_user']))
                     if(!$ok)
                     {
                       ?><script type="text/javascript">
-                              window.location='index.html';
+                              window.location='../index.html';
                               alert("Nu s-a gasit anunt.");
 
                               </script><?php

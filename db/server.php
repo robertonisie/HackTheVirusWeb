@@ -133,10 +133,10 @@ if (isset($_POST['adauga_anunt']))
     $query = "INSERT INTO anunturi(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$nume_produs', '$pret', '$descriere', '$cantitate', '$poza_id', '$user_id')";
     mysqli_query($db, $query);
 
-    /*echo "<script type='text/javascript'>
+    echo "<script type='text/javascript'>
           alert('Anunt adaugat cu succes.');
           window.location = 'index.html';
-          </script>";*/
+          </script>";
   }
 }
 
