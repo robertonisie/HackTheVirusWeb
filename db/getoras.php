@@ -6,7 +6,7 @@ $judet_num =$_POST['judet'];
 
 $id_oras = "SELECT id from judete where name = ".$$judet_num."'";
 $result = mysqli_query($db, $id_oras);
-$row = mysqli_fetch_array($result)
+$row = mysqli_fetch_array($result);
 
 echo $row;
 $sql = "SELECT id, name FROM orase WHERE county_id='".$judetid."'";
