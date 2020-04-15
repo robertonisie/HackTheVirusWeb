@@ -108,7 +108,7 @@ if (isset($_POST['adauga_anunt']))
     $sql = "INSERT INTO image_upload(image) VALUES ('$poza')";
     mysqli_query($db, $sql);
 
-    if (file_exists("uploads/" . $_FILES["file"]["name"])) {
+    if (file_exists("uploads/" . $_FILES["file"]["name"]))
             array_push($errors, "Image name already exists");
 
     if (count($errors) == 0) 
