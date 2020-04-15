@@ -56,15 +56,7 @@ $pid = $_GET["id"];
         </div>
       </div>
     </div>
-
-    <section class="ftco-section">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-lg-6 mb-5 ftco-animate">
-    				<a href="images/product-1.jpg" class="image-popup"><img src="images/product-1.jpg" class="img-fluid" alt="Colorlib Template"></a>
-    			</div>
-    			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
-            <?php 
+        <?php 
             $query = "SELECT * FROM anunturi WHERE id='$pid'";
             $result=mysqli_query($db, $query);
             $row = mysqli_fetch_assoc($result);
@@ -92,6 +84,15 @@ $pid = $_GET["id"];
             $pcantitate = $row["cantitate"];
             $pdescriere = $row['descriere'];
             ?>
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-lg-6 mb-5 ftco-animate">
+            <?php echo '
+    				<a href="images/product-1.jpg" class="image-popup"><img src="../uploads/'.$ppoza.'" class="img-fluid" alt="Colorlib Template"></a>'; ?>
+    			</div>
+    			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
+            
 				<p><?php echo $pnume_afacere ?></p>
 				<p> <?php echo "$poras , $pjudet"; ?> </p>
     				<h3><?php echo $pnume_produs ?></h3>
