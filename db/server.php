@@ -49,7 +49,7 @@ if (isset($_POST['reg_user']))
     //$password_h = password_hash($password_1, PASSWORD_DEFAULT);
     $query = "INSERT INTO users(email, password, nume, prenume, judet, oras, adresa, nume_afacere) VALUES('$email', '$password_1', '$nume', '$prenume', '$judet', '$oras', '$adresa', '$nume_afacere')";
     mysqli_query($db, $query);
-    $_SESSION['nume_sesiune'] = $nume;
+    $_SESSION['nume_sesiune'] = $email;
     $_SESSION['success'] = "You are now logged in";
     header('location: index.html');
   }
@@ -73,7 +73,7 @@ if (isset($_POST['login_user']))
 
     if (mysqli_num_rows($results) == 1) 
     {
-      $_SESSION['nume_sesiune'] = $nume;
+      $_SESSION['nume_sesiune'] = $email;
       $_SESSION['success'] = "You are now logged in";
       header('location: index.html');
     }
@@ -82,37 +82,52 @@ if (isset($_POST['login_user']))
   }
 }
 
-
 if (isset($_POST['adauga_anunt'])) 
 {
-  $oras = mysqli_real_escape_string($db, $_POST['oras']);
-  $de_cand = mysqli_real_escape_string($db, $_POST['de_cand']);
+  $nume_produs = mysqli_real_escape_string($db, $_POST['nume_produs']);
+  $pret = mysqli_real_escape_string($db, $_POST['pret']);
   $descriere = mysqli_real_escape_string($db, $_POST['descriere']);
-  $pana_cand = mysqli_real_escape_string($db, $_POST['pana_cand']);
-  $talie = mysqli_real_escape_string($db, $_POST['talie']);
+  $cantitate = mysqli_real_escape_string($db, $_POST['cantitate']);
 
-
-  $username=$_SESSION['username'];
-
-  if (empty($oras)) { array_push($errors, "Specificati un oras"); }
-  if (empty($de_cand)) { array_push($errors, "Specificati de cand"); }
+  if (empty($nume_produs)) { array_push($errors, "Specificati numele produsului"); }
+  if (empty($pret)) { array_push($errors, "Specificati pretul"); }
   if (empty($descriere)) { array_push($errors, "Descrieti anuntul"); }
-  if (empty($pana_cand)) { array_push($errors, "Specificati pana cand"); }
-  if (empty($talie)) { array_push($errors, "Specificati talia animalului"); }
+  if (empty($cantitate)) { array_push($errors, "Specificati cantitatea"); }
 
-  if($pana_cand<=$de_cand)
-  {
-    array_push($errors,"Perioada invalida");
+  $poza = $_FILES['image']['name'];
+
+    $target = "uploads/".basename($image);
+
+    $sql = "INSERT INTO image_upload(image) VALUES ('$image')";
+    mysqli_query($db, $id_oras);
+
+    if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) 
+    {
+      $msg = "Image uploaded successfully";
+      $sql = "SELECT id FROM image_upload WHERE image='$image'";
+      $result = mysqli_query($db, $sql);
+      $row = mysqli_fetch_assoc($result))
+      $poza_id = $row['id'];
+
+      else
+      {
+      $msg = "Failed to upload image";
+    }
   }
+
 
   if (count($errors) == 0) 
   {
-    $query = "INSERT INTO animal (oras, de_cand, pana_cand, talie, user, descriere) 
-          VALUES('$oras', '$de_cand', '$pana_cand', '$talie', '$username', '$descriere')";
+    $user_check_query = "SELECT id FROM users WHERE email='$email'";
+    $result = mysqli_query($db, $user_check_query);
+    $user_id = mysqli_fetch_assoc($result);
+
+    $query = "INSERT INTO anunturi(nume_produs, pret, descriere, cantitate, poza, user_email) 
+          VALUES('$nume_produs', '$pret', '$descriere', '$cantitate', '$poza_id', '$user_id')";
     mysqli_query($db, $query);
     echo "<script type='text/javascript'>
           alert('Anunt adaugat cu succes.');
-          window.location = '/Hackathon/index2.php';
+          window.location = 'index.html';
           </script>";
   }
 }
