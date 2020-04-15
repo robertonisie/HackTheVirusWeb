@@ -126,10 +126,17 @@ if (isset($_POST['search_user']))
 
                           if ($result) {
                               while ($row = $result->fetch_assoc()) {
-                                  $pname = $row["nume_produs"];
-                                  $ppret = $row["pret"];
-                                  $pcantitate = $row["cantitate"];
-                                  $pdescriere = $row['descriere'];
+
+                                $ppoza = $row["poza"];
+                                $sql = "SELECT * FROM image_upload WHERE id='$ppoza'";
+                                $result = mysqli_query($db, $sql);
+                                $row = mysqli_fetch_assoc($result);
+                                  
+                                $ppoza = $row['image'];
+                                $pname = $row["nume_produs"];
+                                $ppret = $row["pret"];
+                                $pcantitate = $row["cantitate"];
+                                $pdescriere = $row['descriere'];
                            
                                   /*echo '<tr> 
                                             <td>'.$field1name.'</td> 
@@ -141,7 +148,7 @@ if (isset($_POST['search_user']))
                                          echo '
                                          <div class="col-md-6 col-lg-3 ftco-animate">
                                             <div class="product">
-                                                <a href="#" class="img-prod"><img class="img-fluid" src="images/product-1.jpg" alt="Colorlib Template">
+                                                <a href="#" class="img-prod"><img class="img-fluid" src="uploads/'.$ppoza.'" alt="Colorlib Template">
                                                     <span class="status">30%</span>
                                                     <div class="overlay"></div>
                                                 </a>
@@ -190,7 +197,7 @@ if (isset($_POST['search_user']))
                     if(!$ok)
                     {
                       ?><script type="text/javascript">
-                              window.location='/shop/shop.php';
+                              window.location='index.html';
                               alert("Nu s-a gasit anunt.");
 
                               </script><?php
