@@ -36,10 +36,10 @@ if (isset($_POST['search_user']))
     }
   }
   else{
-    echo "<script type='text/javascript'>
+    /*echo "<script type='text/javascript'>
           alert('Nu s-a gasit anunt.');
           window.location = 'index.php';
-          </script>";
+          </script>";*/
   }
 
 }
