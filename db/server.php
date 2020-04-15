@@ -103,30 +103,23 @@ if (isset($_POST['adauga_anunt']))
 
   $poza = $_FILES['image']['name'];
 
-    //$target = "uploads/";.basename($poza);
+    $target = "uploads/".basename($poza);
 
     $sql = "INSERT INTO image_upload(image) VALUES ('$poza')";
     mysqli_query($db, $sql);
 
-    if (file_exists("uploads/" . $_FILES["image"]["name"]))
-            array_push($errors, "Image name already exists");
-
-    if (count($errors) == 0) 
+    if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) 
     {
-      $temp = explode(".", $_FILES["image"]["name"]);
-      $newfilename = round(microtime(true)) . '.' . end($temp);        
-      if (move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/" . $newfilename)) 
-      {
-        //$msg = "Image uploaded successfully";
-        $sql = "SELECT * FROM image_upload WHERE image='$poza'";
-        $result = mysqli_query($db, $sql);
-        $row = mysqli_fetch_assoc($result);
-        $poza_id = $row['id'];
-      }
-
-      else
-        array_push($errors, "Eroare poza");
+      $msg = "Image uploaded successfully";
+      $sql = "SELECT * FROM image_upload WHERE image='$poza'";
+      $result = mysqli_query($db, $sql);
+      $row = mysqli_fetch_assoc($result);
+      $poza_id = $row['id'];
     }
+
+    else
+      array_push($errors, "Eroare poza");
+
 
   if (count($errors) == 0) 
   {
