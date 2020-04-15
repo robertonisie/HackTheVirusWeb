@@ -115,7 +115,7 @@ if (isset($_POST['adauga_anunt']))
     {
       $temp = explode(".", $_FILES["file"]["name"]);
       $newfilename = round(microtime(true)) . '.' . end($temp);        
-      if (move_uploaded_file($_FILES["file"]["tmp_name"], "uploads/" . $newfilename);) 
+      if (move_uploaded_file($_FILES["file"]["tmp_name"], "uploads/" . $newfilename)) 
       {
         //$msg = "Image uploaded successfully";
         $sql = "SELECT * FROM image_upload WHERE image='$poza'";
