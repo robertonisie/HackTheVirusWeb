@@ -3,7 +3,7 @@ include "config.php";
 
 $departid = $_POST['depart'];   // department id
 
-$sql = "SELECT id,name FROM users WHERE department=".$departid;
+$sql = "SELECT id,name FROM orase WHERE county_id=".$departid;
 
 $result = mysqli_query($con,$sql);
 

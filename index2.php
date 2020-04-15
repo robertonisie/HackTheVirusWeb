@@ -47,11 +47,11 @@ include "config.php";
             <option value="0">- Select -</option>
             <?php 
             // Fetch Department
-            $sql_department = "SELECT * FROM department";
+            $sql_department = "SELECT * FROM judete";
             $department_data = mysqli_query($con,$sql_department);
             while($row = mysqli_fetch_assoc($department_data) ){
                 $departid = $row['id'];
-                $depart_name = $row['depart_name'];
+                $depart_name = $row['name'];
               
                 // Option
                 echo "<option value='".$departid."' >".$depart_name."</option>";
