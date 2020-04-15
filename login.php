@@ -1,6 +1,13 @@
 <?php 
 include('/db/server.php');
-include('/db/errors.php');      
+include('/db/errors.php');
+
+session_start();
+if(isset($_SESSION['nume_sesiune']))
+{
+ header("Location: index.html");
+ die("Already logged in"); 
+}       
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +23,7 @@ include('/db/errors.php');
       <input type="text" name="email" placeholder="Email" required/>
       <input type="password" name="password" placeholder="Password"/>
       <button type="submit" name="login_user">login</button>
-      <p class="message">Not yet a member? <a href="SignUp.html">Create an account</a></p>
+      <p class="message">Not yet a member? <a href="register.php">Create an account</a></p>
     </form>
   </div>
 </div>

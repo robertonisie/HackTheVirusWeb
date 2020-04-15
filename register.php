@@ -5,7 +5,7 @@ include('/db/errors.php');
 session_start();
 if(isset($_SESSION['nume_sesiune']))
 {
- header("Location: index.php");
+ header("Location: index.html");
  die("Already logged in"); 
 }      
 ?>
@@ -45,7 +45,7 @@ if(isset($_SESSION['nume_sesiune']))
 					</div>
 					<input type="submit" value="reg_user">
 				</form>
-				<p>Already a member? <a href="LogIn.html"> Login Now!</a></p>
+				<p>Already a member? <a href="register.php"> Login Now!</a></p>
 			</div>
 		</div>
 		<div class="colorlibcopy-agile">
