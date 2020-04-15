@@ -76,7 +76,7 @@ if(isset($_SESSION['nume_sesiune']))
 					   {
 					      $judetid = $row['id'];
 					      $judet_name = $row['name'];
-					      echo "<option value='".$judetid."' >".$judet_name."</option>";
+					      echo "<option id='".$judetid."' value='".$judetid."' >".$judet_name."</option>";
 					   }
 
 					   ?>
