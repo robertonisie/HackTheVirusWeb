@@ -39,8 +39,6 @@ if(isset($_SESSION['nume_sesiune']))
                         $("#sel_oras").empty();
                         for( var i = 0; i<len; i++)
                         {
-                        	if (response.oras_id == 'Arad') {
-            				alert('captcha');}
                             var id = response[i]['oras_id'];
                             var name = response[i]['oras_name'];
 
@@ -84,7 +82,7 @@ if(isset($_SESSION['nume_sesiune']))
 					   ?>
 					</select>
 					<div class="clear"></div>
-
+					<h1>"the value for number is: " + len</h1>
 					<div>Oras </div>
 						<select id="sel_oras">
 						   <option value="0">- Select -</option>
