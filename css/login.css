@@ -7,7 +7,7 @@
 .form {
   position: relative;
   z-index: 1;
-  background: #AF473C;
+  background: #AF473C;   background: -webkit-linear-gradient(right, #626e60, #AF473C);   background: -moz-linear-gradient(right, #626e60, #AF473C);   background: -o-linear-gradient(right, #626e60, #AF473C);   background: linear-gradient(to left, #626e60, #AF473C);   font-family: "Roboto", sans-serif;   -webkit-font-smoothing: antialiased;   -moz-osx-font-smoothing: grayscale;  
   max-width: 660px;
   margin: 0 auto 150px;
   padding: 65px;
@@ -56,12 +56,5 @@
   display: none;
 }
 body {
-  background: #AF473C;
-  background: -webkit-linear-gradient(right, #626e60, #AF473C);
-  background: -moz-linear-gradient(right, #626e60, #AF473C);
-  background: -o-linear-gradient(right, #626e60, #AF473C);
-  background: linear-gradient(to left, #626e60, #AF473C);
-  font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;      
+  background: #FFFFFF;    
 }
