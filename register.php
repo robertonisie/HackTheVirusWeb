@@ -29,7 +29,7 @@ if(isset($_SESSION['nume_sesiune']))
                 var judetid = $(this).val();
 
                 $.ajax({
-                    url: 'db/getoras.php',
+                    url: 'getoras.php',
                     type: 'post',
                     data: {
                     	judet:judetid
@@ -73,7 +73,7 @@ if(isset($_SESSION['nume_sesiune']))
 					   <option value="0">- Select -</option>
 					   <?php 
 					   $sql_judet = "SELECT name FROM judete";
-					   $judet_data = mysqli_query($db,$sql_judet);
+					   $judet_data = mysqli_query($db, $sql_judet);
 					   while($row = mysqli_fetch_assoc($judet_data) ){
 					      $judetid = $row['id'];
 					      $judet_name = $row['name'];
