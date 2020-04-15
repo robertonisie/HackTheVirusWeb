@@ -74,7 +74,7 @@ $pid = $_GET["id"];
             $row2 = mysqli_fetch_assoc($result2);
 
             $puser = $row["user_id"];
-            $sql = "SELECT * FROM users WHERE id='$user_id'";
+            $sql = "SELECT * FROM users WHERE id='$puser'";
             $result3 = mysqli_query($db, $sql);
             $row3 = mysqli_fetch_assoc($result3);
 
@@ -86,12 +86,12 @@ $pid = $_GET["id"];
             $pnume_afacere = $row3['nume_afacere'];
             $ppoza = $row2['image'];
             $pid = $row["id"];
-            $pname = $row["nume_produs"];
+            $pnume_produs = $row["nume_produs"];
             $ppret = $row["pret"];
             $pcantitate = $row["cantitate"];
             $pdescriere = $row['descriere'];
             ?>
-				<p><?php echo $pname ?></p>
+				<p><?php echo $pnume_produs ?></p>
 				<p> <?php echo ''.$poras.' , '.$pjudet.'';?> </p>
     				<h3>Bell Pepper</h3>
     			
