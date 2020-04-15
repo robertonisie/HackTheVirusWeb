@@ -34,6 +34,7 @@ while( $row = mysqli_fetch_array($result2))
 
 }
 //echo print_r($oras_arr);
+header('Content-Type: application/json');
 echo json_encode($oras_arr);
 
 ?>
