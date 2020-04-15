@@ -120,8 +120,8 @@ if (isset($_POST['search_user']))
                            
 
                           if ($result) {
-                              while ($row = $result->fetch_assoc()) {
-
+                              while ($row = $result->fetch_assoc()) 
+                              {
                                 $ppoza = $row["poza"];
                                 $sql = "SELECT * FROM image_upload WHERE id='$ppoza'";
                                 $result2 = mysqli_query($db, $sql);
@@ -137,7 +137,7 @@ if (isset($_POST['search_user']))
                                          echo '
                                          <div class="col-md-6 col-lg-3 ftco-animate">
                                             <div class="product">
-                                                <a href="product-single.php?id=<?php echo $pid ?>" class="img-prod"><img class="img-fluid" src="../uploads/'.$ppoza.'" alt="Colorlib Template">
+                                                <a href="product-single.php?id='.$pid.'" class="img-prod"><img class="img-fluid" src="../uploads/'.$ppoza.'" alt="Colorlib Template">
                                                     <span class="status">30%</span>
                                                     <div class="overlay"></div>
                                                 </a>
