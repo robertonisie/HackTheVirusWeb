@@ -108,7 +108,7 @@ if (isset($_POST['adauga_anunt']))
       $result = mysqli_query($db, $sql);
       $row = mysqli_fetch_assoc($result);
       $poza_id = $row['id'];
-
+    }
       else
       {
       $msg = "Failed to upload image";
