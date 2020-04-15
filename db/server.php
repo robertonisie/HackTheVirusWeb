@@ -113,7 +113,7 @@ if (isset($_POST['adauga_anunt']))
       {
       $msg = "Failed to upload image";
     }
-  }
+
 
 
   if (count($errors) == 0) 
