@@ -67,7 +67,7 @@ if(isset($_SESSION['nume_sesiune']))
 					<input class="text" type="text" name="nume" placeholder="Nume" required="">
 					<input class="text" type="text" name="prenume" placeholder="Prenume" required="">
 					<input class="text" type="text" name="judet" placeholder="Judet" required="">
-					<input class="text" type="text" name="localitate" placeholder="Localitate" required="">
+					<input class="text" type="text" name="oras" placeholder="Localitate" required="">
 
 					<!--
 					<div>Judet</div>
