@@ -103,7 +103,7 @@ if(isset($_SESSION['nume_sesiune']))
 						</label>
 						<div class="clear"> </div>
 					</div>
-					<input type="submit" value="reg_user">
+					<button type="submit" name="reg_user">Inregistrare</button>
 				</form>
 				<p>Already a member? <a href="login.php"> Login Now!</a></p>
 			</div>
