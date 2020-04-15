@@ -191,7 +191,17 @@ $pid = $_GET["id"];
 		            $('#quantity').val(quantity - 1);
 		            }
 		    });
-		    createCookie("cantitte_aleasa", quantity, "7"); 
+		    function createCookie(name, value, days) {
+        var expires = '',
+        date = new Date();
+        if (days) {
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = '; expires=' + date.toGMTString();
+        }
+        document.cookie = name + '=' + value + expires + '; path=/';
+        } 
+
+        createCookie("cantitte_aleasa", quantity, "7");
 		});
 	</script>
   </body>
