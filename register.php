@@ -74,7 +74,9 @@ if(isset($_SESSION['nume_sesiune']))
 					   <?php 
 					   $sql_judet = "SELECT name FROM judete";
 					   $judet_data = mysqli_query($db, $sql_judet);
-					   while($row = mysqli_fetch_assoc($judet_data) ){
+
+					   while($row = mysqli_fetch_assoc($judet_data))
+					   {
 					      $judetid = $row['id'];
 					      $judet_name = $row['name'];
 					      
