@@ -30,7 +30,7 @@ if(isset($_SESSION['nume_sesiune']))
 
                 $.ajax({
                     url: '/db/getoras.php',
-                    type: 'POST',
+                    type: "POST",
                     data: {
                     	judet:judetid
                     	},
@@ -53,10 +53,6 @@ if(isset($_SESSION['nume_sesiune']))
 
         });
     </script>
-
-    <script>
-	document.write(judetid);
-</script>
 </head>
 <body>
 	<div class="main-w3layouts wrapper">
