@@ -27,10 +27,11 @@ while( $row = mysqli_fetch_array($result2))
     //echo $row['name'];
     //echo 'test';
 
-    $userid = $row['id'];
+   // $userid = $row['id'];
     $name = $row['name'];
 
-    $oras_arr[] = array("oras_id" => $userid, "oras_name" => $name);
+    //$oras_arr[] = array("oras_id" => $userid, "oras_name" => $name);
+    array_push($oras_arr, $name);
 
 }
 //echo print_r($oras_arr);
