@@ -29,7 +29,7 @@ if(isset($_SESSION['nume_sesiune']))
                 var judetid = $(this).val();
 
                 $.ajax({
-                    url: 'getoras.php',
+                    url: '/db/getoras.php',
                     type: 'POST',s
                     data: {
                     	judet:judetid
