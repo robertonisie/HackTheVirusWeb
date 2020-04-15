@@ -1,6 +1,7 @@
 <?php 
 include('/db/server.php');
 include('/db/errors.php');
+include ("/var/db/dbconfig.php");
 
 session_start();
 if(isset($_SESSION['nume_sesiune']))
@@ -19,6 +20,37 @@ if(isset($_SESSION['nume_sesiune']))
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/register.css" rel="stylesheet" type="text/css" media="all"/>
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<script src="jquery-1.12.0.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $("#sel_judet").change(function(){
+                var judetid = $(this).val();
+
+                $.ajax({
+                    url: 'getoras.php',
+                    type: 'post',
+                    data: {depart:deptid},
+                    dataType: 'json',
+                    success:function(response){
+
+                        var len = response.length;
+
+                        $("#sel_oras").empty();
+                        for( var i = 0; i<len; i++){
+                            var id = response[i]['id'];
+                            var name = response[i]['name'];
+
+                            $("#sel_oras").append("<option value='"+id+"'>"+name+"</option>");
+
+                        }
+                    }
+                });
+            });
+
+        });
+    </script>
 </head>
 <body>
 	<div class="main-w3layouts wrapper">
@@ -30,8 +62,30 @@ if(isset($_SESSION['nume_sesiune']))
 					<input class="text" type="password" name="password" placeholder="Password" required="">
 					<input class="text" type="text" name="nume" placeholder="Nume" required="">
 					<input class="text" type="text" name="prenume" placeholder="Prenume" required="">
-					<input class="text" type="text" name="judet" placeholder="Judet" required="">
-					<input class="text" type="text" name="localitate" placeholder="Localitate" required="">
+					//<input class="text" type="text" name="judet" placeholder="Judet" required="">
+					//<input class="text" type="text" name="localitate" placeholder="Localitate" required="">
+
+					<div>Departments </div>
+					<select id="sel_judet">
+					   <option value="0">- Select -</option>
+					   <?php 
+					   $sql_judet = "SELECT name FROM judete";
+					   $judet_data = mysqli_query($db,$sql_judet);
+					   while($row = mysqli_fetch_assoc($judet_data) ){
+					      $judetid = $row['id'];
+					      $judet_name = $row['name'];
+					      
+					      echo "<option value='".$judetid."' >".$judet_name."</option>";
+					   }
+					   ?>
+					</select>
+					<div class="clear"></div>
+
+					<div>Oras </div>
+						<select id="sel_oras">
+						   <option value="0">- Select -</option>
+						</select>
+
 					<input class="text" type="text" name="adresa" placeholder="Adresa" required="">
 					<input class="text" type="text" name="nume_afacere" placeholder="Nume Afacere" required="">
 
@@ -45,7 +99,7 @@ if(isset($_SESSION['nume_sesiune']))
 					</div>
 					<input type="submit" value="reg_user">
 				</form>
-				<p>Already a member? <a href="register.php"> Login Now!</a></p>
+				<p>Already a member? <a href="login.php"> Login Now!</a></p>
 			</div>
 		</div>
 		<div class="colorlibcopy-agile">
