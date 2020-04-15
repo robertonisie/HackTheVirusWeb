@@ -236,7 +236,7 @@ h3 {
 .overlay2::before {
   position: absolute;
   content: "";
-  background-color: #001D38;
+  background-color: #505050;
   top: 0;
   left: 0;
   width: 100%;
@@ -244,26 +244,6 @@ h3 {
   z-index: -1;
   opacity: 0.4;
 }
-
-/* line 175, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/theme-default.scss */
-.overlay_03 {
-  position: relative;
-  z-index: 0;
-}
-
-/* line 179, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/theme-default.scss */
-.overlay_03::before {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: #001D38;
-  opacity: .6;
-  content: '';
-  z-index: -1;
-}
-
 /* line 192, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/theme-default.scss */
 .bradcam_overlay {
   position: relative;
@@ -1400,7 +1380,8 @@ h3 {
 
 /* line 2, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_about.scss */
 .about_info_area {
-  padding-bottom: 70px;
+  padding-bottom: 35px;
+   padding-top: 35px;
 }
 
 /* line 4, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_about.scss */
@@ -1450,11 +1431,11 @@ h3 {
 
 /* line 31, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_about.scss */
 .about_info_area .about_thumb {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 /* line 35, ../../Arafath/CL/CL October/216. Consulting/HTML/scss/_about.scss */
