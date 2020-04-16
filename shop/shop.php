@@ -57,7 +57,7 @@ $errors = array();
     		<div class="row justify-content-center">
     			<div class="col-md-10 mb-5 text-center">
     				<ul class="product-category">
-    					<li><a href="#" class="active">Oferte</a></li>
+    					<li><a href="../shop/shop.php" class="active">Oferte</a></li>
     				</ul>
     			</div>
     		</div>
