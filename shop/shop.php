@@ -121,8 +121,8 @@ $errors = array();
     				</div>
     			</div>
     		</div>
-    		<div class="row mt-5">
-         <!-- <div class="col text-center">
+    		<!--<div class="row mt-5">
+         <div class="col text-center">
             <div class="block-27">
               <ul>
                 <li><a href="#">&lt;</a></li>
