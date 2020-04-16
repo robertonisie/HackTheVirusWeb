@@ -384,9 +384,8 @@ mark,
     content: "\2014\00A0"; }
 
 .img-fluid {
-  width: 450;    
-  height: 300; 
-  object-fit:cover;  
+  width: 450px;    
+  height: 300px;  
  }
 
 .img-thumbnail {
