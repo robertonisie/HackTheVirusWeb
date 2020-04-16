@@ -125,14 +125,11 @@ $errors = array();
                       }
 
                     echo '</div></div></div></section>';
-                    
+
                     if(!$ok)
                     {
 
-                      echo '<script type="text/javascript">
-                              window.location="../index.html";
-                              alert("Nu s-au gasit anunturi.");
-                              </script>';
+                      echo '<p> Nu s-au gasit anunturi</p>';
                     }
                     ?>
 

@@ -15,7 +15,6 @@ $row = mysqli_fetch_assoc($result);
 $pid = $row['id'];
 
 $ppoza = '';
- $pid = '';
 $pnume_produs = '';
 $ppret = '';
 $pcantitate = '';

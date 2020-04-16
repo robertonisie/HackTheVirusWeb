@@ -20,7 +20,7 @@ $pcantitate_aleasa='';
 
 if (isset($_POST['addtocart']))
 {
-    $pcantitate_aleasa='<script type="text/javascript">document.write(quantity)); 
+    echo '<script type="text/javascript">document.write(quantity)); 
           </script>';
 
     $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '$pcantitate_aleasa', '$ppoza_id', '$puser_id')";
@@ -159,7 +159,7 @@ if (isset($_POST['addtocart']))
 	          	</div>
           	</div>
             <form method="post">
-          	   <p><button class="btn btn-black py-3 px-5" type="submit" name="addtocart">Baga-n sac</button></p>
+          	   <p><button id="submit" class="btn btn-black py-3 px-5" type="submit" name="addtocart">Baga-n sac</button></p>
             </form>
             <!--<?php// echo '<a href="cart.php?produs='.$pnume_produs.'&pret='.$ppret.'&desc='.$pdescriere.'&poza='.$ppoza.'" class="btn btn-black py-3 px-5">Baga-n sac</a>'; ?>--> 
     			</div>
