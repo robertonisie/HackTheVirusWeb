@@ -28,15 +28,15 @@ if(isset($_SESSION['nume_sesiune']))
 		<div class="main-agileinfo">
 			<div class="agileits-top">
 				<form method="post">
-					<input class="text email" type="email" name="email" placeholder="Email" required=""> 
-					<input class="text" type="password" name="password_1" placeholder="Password" required="">
-					<input class="text w3lpass" type="password" name="password_2" placeholder="Confirm Password" required="">
-					<input class="text" type="text" name="nume" placeholder="Nume" required="">
-					<input class="text" type="text" name="prenume" placeholder="Prenume" required="">
-					<input class="text" type="text" name="judet" placeholder="Judet" required="">
-					<input class="text" type="text" name="oras" placeholder="Localitate" required="">
-					<input class="text" type="text" name="adresa" placeholder="Adresa" required="">
-					<input class="text" type="text" name="nume_afacere" placeholder="Nume Afacere" required="">
+					<input class="text email" type="email" name="email" placeholder="Email" required> 
+					<input class="text" type="password" name="password_1" placeholder="Password" required>
+					<input class="text w3lpass" type="password" name="password_2" placeholder="Confirm Password" required>
+					<input class="text" type="text" name="nume" placeholder="Nume" required>
+					<input class="text" type="text" name="prenume" placeholder="Prenume" required>
+					<input class="text" type="text" name="judet" placeholder="Judet" required>
+					<input class="text" type="text" name="oras" placeholder="Localitate" required>
+					<input class="text" type="text" name="adresa" placeholder="Adresa" required>
+					<input class="text" type="text" name="nume_afacere" placeholder="Nume Afacere" required=
 					<label class="anim">
 							<input type="checkbox" class="checkbox" required="">
 							<span>Sunt de acord cu termenii si conditiile</span>
