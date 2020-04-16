@@ -385,7 +385,8 @@ mark,
 
 .img-fluid {
   max-width: 450px;    
-  height: 300px;  
+  height: 300px; 
+  border:2px solid grey;	
  }
 
 .img-thumbnail {
@@ -2029,6 +2030,9 @@ textarea.form-control {
       justify-content: center;
       width: auto;
       padding-left: 0; }
+#idunu{
+	margin-left:300px;
+}
     .form-inline .form-check-input {
       position: relative;
       margin-top: 0;
@@ -8568,7 +8572,7 @@ h1, h2, h3, h4, h5,
     border: 1px solid #000000;
     color: #fff; 
 	margin:0px;
-	margin-left:650px;
+	margin-left:617px;
 }
     .btn.btn-black:hover {
       background: #000000;
@@ -8842,7 +8846,8 @@ h1, h2, h3, h4, h5,
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0;
-  font-size: 14px; }
+  font-size: 14px; 
+  }
   .product-details button:hover, .product-details button:focus, .product-details .form-control:hover, .product-details .form-control:focus {
     text-decoration: none;
     outline: none; }

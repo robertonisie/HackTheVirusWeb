@@ -135,16 +135,14 @@ $query = "SELECT * FROM anunturi WHERE id='$pid'";
 							</div>
 							<div class="w-100"></div>
 							<div class="input-group col-md-6 d-flex mb-3">
-	             	<span class="input-group-btn mr-2">
-	            		</span>
+	             	<span class="input-group-btn mr-2"></span>
                   <form method="post" action="../db/server.php">
 	             	<?php echo '<input type="number" name="quantity" class="form-control input-number" value="1" min="1" max="'.$pcantitate.'">'; ?>
-    	             	<span class="input-group-btn ml-2">
-    	             	</span>
+    	             	<span class="input-group-btn ml-2"></span>
     	          	</div>
     	          	<div class="w-100"></div>
     	          	<div class="col-md-12">
-    	          		<p style="color: #000;"><?php echo "$pcantitate kg disponibile pe stoc"; ?></p>
+    	          		<p id=idunu style="color: #000;"><?php echo "$pcantitate kg disponibile pe stoc"; ?></p>
     	          	</div>
               	</div>
 
