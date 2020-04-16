@@ -87,48 +87,73 @@ $pdescriere = '';
       </div>
     </div>
 
-    <?php
-
-      $user_check_query = "SELECT * FROM produse_cart WHERE id='$pid'";
-      $result = mysqli_query($db, $user_check_query);
-      
-
-      if ($result) {
-        $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        foreach($user AS $row)
-        {
-            $ppoza = $row["poza"];
-             $sql = "SELECT * FROM image_upload WHERE id='$ppoza'";
-             $result2 = mysqli_query($db, $sql);
-             $row2 = mysqli_fetch_assoc($result2);
-                                    
-               $ppoza = $row2['image'];
-               $pid = $row["id"];
-               $pnume_produs = $row["nume_produs"];
-               $ppret = $row["pret"];
-               $pcantitate = $row["cantitate"];
-               $pdescriere = $row['descriere'];
-        }
-      }
-    ?>
-
     <section class="ftco-section ftco-cart">
-			<div class="container">
-				<div class="row">
-    			<div class="col-md-12 ftco-animate">
-    				<div class="cart-list">
-	    				<table class="table">
-						    <thead class="thead-primary">
-						      <tr class="text-center">
-						        <th>&nbsp;</th>
-						        <th>&nbsp;</th>
-						        <th>Product name</th>
-						        <th>Price</th>
-						        <th>Quantity</th>
-						        <th>Total</th>
-						      </tr>
-						    </thead>
-						    <tbody>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 ftco-animate">
+            <div class="cart-list">
+              <table class="table">
+                <thead class="thead-primary">
+                  <tr class="text-center">
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th>Product name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                <?php
+
+                  $user_check_query = "SELECT * FROM produse_cart WHERE id='$pid'";
+                  $result = mysqli_query($db, $user_check_query);
+                  
+
+                  if ($result) {
+                    $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                    foreach($user AS $row)
+                    {
+                        $ppoza = $row["poza"];
+                         $sql = "SELECT * FROM image_upload WHERE id='$ppoza'";
+                         $result2 = mysqli_query($db, $sql);
+                         $row2 = mysqli_fetch_assoc($result2);
+                                                
+                           $ppoza = $row2['image'];
+                           $pid = $row["id"];
+                           $pnume_produs = $row["nume_produs"];
+                           $ppret = $row["pret"];
+                           $pcantitate = $row["cantitate"];
+                           $pdescriere = $row['descriere'];
+
+                           echo '
+                                tr class="text-center">
+                                <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
+                                
+                                <td class="image-prod"><div class="img" style="background-image:url(../uploads/'.$ppoza.');"></div></td>
+                                
+                                <td class="product-name">
+                                  <h3> '.$pnume_produs.' </h3>
+                                  <p> '.$pdescriere.'</p>
+                                </td>
+                                
+                                <td class="price"> <?php echo "$ppret RON"?> </td>
+                                
+                                <td class="quantity">
+                                  <div class="input-group mb-3">
+                                    <input type="text" name="quantity" class="quantity form-control input-number" value="'.$pcantitate.'" min="1" max="100">
+                                  </div>
+                                </td>
+                                
+                                <td class="total">$4.90</td>
+                              </tr>';
+
+                    }
+                  }
+                ?>
+
+    
 						      <tr class="text-center">
 						        <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
 						        
