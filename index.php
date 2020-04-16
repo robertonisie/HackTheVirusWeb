@@ -74,6 +74,7 @@ session_start();
 				<div class="header-area ">
                  <div id="sticky-header" class="main-header-area">
                     <div class="container">
+                    <a href="formularitem.php">Vinde</a>
                         <div class="header_bottom_border">
                             <div class="row align-items-center">
                                 <div class="col-xl-3 col-lg-2">          
