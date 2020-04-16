@@ -187,7 +187,7 @@ $ptotal = 0;
     				<div class="cart-total mb-3">
     					<h3>Cart Totals</h3>
     						<span>Total</span>
-    						<span><?php echo $ptotal; ?></span>
+    						<span><?php echo $ptotal; ?> RON</span>
     					</p>
     				</div>
 
