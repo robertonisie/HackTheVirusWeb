@@ -1,6 +1,7 @@
 <?php
 session_start();
 include ("/var/db/dbconfig.php");
+include('/var/www/html/HackTheVirusWeb/db/server.php');
 $pid = $_GET["id"];
 
 $puser_id = '';
