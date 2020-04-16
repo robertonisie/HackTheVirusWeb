@@ -185,12 +185,12 @@ $ptotal = 0;
     		
     			<div class="col-lg-4 mt-5 cart-wrap ftco-animate">
     				<div class="cart-total mb-3">
-    					<h3>Cart Totals</h3>
+    					<h3>Total Obiecte</h3>
     						<span><?php echo $ptotal; ?> RON</span>
     					</p>
     				</div>
 
-    				<p><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+    				<p><a href="checkout.html" class="btn btn-primary py-3 px-4">Catre Metoda de Plata</a></p>
             <!--<form method="post" action="cart.php">
 
              <input type="hidden" name="pidvector"  value="<?php echo json_encode($pidvector); ?>">
