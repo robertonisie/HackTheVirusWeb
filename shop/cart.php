@@ -132,7 +132,7 @@ $ptotal = 0;
                             $pidvector = json_decode($_POST['pidvector'] ,true);
                             $pcantitate = json_decode($_POST['pcantitate'] ,true);
                             echo $pidvector[1];
-                            echo $pidvector[2];
+                            echo $pcantitate[2];
 
                              for($i = 1; $i <= $ct_p; $i++)
                             {
@@ -177,7 +177,6 @@ $ptotal = 0;
                         $ct++;
                       }
                     ?>
-
 						    </tbody>
 						  </table>
 					  </div>
@@ -187,7 +186,6 @@ $ptotal = 0;
     			<div class="col-lg-4 mt-5 cart-wrap ftco-animate">
     				<div class="cart-total mb-3">
     					<h3>Cart Totals</h3>
-    						<span>Total</span>
     						<span><?php echo $ptotal; ?> RON</span>
     					</p>
     				</div>
