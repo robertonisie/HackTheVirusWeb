@@ -106,11 +106,9 @@ $pdescriere = '';
                 <tbody>
 
                 <?php
-
                   $user_check_query = "SELECT * FROM produse_cart WHERE user_id='$pid'";
                   $result = mysqli_query($db, $user_check_query);
                   
-
                   if ($result) {
                     $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     foreach($user AS $row)
@@ -148,10 +146,9 @@ $pdescriere = '';
                                 
                                 <td class="total">$4.90</td>
                               </tr>';
-
-                    }
-                  }
-                ?>
+                        }
+                      }
+                    ?>
 
 						    </tbody>
 						  </table>
