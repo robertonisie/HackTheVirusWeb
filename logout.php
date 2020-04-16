@@ -2,6 +2,9 @@
 session_start();
 
     session_destroy();
-    unset($_SESSION['nume_sesiune']);
-    header("location: index.html");
+    session_unset($_SESSION['nume_sesiune']);
+    session_destroy();
+    header('Location: index.html');
+    exit();
+
 ?>
