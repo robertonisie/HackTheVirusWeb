@@ -151,7 +151,7 @@ $ppretcantitate = '';
 
                            echo '
                                 <tr class="text-center">
-                                  <td class="product-remove"><a href="shop/remove.php?id='.$pidvector[$ct].'"><span class="ion-ios-close"></span></a></td>
+                                  <td class="product-remove"><a href="remove.php?id='.$pidvector[$ct].'"><span class="ion-ios-close"></span></a></td>
                                   
                                   <td class="image-prod"><div class="img" style="background-image:url(../uploads/'.$ppoza.');"></div></td>
                                   
