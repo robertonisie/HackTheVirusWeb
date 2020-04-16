@@ -117,7 +117,7 @@ $query = "SELECT * FROM anunturi WHERE id='$pid'";
     		<div class="row">
     			<div class="col-lg-6 mb-5 ftco-animate">
             <?php echo ' 
-    				<a href="../uploads/'.$ppoza.'" class="image-popup"><img src="../uploads/'.$ppoza.'" class="img-fluid" alt=""></a>'; ?>
+    				<a href="../uploads/'.$ppoza.'" class="image-popup"><img src="../uploads/'.$ppoza.'" class="img-fluid" alt="" border="5"></a>'; ?>
     			</div>
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
             
