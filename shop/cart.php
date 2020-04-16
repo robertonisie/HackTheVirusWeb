@@ -121,7 +121,6 @@ $pdescriere = '';
                          $row2 = mysqli_fetch_assoc($result2);
                                                 
                            $ppoza = $row2['image'];
-                           $pid = $row["id"];
                            $pnume_produs = $row["nume_produs"];
                            $ppret = $row["pret"];
                            $pcantitate = $row["cantitate"];
