@@ -70,7 +70,8 @@ $errors = array();
     		</div>
     		<div class="row">
                 <?php
-                    $user_check_query = "SELECT * FROM anunturi1 ORDER BY id DESC";
+                    $ok = 0;
+                    $user_check_query = "SELECT * FROM anunturi ORDER BY id DESC";
                     $result = mysqli_query($db, $user_check_query);
   
 
@@ -80,6 +81,8 @@ $errors = array();
                       foreach($user AS $row)
                       {
 
+                            $ok = 1;
+                           
                                 $ppoza = $row["poza"];
                                 $sql = "SELECT * FROM image_upload WHERE id='$ppoza'";
                                 $result2 = mysqli_query($db, $sql);
@@ -124,7 +127,7 @@ $errors = array();
 
                     echo '</div></div></div></section>';
 
-                    else
+                    if(!$ok)
                     {
 
                       echo '<p> Nu s-au gasit anunturi</p>';
