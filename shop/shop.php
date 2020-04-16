@@ -1,5 +1,6 @@
 <?php
 include ("/var/db/dbconfig.php");
+include('/var/www/html/HackTheVirusWeb/db/server.php');
 include('/var/www/html/HackTheVirusWeb/db/errors.php');
 
 $errors = array(); 
@@ -100,9 +101,9 @@ $errors = array();
                                                     </div>
                                                     <div class="bottom-area d-flex px-3">
                                                         <div class="m-auto d-flex">
-                                                            <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                                        <form>
+                                                            <input type="submit" name="" value="submit" onclick="return clickButton();" href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
                                                                 <span><i class="ion-ios-cart"></i></span>
-                                                            </a>
                                                             <a href="#" class="heart d-flex justify-content-center align-items-center ">
                                                                 <span><i class="ion-ios-heart"></i></span>
                                                             </a>
@@ -152,6 +153,8 @@ $errors = array();
       </div>
     </footer>
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -168,5 +171,29 @@ $errors = array();
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js">
+    </script>
+    <script type="text/javascript">
+    function clickButton(){
+
+      var id_j = "<?php echo $pid ?>"; 
+    $.ajax({
+            type:"post",
+            url:"addcart_btn.php",
+            data: 
+            {  
+               'id' :id_j,
+            },
+            cache:false,
+            success: function (html) 
+            {
+               alert('Data Send');
+              
+            }
+            });
+            return false;
+     }
+    </script>
   </body>
 </html>
