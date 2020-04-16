@@ -136,7 +136,10 @@ if (isset($_POST['addtocart']))
 	          		<p style="color: #000;"><?php echo "$pcantitate kg disponibile pe stoc"; ?></p>
 	          	</div>
           	</div>
-          	<p><button type="submit" name="addtocart">Baga-n sac</button></p><!--<?php// echo '<a href="cart.php?produs='.$pnume_produs.'&pret='.$ppret.'&desc='.$pdescriere.'&poza='.$ppoza.'" class="btn btn-black py-3 px-5">Baga-n sac</a>'; ?>--> 
+            <form method="post">
+          	   <p><button class="btn btn-black py-3 px-5" type="submit" name="addtocart">Baga-n sac</button></p>
+            </form>
+            <!--<?php// echo '<a href="cart.php?produs='.$pnume_produs.'&pret='.$ppret.'&desc='.$pdescriere.'&poza='.$ppoza.'" class="btn btn-black py-3 px-5">Baga-n sac</a>'; ?>--> 
     			</div>
     		</div>
     	</div>
