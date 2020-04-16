@@ -135,7 +135,7 @@ if (isset($_POST['adauga_anunt']))
 
     echo "<script type='text/javascript'>
           alert('Anunt adaugat cu succes.');
-          window.location = 'index.php';
+          window.location = '/shop/shop.php';
           </script>";
   }
 }
