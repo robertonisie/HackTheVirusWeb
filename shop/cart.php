@@ -2,7 +2,7 @@
 session_start();
 include ("/var/db/dbconfig.php");
 $get_id = $_SESSION['addtocart'];
-
+echo $get_id;
 ?>
 
 <!DOCTYPE html>
@@ -80,27 +80,27 @@ $get_id = $_SESSION['addtocart'];
 
 
 
-  $user_check_query = "SELECT * FROM produse_cart WHERE id='$get_id'";
-  $result = mysqli_query($db, $user_check_query);
-  
+      $user_check_query = "SELECT * FROM produse_cart WHERE id='$get_id'";
+      $result = mysqli_query($db, $user_check_query);
+      
 
-  if ($result) {
-    $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    foreach($user AS $row)
-    {
-        $ppoza = $row["poza"];
-         $sql = "SELECT * FROM image_upload WHERE id='$ppoza'";
-         $result2 = mysqli_query($db, $sql);
-         $row2 = mysqli_fetch_assoc($result2);
-                                
-           $ppoza = $row2['image'];
-           $pid = $row["id"];
-           $pnume_produs = $row["nume_produs"];
-           $ppret = $row["pret"];
-           $pcantitate = $row["cantitate"];
-           $pdescriere = $row['descriere'];
-    }
-  }
+      if ($result) {
+        $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        foreach($user AS $row)
+        {
+            $ppoza = $row["poza"];
+             $sql = "SELECT * FROM image_upload WHERE id='$ppoza'";
+             $result2 = mysqli_query($db, $sql);
+             $row2 = mysqli_fetch_assoc($result2);
+                                    
+               $ppoza = $row2['image'];
+               $pid = $row["id"];
+               $pnume_produs = $row["nume_produs"];
+               $ppret = $row["pret"];
+               $pcantitate = $row["cantitate"];
+               $pdescriere = $row['descriere'];
+        }
+      }
     ?>
 
     <section class="ftco-section ftco-cart">
