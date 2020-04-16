@@ -29,19 +29,39 @@ $errors = array();
     <link rel="stylesheet" href="css/style.css">
   </head>
 <body class="goto-here">
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">	    
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-			   <li class="nav-item"><a href="../login.php" class="nav-link">Logare</a></li>
-			   <li class="nav-item"><a href="../register.php" class="nav-link">Inregistrare</a></li>
-			  <li class="nav-item"><a href="../shop/shop.php" class="nav-link">Shop</a></li>
-			<li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+  <?php 
+                if(isset($_SESSION['nume_sesiune']))
+                    echo '
+                        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+                      	    <div class="container">	    
+                      	      <div class="collapse navbar-collapse" id="ftco-nav">
+                      	        <ul class="navbar-nav ml-auto">
+                      	          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                      			   <li class="nav-item"><a href="../login.php" class="nav-link">Logare</a></li>
+                      			   <li class="nav-item"><a href="../register.php" class="nav-link">Inregistrare</a></li>
+                      			  <li class="nav-item"><a href="../shop/shop.php" class="nav-link">Shop</a></li>
+                      			<li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+                      	        </ul>
+                      	      </div>
+                      	    </div>
+                      	  </nav>'; 
+
+                else
+                  echo '
+                        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+                            <div class="container">     
+                              <div class="collapse navbar-collapse" id="ftco-nav">
+                                <ul class="navbar-nav ml-auto">
+                                  <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                                  <li class="nav-item"><a href="../logout.php" class="nav-link">Logout</a></li>
+                              <li class="nav-item"><a href="../shop/shop.php" class="nav-link">Shop</a></li>
+                            <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </nav>'; 
+                          ?>
+
     <div class="hero-wrap hero-bread" style="background-image: url('images/bg_1.jpg');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
