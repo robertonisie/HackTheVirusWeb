@@ -59,26 +59,15 @@ $ppretcantitate = '';
 	    <div class="container">	    
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-			   <li class="nav-item active dropdown">
-	          <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown04">
-              	<a class="dropdown-item" href="shop.html">Shop</a>
-              	<a class="dropdown-item" href="wishlist.html">Wishlist</a>
-                <a class="dropdown-item" href="product-single.html">Single Product</a>
-                <a class="dropdown-item" href="cart.html">Cart</a>
-                <a class="dropdown-item" href="checkout.html">Checkout</a>
-              </div>
-			  </li>
-	          <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-
+	          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+			    <li class="nav-item"><a href="../login.php" class="nav-link">Logare</a></li>
+			  <li class="nav-item"><a href="../shop/shop.php" class="nav-link">Shop</a></li>
+			<li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
-    <!-- END nav -->
-
-    <div class="hero-wrap hero-bread" style="background-image: url('images/bg_1.jpg');">
+   <div class="hero-wrap hero-bread" style="background-image: url('images/bg_1.jpg');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
