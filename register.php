@@ -78,6 +78,7 @@ if(isset($_SESSION['nume_sesiune']))
 					</label>
 				</form>
 					<button type="submit" name="reg_user">Inregistrare</button>
+					<button type="submit" onclick="myFunction()">Inapoi la pagina principala</button>
 					<!--
 					<div>Judet</div>
 					<select id="sel_judet">
@@ -120,4 +121,9 @@ if(isset($_SESSION['nume_sesiune']))
             </div>
         </div>
 </body>
+<script>
+function myFunction() {
+    location.replace("index.html")
+}
+</script>
 </html>

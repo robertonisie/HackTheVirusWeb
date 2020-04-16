@@ -11,7 +11,7 @@
   margin: 200px auto;
   padding: 65px;
   text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.34);
   background-image: url("../img/service/13.png");
   background-repeat: no-repeat;
   background-size: 800px 320px;
@@ -38,6 +38,7 @@
   width: 100%;
   border: 0;
   padding: 15px;
+   margin: 0 0 15px;
   color: #ffffff;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
@@ -45,7 +46,7 @@
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
-  background: #;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 .form .message {
   margin: 15px 0 0;

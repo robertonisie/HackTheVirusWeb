@@ -25,7 +25,8 @@ if(isset($_SESSION['nume_sesiune']))
       <input type="text" name="email" placeholder="Email" required/>
       <input type="password" name="password" placeholder="Parola" required/>
       <button type="submit" name="login_user">Logare</button>
-      <p class="message">Nu esti inca membru? <a href="register.php">Creaza-ti un cont</a></p>
+	  <button onclick="myFunction()">Inapoi la pagina principala</button>
+	  <p class="message">Nu esti inca membru? <a href="register.php">Creaza-ti un cont</a></p>
     </form>
   </div>
 </div>
@@ -41,4 +42,9 @@ if(isset($_SESSION['nume_sesiune']))
             </div>
         </div>
 </body>
+<script>
+function myFunction() {
+    location.replace("index.html")
+}
+</script>
 </html>
