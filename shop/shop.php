@@ -3,18 +3,6 @@ include ("/var/db/dbconfig.php");
 include('/var/www/html/HackTheVirusWeb/db/errors.php');
 
 $errors = array(); 
-
-    /*
-  $nume_produs = mysqli_real_escape_string($db, $_POST['nume_produs']);
-  $pret = mysqli_real_escape_string($db, $_POST['pret']);
-  $descriere = mysqli_real_escape_string($db, $_POST['descriere']);
-  $cantitate = mysqli_real_escape_string($db, $_POST['cantitate']);
-
-  if (empty($nume_produs)) { array_push($errors, "Specificati un nume_produs"); }
-  if (empty($pret)) { array_push($errors, "Specificati de cand"); }
-  if (empty($descriere)) { array_push($errors, "Specificati pana cand"); }
-  if (empty($cantitate)) { array_push($errors, "Specificati talia animalului"); } */
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
