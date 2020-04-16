@@ -78,7 +78,7 @@ if(isset($_SESSION['nume_sesiune']))
 					</label>
 				</form>
 					<button type="submit" name="reg_user">Inregistrare</button>
-					<button type="submit" onclick="myFunction()">Inapoi la pagina principala</button>
+					<button type="submit" onclick="myFunction()">Inapoi la Pagina Principala</button>
 					<!--
 					<div>Judet</div>
 					<select id="sel_judet">
