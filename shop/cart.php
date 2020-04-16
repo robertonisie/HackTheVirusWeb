@@ -17,10 +17,25 @@ $pid = $row['id'];
 $ppoza = '';
 $pnume_produs = '';
 $ppret = '';
-$pcantitate = '';
+$pcantitate = array();
+$pidvector = array();
 $pdescriere = '';
 $ppretcantitate = '';
 
+if (isset($_POST['update_cart']))
+{
+   for($i = 1; $i <= $ct; i++)
+  {
+      if($pcantitate[$i] > 0)
+        {
+            $sql = "UPDATE produse_cart SET cantitate = '$pcantitate[$i]' WHERE id = '$pidvector[$ct]'";
+            mysqli_query($db, $sql);
+        }
+              // else
+
+    }       
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -112,6 +127,7 @@ $ppretcantitate = '';
                   
                   if ($result) {
                     $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                    $ct = 1;
                     foreach($user AS $row)
                     {
                          $ppoza = $row["poza"];
@@ -122,9 +138,10 @@ $ppretcantitate = '';
                            $ppoza = $row2['image'];
                            $pnume_produs = $row["nume_produs"];
                            $ppret = $row["pret"];
-                           $pcantitate = $row["cantitate"];
+                           $pcantitate[$ct] = $row["cantitate"];
+                           $pidvector[$ct] = $row['id'];
                            $pdescriere = $row['descriere'];
-                           $ppretcantitate = $pcantitate * $ppret;
+                           $ppretcantitate = $pcantitate[$ct] * $ppret;
 
                            echo '
                                 <tr class="text-center">
@@ -141,13 +158,14 @@ $ppretcantitate = '';
                                   
                                   <td class="quantity">
                                     <div class="input-group mb-3">
-                                      <input type="number" name="quantity" class="quantity form-control input-number" value="'.$pcantitate.'" min="0" max="100">
+                                      <input type="number" name="quantity" class="quantity form-control input-number" value="'. $pcantitate[$ct].'" min="0" max="100">
                                     </div>
                                   </td>
                                 
                                 <td class="total">'.$ppretcantitate.'</td>
                               </tr>';
                         }
+                        ct++;
                       }
                     ?>
 
