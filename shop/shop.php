@@ -54,7 +54,7 @@ $errors = array();
                               <div class="collapse navbar-collapse" id="ftco-nav">
                                 <ul class="navbar-nav ml-auto">
                                   <li class="nav-item"><a href="../index.php" class="nav-link">Home</a></li>
-                                  <li class="nav-item"><a href="../logout_shop.php?id=.'.$pid.'" class="nav-link">Logout</a></li>
+                                  <li class="nav-item"><a href="../logout_shop.php" class="nav-link">Logout</a></li>
                               <li class="nav-item"><a href="../shop/shop.php" class="nav-link">Shop</a></li>
                             <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
                                 </ul>
@@ -116,7 +116,7 @@ $errors = array();
                                                     <div class="overlay"></div>
                                                 </a>
                                                 <div class="text py-3 pb-4 px-3 text-center">
-                                                    <h3><a href="product-single.php">'.$pname.'</a></h3>
+                                                    <h3><a href="product-single?id='.$pid.'.php">'.$pname.'</a></h3>
                                                     <div class="d-flex">
                                                         <div class="pricing">
                                                             <p class="price"><span class="mr-2 price">'.$ppret.'</span></p>
