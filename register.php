@@ -36,13 +36,13 @@ if(isset($_SESSION['nume_sesiune']))
 					<input class="text" type="text" name="judet" placeholder="Judet" required>
 					<input class="text" type="text" name="oras" placeholder="Localitate" required>
 					<input class="text" type="text" name="adresa" placeholder="Adresa" required>
-					<input class="text" type="text" name="nume_afacere" placeholder="Nume Afacere" required=
+					<input class="text" type="text" name="nume_afacere" placeholder="Nume Afacere" required>
 					<label class="anim">
 							<input type="checkbox" class="checkbox" required="">
 							<span>Sunt de acord cu termenii si conditiile</span>
 					</label>
-				</form>
-					<button type="submit" name="reg_user">Inregistrare</button>					
+						<button type="submit" name="reg_user">Inregistrare</button>	
+					</form>				
 				<p>Ai deja un cont? <a href="login.php"> Logheaza-te aici!</a></p>
 			</div>
 		</div>
