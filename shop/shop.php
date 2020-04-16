@@ -33,14 +33,12 @@ $errors = array();
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-			  <li class="nav-item"><a href="index.html" class="nav-link">Shop</a></li>
+			  <li class="nav-item"><a href="../shop/shop.php" class="nav-link">Shop</a></li>
 			<li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
-
-
     <div class="hero-wrap hero-bread" style="background-image: url('images/bg_1.jpg');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -51,7 +49,6 @@ $errors = array();
         </div>
       </div>
     </div>
-
     <section class="ftco-section">
     	<div class="container">
     		<div class="row justify-content-center">
@@ -150,19 +147,12 @@ $errors = array();
 	 <footer class="ftco-footer ftco-section">
 		<div class="row">
           <div class="col-md-12 text-center">
-
-            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</a></p>
+            <p>Copyright &copy; local's <script>document.write(new Date().getFullYear());</script> | All rights reserved</a></p>
           </div>
         </div>
       </div>
     </footer>
-    
-  
-
-  <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -179,6 +169,5 @@ $errors = array();
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
   </body>
 </html>

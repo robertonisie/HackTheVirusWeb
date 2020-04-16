@@ -114,8 +114,7 @@ if(isset($_SESSION['nume_sesiune']))
                 <div class="row">
                     <div class="col-xl-12">
                         <p class="copy_right text-center">
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</a>
-                        </p>
+							Copyright &copy; local's <script>document.write(new Date().getFullYear());</script> | All rights reserved</a></p>                    
                     </div>
                 </div>
             </div>
