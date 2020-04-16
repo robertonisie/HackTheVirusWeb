@@ -142,7 +142,7 @@ if (isset($_POST['addtocart']))
 	                	</button>-->
 	            		</span>
                   <form method="post">
-	             	<?php echo '<input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="'.$pcantitate.'">'; ?>
+	             	<?php echo '<input type="number" id="quantity" name="quantity" class="form-control input-number" value="1" min="1">'; ?>
     	             	<span class="input-group-btn ml-2">
     	                	<!--<button type="button" class="quantity-right-plus btn" data-type="plus" data-field="">
     	                     <i class="ion-ios-add"></i>
@@ -200,11 +200,20 @@ if (isset($_POST['addtocart']))
   <script>
 		$(document).ready(function(){
 
-		  
-        var quantitiy=0;
-		   /*$('.quantity-right-plus').click(function(e){
+		  var cantitate_max = "<?php echo $pcantitate ?>";
+
+      var input = document.querySelectorAll("input[type=number]")[0];
+
+      input.addEventListener('input', function () {
+        if(this.checkValidity()) {
+          cantitate_max = this.value;
+        } else {
+          this.value = cantitate_max;
+        }
+        /*var quantitiy=0;
+		   $('.quantity-right-plus').click(function(e){
 		        
-		        var cantitate_max = "<?php echo $pcantitate ?>";
+		        v
 		        e.preventDefault();
 		        var quantity = parseInt($('#quantity').val());
 		        
