@@ -68,10 +68,9 @@ session_start();
                     </div>
                 </div>
             </div>';
+
 			 else
                   echo '
-				  <div id="sticky-header" class="main-header-area">
-                    <div class="container">
                         <div class="header_bottom_border">
                             <div class="row align-items-center">
                                 <div class="col-xl-3 col-lg-2">          
