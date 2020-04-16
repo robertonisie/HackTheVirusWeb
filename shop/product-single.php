@@ -227,6 +227,8 @@ if (isset($_POST['addtocart']))
 		            }
 		    });
 
+         $.post("shop.php", {cantitate:quantity});
+
 		});
 	</script>
   </body>
