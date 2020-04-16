@@ -118,7 +118,7 @@ $query = "SELECT * FROM anunturi WHERE id='$pid'";
 							<div class="input-group col-md-6 d-flex mb-3">
 	             	<span class="input-group-btn mr-2">
 	            		</span>
-                  <form method="post">
+                  <form method="post" action="../db/server.php">
 	             	<?php echo '<input type="number" name="quantity" class="form-control input-number" value="1" min="1" max="'.$pcantitate.'">'; ?>
     	             	<span class="input-group-btn ml-2">
     	             	</span>
