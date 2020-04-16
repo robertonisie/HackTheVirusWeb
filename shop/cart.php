@@ -7,13 +7,7 @@ if(!isset($_SESSION['nume_sesiune']))
  header("Location: ../index.html");
  die("Not logged in"); 
 }  
-$get_id = $_SESSION['addedtocart'];
-
-if(isset($_SESSION['addedtocart'])){
-echo "<script type='text/javascript'>
-          alert('Nu s-au gasit anunturi.');
-          </script>";
-        }
+$pid = $_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +77,7 @@ echo "<script type='text/javascript'>
 
     <?php
 
-      $user_check_query = "SELECT * FROM produse_cart WHERE id='$get_id'";
+      $user_check_query = "SELECT * FROM produse_cart WHERE id='$pid'";
       $result = mysqli_query($db, $user_check_query);
       
 
