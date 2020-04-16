@@ -2,7 +2,11 @@
 session_start();
 include ("/var/db/dbconfig.php");
 $get_id = $_SESSION['addtocart'];
-echo $get_id;
+if(isset($_SESSION['addtocart'])){
+echo "<script type='text/javascript'>
+          alert('Nu s-au gasit anunturi.');
+          </script>";
+        }
 ?>
 
 <!DOCTYPE html>
@@ -71,14 +75,6 @@ echo $get_id;
     </div>
 
     <?php
-
-    $pnume_produs = $_GET["produs"];
-    $ppret = $_GET["pret"];
-    $pcantitate = $_COOKIE["cantitate_aleasa"];
-    $pdescriere = $_GET['desc'];
-    $ppoza = $_GET['poza'];
-
-
 
       $user_check_query = "SELECT * FROM produse_cart WHERE id='$get_id'";
       $result = mysqli_query($db, $user_check_query);
