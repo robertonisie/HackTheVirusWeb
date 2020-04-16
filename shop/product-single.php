@@ -26,9 +26,7 @@ if (isset($_POST['addtocart']))
     $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '$pcantitate_aleasa', '$ppoza_id', '$puser_id')";
     mysqli_query($db, $query);
 
-    echo '<script type="text/javascript">
-                              alert("'.$pcantitate_aleasa.'");
-                              </script>';
+    echo $pcantitate_aleasa;
                     
 
     //header("Location: cart.php");
