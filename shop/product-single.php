@@ -27,6 +27,7 @@ if (isset($_POST['addtocart']))
     mysqli_query($db, $query);
 
     echo $pcantitate_aleasa;
+    echo '123';
                     
 
     //header("Location: cart.php");
