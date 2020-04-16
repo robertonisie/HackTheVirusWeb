@@ -21,9 +21,9 @@ input {
 
 button {
   font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
   outline: 0;
   background: #000000;
+  margin: 0 auto;
   width: 20%;
   border: 0;
   border-radius:25px;
