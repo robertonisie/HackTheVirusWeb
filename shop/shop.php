@@ -110,7 +110,7 @@ $errors = array();
                                          echo '
                                          <div class="col-md-6 col-lg-3 ftco-animate">
                                             <div class="product">
-                                                <a href="product-single.php?id='.$pid.'" class="img-prod"><img class="img-fluid" src="../uploads/'.$ppoza.'" alt="">
+                                                <a href="product-single.php?id='.$pid.'" class="img-prod"><img class="img-fluid" src="../uploads/'.$ppoza.'" alt="" height=300 width=450>
                                                     <div class="overlay"></div>
                                                 </a>
                                                 <div class="text py-3 pb-4 px-3 text-center">

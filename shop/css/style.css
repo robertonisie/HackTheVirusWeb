@@ -8673,8 +8673,7 @@ h1, h2, h3, h4, h5,
 
 .product {
   display: block;
-  width: 450;
-  height:300;
+  width: 100%;
   margin-bottom: 30px;
   position: relative;
   -moz-transition: all 0.3s ease;
