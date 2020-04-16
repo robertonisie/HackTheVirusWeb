@@ -165,7 +165,7 @@ if (isset($_POST['update_cart']))
                                 <td class="total">'.$ppretcantitate.'</td>
                               </tr>';
                         }
-                        ct++;
+                        $ct++;
                       }
                     ?>
 
