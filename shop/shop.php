@@ -1,4 +1,5 @@
 <?php
+session_start();
 include ("/var/db/dbconfig.php");
 include('/var/www/html/HackTheVirusWeb/db/server.php');
 include('/var/www/html/HackTheVirusWeb/db/errors.php');
