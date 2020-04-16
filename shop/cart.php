@@ -141,7 +141,7 @@ $ppretcantitate = '';
                                   
                                   <td class="quantity">
                                     <div class="input-group mb-3">
-                                      <input type="text" name="quantity" class="quantity form-control input-number" value="'.$pcantitate.'" min="1" max="100">
+                                      <input type="number" name="quantity" class="quantity form-control input-number" value="'.$pcantitate.'" min="0" max="100">
                                     </div>
                                   </td>
                                 
@@ -180,7 +180,9 @@ $ppretcantitate = '';
     				</div>
 
     				<p><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
-            <p><a href="cart.php" class="btn btn-primary py-3 px-4">Update cart</a></p>
+            <form method="post" action="cart.php">
+              <p><button class="btn btn-primary py-3 px-4" name="update_cart">Proceed to Checkout</button></p>
+            </form>
     			</div>
     		</div>
 			</div>
