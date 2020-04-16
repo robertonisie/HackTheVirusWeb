@@ -126,6 +126,7 @@ $pdescriere = '';
                            $pcantitate = $row["cantitate"];
                            $pdescriere = $row['descriere'];
 
+                            echo '123';
                            echo '
                                 <tr class="text-center">
                                   <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
