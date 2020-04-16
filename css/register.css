@@ -121,8 +121,8 @@ button[type="submit"] {
   cursor: pointer;
   padding: 1.2em;
   -webkit-appearance: none;
-  width: 30%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0.9em auto;
   letter-spacing: 0.5px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
