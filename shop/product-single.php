@@ -27,8 +27,8 @@ if (isset($_POST['addtocart']))
 
     echo $pcantitate_aleasa;
                     
-    header("Location: cart.php");
-    die("Already logged in"); 
+    //header("Location: cart.php");
+    //die("Already logged in"); 
 }
 
 ?>
