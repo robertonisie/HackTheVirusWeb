@@ -21,7 +21,7 @@ $pcantitate = array();
 $pidvector = array();
 $pdescriere = '';
 $ppretcantitate = '';
-$ptotal = '';
+$ptotal = 0;
 
 ?>
 
@@ -173,7 +173,7 @@ $ptotal = '';
                               </tr>';
                           }
                         $ct++;
-                        $ptotal += $ppretcantitate;
+                      $ptotal += $ppretcantitate;
                       }
                     ?>
 
