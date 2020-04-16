@@ -24,11 +24,9 @@ if (isset($_POST['addtocart']))
 
     $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '$pcantitate_aleasa', '$ppoza_id', '$puser_id')";
     mysqli_query($db, $query);
-
-    echo $pcantitate_aleasa;
                     
-    //header("Location: cart.php");
-    //die("Already logged in"); 
+    header("Location: cart.php");
+    die("Already logged in"); 
 }
 
 ?>
@@ -144,7 +142,7 @@ if (isset($_POST['addtocart']))
 	                	</button>-->
 	            		</span>
                   <form method="post">
-	             	<input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="100">
+	             	<?php echo '<input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="'.$pcantitate.'">'; ?>
     	             	<span class="input-group-btn ml-2">
     	                	<!--<button type="button" class="quantity-right-plus btn" data-type="plus" data-field="">
     	                     <i class="ion-ios-add"></i>
