@@ -153,8 +153,6 @@ input[type="submit"]:hover {
    text-decoration: underline;
 }
 
-/*-- //main --*/
-/*-- checkbox --*/
 .wthree-text label {
   font-size: 0.9em;
   color: #fff;
@@ -231,8 +229,6 @@ input.checkbox:checked:after {
   }
 }
 
-/*-- //checkbox --*/
-/*-- copyright --*/
 .colorlibcopy-agile {
   margin: 2em 0 1em;
   text-align: center;
@@ -259,7 +255,6 @@ input.checkbox:checked:after {
   color: #000;
 }
 
-/*-- //copyright --*/
 .wrapper {
   position: relative;
   overflow: hidden;
