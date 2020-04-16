@@ -131,8 +131,8 @@ $ptotal = 0;
                             $ct_p = $_POST['ct'];
                             $pidvector = json_decode($_POST['pidvector'] ,true);
                             $pcantitate = json_decode($_POST['pcantitate'] ,true);
-                            echo $pidvector[1];
-                            echo $pcantitate[2];
+                            //echo $pidvector[1];
+                            //echo $pcantitate[2];
 
                              for($i = 1; $i <= $ct_p; $i++)
                             {
