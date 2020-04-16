@@ -128,7 +128,7 @@ $pdescriere = '';
                            $pdescriere = $row['descriere'];
 
                            echo '
-                                tr class="text-center">
+                                <tr class="text-center">
                                 <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
                                 
                                 <td class="image-prod"><div class="img" style="background-image:url(../uploads/'.$ppoza.');"></div></td>
