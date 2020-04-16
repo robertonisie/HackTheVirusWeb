@@ -110,6 +110,7 @@ session_start();
                 </div>
             </div>
         </header>';
+        ?>
     <div class="slider_area">
         <div class="slider_active owl-carousel">
             <div class="single_slider  d-flex align-items-center slider_bg_1 overlay2">
