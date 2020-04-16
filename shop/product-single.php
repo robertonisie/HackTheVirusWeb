@@ -3,9 +3,27 @@ session_start();
 include ("/var/db/dbconfig.php");
 $pid = $_GET["id"];
 
+$puser_id = '';
+$poras = '';
+$pjudet = '';
+$padresa = '';
+$pnume = '';
+$pprenume = '';
+$pnume_afacere = '';
+$ppoza = '';
+$pid = '';
+$pnume_produs = '';
+$ppret = '';
+$pcantitate = '';
+$pdescriere = '';
+$pcantitate_aleasa='';
+
 if (isset($_POST['addtocart']))
 {
-    $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '3', '$ppoza_id', '$puser_id')";
+    $pcantitate_aleasa='<script type="text/javascript">document.write(quantity)); 
+          </script>';
+
+    $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '$pcantitate_aleasa', '$ppoza_id', '$puser_id')";
     mysqli_query($db, $query);
 
     header("Location: cart.php");
@@ -204,17 +222,7 @@ if (isset($_POST['addtocart']))
 		            $('#quantity').val(quantity - 1);
 		            }
 		    });
-		    function createCookie(name, value, days) {
-        var expires = '',
-        date = new Date();
-        if (days) {
-          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-          expires = '; expires=' + date.toGMTString();
-        }
-        document.cookie = name + '=' + value + expires + '; path=/';
-        } 
 
-        createCookie("cantitte_aleasa", quantity, "7");
 		});
 	</script>
   </body>
