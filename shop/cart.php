@@ -128,11 +128,9 @@ $ppretcantitate = '';
                           {
 
                             $ct_p = $_POST['ct'];
-                            $pidvector = $_POST['pidvector'];
-                            $pcantitate = $_POST['pcantitate'];
+                            $pidvector = json_decode($_POST['pidvector'] ,true);
+                            $pcantitate = json_decode($_POST['pcantitate'] ,true);
                             echo $pidvector;
-                            json_decode($pidvector ,true);
-                            json_decode($pcantitate ,true);
                             echo $pidvector;
 
                              for($i = 1; $i <= $ct_p; $i++)
