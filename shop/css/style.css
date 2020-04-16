@@ -1558,12 +1558,11 @@ pre {
 	  
 #anunt{
   font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
   outline:0;
   background: #000000;
   border: 0;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 18px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   z-index: 1;  
