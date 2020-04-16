@@ -5,10 +5,10 @@ $pid = $_GET["id"];
 
 if (isset($_POST['addtocart']))
 {
-    $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '$cantitate', '$ppoza', '$puser_id')";
+    $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '3', '$ppoza', '$puser_id')";
     mysqli_query($db, $query);
 
-    $_SESSION['addtocart'] = $puser_id;
+    $_SESSION['addedtocart'] = $puser_id;
 
     header("Location: cart.php");
     die("Already logged in"); 

@@ -1,8 +1,9 @@
 <?php
 session_start();
 include ("/var/db/dbconfig.php");
-$get_id = $_SESSION['addtocart'];
-if(isset($_SESSION['addtocart'])){
+$get_id = $_SESSION['addedtocart'];
+
+if(isset($_SESSION['addedtocart'])){
 echo "<script type='text/javascript'>
           alert('Nu s-au gasit anunturi.');
           </script>";
