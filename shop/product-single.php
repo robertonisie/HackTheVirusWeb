@@ -1,16 +1,17 @@
 <?php
+session_start();
 include ("/var/db/dbconfig.php");
 $pid = $_GET["id"];
 
 if (isset($_POST['addtocart']))
 {
-    
-    echo "<script type='text/javascript'>
-          alert('Nu s-au gasit anunturi.');
-          window.location = 'index.php';
-          </script>";
-  
+    $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '$cantitate', '$ppoza', '$puser_id')";
+    mysqli_query($db, $query);
 
+    $_SESSION['addtocart'] = $puser_id;
+
+    header("Location: cart.php");
+    die("Already logged in"); 
 }
 
 ?>
@@ -82,6 +83,7 @@ if (isset($_POST['addtocart']))
             $result3 = mysqli_query($db, $sql);
             $row3 = mysqli_fetch_assoc($result3);
 
+            $puser_id = $row3['id'];
             $poras = $row3['oras'];
             $pjudet = $row3['judet'];
             $padresa = $row3['adresa'];

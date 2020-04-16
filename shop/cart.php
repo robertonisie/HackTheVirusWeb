@@ -1,6 +1,7 @@
 <?php
+session_start();
 include ("/var/db/dbconfig.php");
-$pid = $_GET["id"];
+$get_id = $_SESSION['addtocart'];
 
 ?>
 
@@ -77,6 +78,29 @@ $pid = $_GET["id"];
     $pdescriere = $_GET['desc'];
     $ppoza = $_GET['poza'];
 
+
+
+  $user_check_query = "SELECT * FROM produse_cart WHERE id='$get_id'";
+  $result = mysqli_query($db, $user_check_query);
+  
+
+  if ($result) {
+    $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    foreach($user AS $row)
+    {
+        $ppoza = $row["poza"];
+         $sql = "SELECT * FROM image_upload WHERE id='$ppoza'";
+         $result2 = mysqli_query($db, $sql);
+         $row2 = mysqli_fetch_assoc($result2);
+                                
+           $ppoza = $row2['image'];
+           $pid = $row["id"];
+           $pname = $row["nume_produs"];
+           $ppret = $row["pret"];
+           $pcantitate = $row["cantitate"];
+           $pdescriere = $row['descriere'];
+    }
+  }
     ?>
 
     <section class="ftco-section ftco-cart">

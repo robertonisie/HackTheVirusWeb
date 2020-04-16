@@ -2,10 +2,6 @@
 include ("/var/db/dbconfig.php");
 include('/var/www/html/HackTheVirusWeb/db/errors.php');
 
-$nume_produs = "";
-$pret = "";
-$descriere = "";
-$cantitate = "";
 $errors = array(); 
 $available_users = array();
 $index=1;
@@ -36,10 +32,11 @@ if (isset($_POST['search_user']))
         $index++;
     }
   }
-  else{
+  else
+    { //echo un text html
     echo "<script type='text/javascript'>
           alert('Nu s-au gasit anunturi.');
-          window.location = 'index.php';
+          window.location = '../index.html';
           </script>";
   }
 
@@ -113,16 +110,17 @@ if (isset($_POST['search_user']))
                 <?php
                     $index--;
                     $ok = 0;
-                    while($index)
-                    {
-                            $query = "SELECT * FROM anunturi WHERE id='$available_users[$index]'";
-                            $result=mysqli_query($db, $query);
+                    $user_check_query = "SELECT * FROM anunturi";
+                    $result = mysqli_query($db, $user_check_query);
+  
+
+                    if ($result) {
+                      $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                      foreach($user AS $row)
+                      {
+
                             $ok = 1;
                            
-
-                          if ($result) {
-                              while ($row = $result->fetch_assoc()) 
-                              {
                                 $ppoza = $row["poza"];
                                 $sql = "SELECT * FROM image_upload WHERE id='$ppoza'";
                                 $result2 = mysqli_query($db, $sql);
@@ -165,9 +163,9 @@ if (isset($_POST['search_user']))
                               }
                       }
 
-                              $result->free();
-                              $index--;
-                      }
+                              //$result->free();
+                             // $index--;
+                      //}
 
                     echo '</div></div></div></section>';
                     if(!$ok)
