@@ -95,7 +95,7 @@ $get_id = $_SESSION['addtocart'];
                                 
            $ppoza = $row2['image'];
            $pid = $row["id"];
-           $pname = $row["nume_produs"];
+           $pnume_produs = $row["nume_produs"];
            $ppret = $row["pret"];
            $pcantitate = $row["cantitate"];
            $pdescriere = $row['descriere'];

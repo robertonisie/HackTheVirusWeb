@@ -3,8 +3,6 @@ include ("/var/db/dbconfig.php");
 include('/var/www/html/HackTheVirusWeb/db/errors.php');
 
 $errors = array(); 
-$available_users = array();
-$index=1;
 
 if (isset($_POST['search_user']))
 {
@@ -162,10 +160,6 @@ if (isset($_POST['search_user']))
                                         </div>';
                               }
                       }
-
-                              //$result->free();
-                             // $index--;
-                      //}
 
                     echo '</div></div></div></section>';
                     if(!$ok)
