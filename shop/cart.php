@@ -126,12 +126,14 @@ $ppretcantitate = '';
                            $ppret = $row["pret"];
                            if (isset($_POST['update_cart']))
                           {
-                            echo '123';
+
                             $ct_p = $_POST['ct'];
                             $pidvector = $_POST['pidvector'];
                             $pcantitate = $_POST['pcantitate'];
+                            echo $pidvector;
                             json_decode($pidvector ,true);
                             json_decode($pcantitate ,true);
+                            echo $pidvector;
 
                              for($i = 1; $i <= $ct_p; $i++)
                             {
