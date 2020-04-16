@@ -191,13 +191,13 @@ $ptotal = 0;
     				</div>
 
     				<p><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
-            <form method="post" action="cart.php">
+            <!--<form method="post" action="cart.php">
 
              <input type="hidden" name="pidvector"  value="<?php echo json_encode($pidvector); ?>">
              <input type="hidden" name="pcantitate"  value="<?php echo json_encode($pcantitate); ?>">
              <input type="hidden" name="ct"  value="<?php echo $ct ?>">
               <p><button class="btn btn-primary py-3 px-4" name="update_cart">Update cart</button></p>
-            </form>
+            </form>-->
     			</div>
     		</div>
 			</div>
