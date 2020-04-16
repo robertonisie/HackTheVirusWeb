@@ -101,12 +101,6 @@ $errors = array();
                                                     </div>
                                                     <div class="bottom-area d-flex px-3">
                                                         <div class="m-auto d-flex">
-                                                        <form>
-                                                            <button type="submit" name="" value="submit" onclick="return clickButton();" href="#" class="buy-now d-flex justify-content-center align-items-center mx-1"></button>
-                                                                <span><i class="ion-ios-cart"></i></span>
-                                                            <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                                                                <span><i class="ion-ios-heart"></i></span>
-                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -171,29 +165,5 @@ $errors = array();
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js">
-    </script>
-    <script type="text/javascript">
-    function clickButton(){
-
-      var id_j = "<?php echo $pid ?>"; 
-    $.ajax({
-            type:"post",
-            url:"addcart_btn.php",
-            data: 
-            {  
-               'id' :id_j,
-            },
-            cache:false,
-            success: function (html) 
-            {
-               alert('Data Send');
-              
-            }
-            });
-            return false;
-     }
-    </script>
   </body>
 </html>
