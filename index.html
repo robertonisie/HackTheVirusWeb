@@ -21,7 +21,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
- <div class="header-area ">
+<?php 
+                if(!isset($_SESSION['nume_sesiune']))
+                    echo '
+		<div class="header-area ">
                  <div id="sticky-header" class="main-header-area">
                     <div class="container">
                         <div class="header_bottom_border">
@@ -60,8 +63,49 @@
     
                     </div>
                 </div>
+            </div>';
+			 else
+                  echo '
+				  <div id="sticky-header" class="main-header-area">
+                    <div class="container">
+                        <div class="header_bottom_border">
+                            <div class="row align-items-center">
+                                <div class="col-xl-3 col-lg-2">          
+                                </div>
+                                <div class="col-xl-6 col-lg-7">
+                                    <div class="main-menu  d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">											
+                                                <li><a href="index.html">home</a></li>
+                                                <li><a href="#">Detalii<i class="ti-angle-down"></i></a>
+                                                    <ul class="submenu">
+                                                            <li><a href="#detalii">Ce puteți găsi?</a></li>
+                                                            <li><a href="#dece">De ce noi?</a></li>
+                                                            <li><a href="#recenzii">Recenzii</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a class="active" href="shop/shop.php">Cumpara</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                              <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                    <div class="Appointment">
+                                        <div class="book_btn d-none d-lg-block">
+                                            <a  href="logout_index.php">Delogare</a>
+                                        </div>
+                                    </div>
+							  </div>
+                                <div class="col-12">
+                                    <div class="mobile_menu d-block d-lg-none"></div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
             </div>
-        </header>
+        </header>';
     <div class="slider_area">
         <div class="slider_active owl-carousel">
             <div class="single_slider  d-flex align-items-center slider_bg_1 overlay2">

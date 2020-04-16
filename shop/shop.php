@@ -54,7 +54,7 @@ $errors = array();
                               <div class="collapse navbar-collapse" id="ftco-nav">
                                 <ul class="navbar-nav ml-auto">
                                   <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-                                  <li class="nav-item"><a href="../logout.php" class="nav-link">Logout</a></li>
+                                  <li class="nav-item"><a href="../logout_shop.php" class="nav-link">Logout</a></li>
                               <li class="nav-item"><a href="../shop/shop.php" class="nav-link">Shop</a></li>
                             <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
                                 </ul>
