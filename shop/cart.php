@@ -6,8 +6,14 @@ if(!isset($_SESSION['nume_sesiune']))
 {
  header("Location: ../index.html");
  die("Not logged in"); 
-}  
-$pid = $_GET['id'];
+} 
+
+$user_email = $_SESSION["nume_sesiune"];
+$sql = "SELECT * FROM users WHERE email='$user_email'";
+$result = mysqli_query($db, $sql);
+$row = mysqli_fetch_assoc($result);
+$pid = $row['id'];
+
 ?>
 
 <!DOCTYPE html>

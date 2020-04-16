@@ -8,8 +8,6 @@ if (isset($_POST['addtocart']))
     $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '3', '$ppoza_id', '$puser_id')";
     mysqli_query($db, $query);
 
-    $_SESSION['addedtocart'] = $puser_id;
-
     header("Location: cart.php");
     die("Already logged in"); 
 }
@@ -138,8 +136,8 @@ if (isset($_POST['addtocart']))
 	          		<p style="color: #000;"><?php echo "$pcantitate kg disponibile pe stoc"; ?></p>
 	          	</div>
           	</div>
-            <form method="get" action="cart.php">
-          	   <p><?php echo '<button class="btn btn-black py-3 px-5" type="submit" name="id" value="'.$puser_id.'">Baga-n sac</button>;' ?></p>
+            <form method="post">
+          	   <p><button class="btn btn-black py-3 px-5" type="submit" name="addtocart">Baga-n sac</button></p>
             </form>
             <!--<?php// echo '<a href="cart.php?produs='.$pnume_produs.'&pret='.$ppret.'&desc='.$pdescriere.'&poza='.$ppoza.'" class="btn btn-black py-3 px-5">Baga-n sac</a>'; ?>--> 
     			</div>
