@@ -128,22 +128,22 @@ $pdescriere = '';
 
                            echo '
                                 <tr class="text-center">
-                                <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
-                                
-                                <td class="image-prod"><div class="img" style="background-image:url(../uploads/'.$ppoza.');"></div></td>
-                                
-                                <td class="product-name">
-                                  <h3> '.$pnume_produs.' </h3>
-                                  <p> '.$pdescriere.'</p>
-                                </td>
-                                
-                                <td class="price"> '.$ppret.' RON </td>
-                                
-                                <td class="quantity">
-                                  <div class="input-group mb-3">
-                                    <input type="text" name="quantity" class="quantity form-control input-number" value="'.$pcantitate.'" min="1" max="100">
-                                  </div>
-                                </td>
+                                  <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
+                                  
+                                  <td class="image-prod"><div class="img" style="background-image:url(../uploads/'.$ppoza.');"></div></td>
+                                  
+                                  <td class="product-name">
+                                    <h3> '.$pnume_produs.' </h3>
+                                    <p> '.$pdescriere.'</p>
+                                  </td>
+                                  
+                                  <td class="price"> '.$ppret.' RON </td>
+                                  
+                                  <td class="quantity">
+                                    <div class="input-group mb-3">
+                                      <input type="text" name="quantity" class="quantity form-control input-number" value="'.$pcantitate.'" min="1" max="100">
+                                    </div>
+                                  </td>
                                 
                                 <td class="total">$4.90</td>
                               </tr>';
@@ -152,48 +152,6 @@ $pdescriere = '';
                   }
                 ?>
 
-    
-						      <tr class="text-center">
-						        <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
-						        
-						        <?php echo '<td class="image-prod"><div class="img" style="background-image:url(../uploads/'.$ppoza.');"></div></td>'; ?>
-						        
-						        <td class="product-name">
-						        	<h3> <?php echo $pnume_produs ?> </h3>
-						        	<p> <?php echo $pdescriere ?> </p>
-						        </td>
-						        
-						        <td class="price"> <?php echo "$ppret RON"?> </td>
-						        
-						        <td class="quantity">
-						        	<div class="input-group mb-3">
-					             	<?php echo '<input type="text" name="quantity" class="quantity form-control input-number" value="'.$pcantitate.'" min="1" max="100">'; ?>
-					          	</div>
-					          </td>
-						        
-						        <td class="total">$4.90</td>
-						      </tr><!-- END TR-->
-
-						      <tr class="text-center">
-						        <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
-						        
-						        <td class="image-prod"><div class="img" style="background-image:url(images/product-4.jpg);"></div></td>
-						        
-						        <td class="product-name">
-						        	<h3>Bell Pepper</h3>
-						        	<p>Far far away, behind the word mountains, far from the countries</p>
-						        </td>
-						        
-						        <td class="price">$15.70</td>
-						        
-						        <td class="quantity">
-						        	<div class="input-group mb-3">
-					             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-					          	</div>
-					          </td>
-						        
-						        <td class="total">$15.70</td>
-						      </tr><!-- END TR-->
 						    </tbody>
 						  </table>
 					  </div>
