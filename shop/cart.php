@@ -171,9 +171,9 @@ $ptotal = 0;
                                 
                                 <td class="total">'.$ppretcantitate.'</td>
                               </tr>';
+                               $ptotal += $ppretcantitate;
                           }
                         $ct++;
-                      $ptotal += $ppretcantitate;
                       }
                     ?>
 
