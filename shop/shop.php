@@ -32,7 +32,7 @@ $errors = array();
 	    <div class="container">	    
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
 			  <li class="nav-item"><a href="index.html" class="nav-link">Shop</a></li>
 			<li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 	        </ul>
@@ -45,8 +45,8 @@ $errors = array();
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Products</span></p>
-            <h1 class="mb-0 bread">Products</h1>
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Cumpara</a></span> <span>online</span></p>
+            <h1 class="mb-0 bread">Produse disponibile</h1>
           </div>
         </div>
       </div>
@@ -123,7 +123,7 @@ $errors = array();
                     if(!$ok)
                     {
 
-                      echo '<p> Nu s-au gasit anunturi</p>';
+                      echo '<p id="anunt"> Nu s-au gasit anunturi</p>';
                     }
                     ?>
 
