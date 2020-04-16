@@ -5,7 +5,7 @@ $pid = $_GET["id"];
 
 if (isset($_POST['addtocart']))
 {
-    $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '3', '$ppoza', '$puser_id')";
+    $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '3', '$ppoza_id', '$puser_id')";
     mysqli_query($db, $query);
 
     $_SESSION['addedtocart'] = $puser_id;
@@ -73,8 +73,8 @@ if (isset($_POST['addtocart']))
             $result=mysqli_query($db, $query);
             $row = mysqli_fetch_assoc($result);
 
-            $ppoza = $row["poza"];
-            $sql = "SELECT * FROM image_upload WHERE id='$ppoza'";
+            $ppoza_id = $row["poza"];
+            $sql = "SELECT * FROM image_upload WHERE id='$ppoza_id'";
             $result2 = mysqli_query($db, $sql);
             $row2 = mysqli_fetch_assoc($result2);
 
