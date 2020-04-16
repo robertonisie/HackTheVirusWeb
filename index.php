@@ -91,6 +91,7 @@ session_start();
                                                     </ul>
                                                 </li>
                                                 <li><a href="shop/shop.php">Cumpara</a></li>
+                                                <li><a href="formularitem.php.php">Cumpara</a></li>
                                             </ul>
                                         </nav>
                                     </div>
