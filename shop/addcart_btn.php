@@ -1,4 +1,5 @@
 <?php
+session_start();
 include ("/var/db/dbconfig.php");
 
 $pid = $_POST['id'];
