@@ -5,7 +5,7 @@ include('/var/www/html/HackTheVirusWeb/db/errors.php');
 session_start();
 if(isset($_SESSION['nume_sesiune']))
 {
- header("Location: index.html");
+ header("Location: index.php");
  die("Already logged in"); 
 }      
 ?>
@@ -123,7 +123,7 @@ if(isset($_SESSION['nume_sesiune']))
 </body>
 <script>
 function myFunction() {
-    location.replace("index.html")
+    location.replace("index.php")
 }
 </script>
 </html>

@@ -79,7 +79,7 @@ $query = "SELECT * FROM anunturi WHERE id='$pid'";
                       	    <div class="container">	    
                       	      <div class="collapse navbar-collapse" id="ftco-nav">
                       	        <ul class="navbar-nav ml-auto">
-                      	          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                      	          <li class="nav-item"><a href="../index.php" class="nav-link">Home</a></li>
                       			   <li class="nav-item"><a href="../login.php" class="nav-link">Logare</a></li>
                       			   <li class="nav-item"><a href="../register.php" class="nav-link">Inregistrare</a></li>
                       			  <li class="nav-item"><a href="../shop/shop.php" class="nav-link">Shop</a></li>
@@ -95,7 +95,7 @@ $query = "SELECT * FROM anunturi WHERE id='$pid'";
                             <div class="container">     
                               <div class="collapse navbar-collapse" id="ftco-nav">
                                 <ul class="navbar-nav ml-auto">
-                                  <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                                  <li class="nav-item"><a href="../index.php" class="nav-link">Home</a></li>
                                   <li class="nav-item"><a href="../logout_product.php" class="nav-link">Logout</a></li>
                               <li class="nav-item"><a href="../shop/shop.php" class="nav-link">Shop</a></li>
                             <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
@@ -108,7 +108,7 @@ $query = "SELECT * FROM anunturi WHERE id='$pid'";
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="../index.html">Produsul</a></span> <span class="mr-2"><a href="index.html">disponibil</a></span> 
+          	<p class="breadcrumbs"><span class="mr-2"><a href="../index.php">Produsul</a></span> <span class="mr-2"><a href="index.php">disponibil</a></span> 
             <h1 class="mb-0 bread"><?php echo $pnume_produs ?></h1>
           </div>
         </div>

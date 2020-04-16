@@ -53,7 +53,7 @@ if (isset($_POST['reg_user']))
     mysqli_query($db, $query);
     $_SESSION['nume_sesiune'] = $email;
     $_SESSION['success'] = "You are now logged in";
-    header('location: index.html');
+    header('location: index.php');
   }
 }
 
@@ -80,7 +80,7 @@ if (isset($_POST['login_user']))
       {
         $_SESSION['nume_sesiune'] = $email;
         $_SESSION['success'] = "You are now logged in";
-        header('location: index.html');
+        header('location: index.php');
       }
     }
 
@@ -135,7 +135,7 @@ if (isset($_POST['adauga_anunt']))
 
     echo "<script type='text/javascript'>
           alert('Anunt adaugat cu succes.');
-          window.location = 'index.html';
+          window.location = 'index.php';
           </script>";
   }
 }

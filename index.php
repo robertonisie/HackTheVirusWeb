@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
@@ -35,7 +39,7 @@
                                     <div class="main-menu  d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">											
-                                                <li><a href="index.html">home</a></li>
+                                                <li><a href="index.php">home</a></li>
                                                 <li><a href="#">Detalii<i class="ti-angle-down"></i></a>
                                                     <ul class="submenu">
                                                             <li><a href="#detalii">Ce puteți găsi?</a></li>
@@ -76,7 +80,7 @@
                                     <div class="main-menu  d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">											
-                                                <li><a href="index.html">home</a></li>
+                                                <li><a href="index.php">home</a></li>
                                                 <li><a href="#">Detalii<i class="ti-angle-down"></i></a>
                                                     <ul class="submenu">
                                                             <li><a href="#detalii">Ce puteți găsi?</a></li>
