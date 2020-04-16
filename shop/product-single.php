@@ -11,7 +11,6 @@ $pnume = '';
 $pprenume = '';
 $pnume_afacere = '';
 $ppoza = '';
-$pid = '';
 $pnume_produs = '';
 $ppret = '';
 $pcantitate = '';
