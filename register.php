@@ -20,42 +20,7 @@ if(isset($_SESSION['nume_sesiune']))
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/register.css" rel="stylesheet" type="text/css" media="all"/>
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
-<script src="js/jquery-1.12.0.min.js" type="text/javascript"></script>
-    <!--<script type="text/javascript">
-        $(document).ready(function(){
-            $("#sel_judet").change(function(){
-                var judet_nume = $("#sel_judet option:selected").text();
-
-                $.ajax({
-                    url: '/db/getoras.php',
-                    type: "POST",
-                    data: {
-                    	judet:judet_nume
-                    	},
-                    dataType: 'json',
-                    success:function(response)
-                    {
-                        var len = response.length;
-
-                        $("#sel_oras").empty();
-                        for(var i = 0; i<len; i++)
-                        {
-                            //var id = response[i]['oras_id'];
-                            //var name = response[i]['oras_name'];
-                            var name = response[i];
-
-                            $("#sel_oras").append("<option>"+name+"</option>");
-                        }
-                    },
-
-                    error: function(xhr, status, error) {
-					  alert(xhr.responseText);
-					}
-                });
-            });
-
-        });
-    </script>-->
+<script src="js/jquery-1.12.0.min.js" type="text/javascript"></script>    
 </head>
 <body>
 	<div class="main-w3layouts wrapper">
@@ -77,34 +42,7 @@ if(isset($_SESSION['nume_sesiune']))
 							<span>Sunt de acord cu termenii si conditiile</span>
 					</label>
 				</form>
-					<button type="submit" name="reg_user">Inregistrare</button>
-					<button type="submit" onclick="myFunction()">Inapoi la Pagina Principala</button>
-					<!--
-					<div>Judet</div>
-					<select id="sel_judet">
-					   <option value="0">- Select -</option>
-					   <?php /*
-					   $sql_judet = "SELECT name FROM judete";
-					   $judet_data = mysqli_query($db, $sql_judet);
-
-					   while($row = mysqli_fetch_assoc($judet_data))
-					   {
-					      $judetid = $row['id'];
-					      $judet_name = $row['name'];
-					      echo "<option id='".$judetid."' value='".$judetid."' >".$judet_name."</option>";
-					   }
-
-					   */?>
-					</select>
-					<div class="clear"></div>
-					<div>Oras </div>
-						<select id="sel_oras">
-						   <option value="0">- Select -</option>
-						</select>-->
-
-					
-
-					
+					<button type="submit" name="reg_user">Inregistrare</button>					
 				<p>Ai deja un cont? <a href="login.php"> Logheaza-te aici!</a></p>
 			</div>
 		</div>

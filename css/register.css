@@ -1,10 +1,4 @@
-/*--
-Author: Colorlib
-Author URL: https://colorlib.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
-/*-- reset --*/
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -76,7 +70,7 @@ input[type="text"], input[type="email"], input[type="password"] {
   font-family: 'Roboto', sans-serif;
 }
 
-input.email, input.text.w3lpass, input.text {
+input.email, input.text.w3lpass, input.text{
   margin: 2em 0;
 }
 
@@ -122,11 +116,13 @@ button[type="submit"] {
   background: #000;
   outline: none;
   border: 1px solid #000000;
+  border-radius: 25px;
   cursor: pointer;
-  padding: 0.9em;
+  padding: 1.2em;
   -webkit-appearance: none;
-  width: 100%;
-  margin: 0.5em 0;
+  width: 30%;
+  margin: 1.0em 0;
+  margin-left:14.5em;
   letter-spacing: 4px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
@@ -170,6 +166,7 @@ input[type="submit"]:hover {
 input.checkbox {
   background: #8DC26F;
   cursor: pointer;
+  margin-left: 135px;
   width: 1.2em;
   height: 1.2em;
 }
@@ -395,6 +392,7 @@ input.checkbox:checked:after {
   input.email, input.text.w3lpass {
     margin: 1.5em 0;
   }
+
 
   input[type="submit"] {
     margin: 2em 0;
