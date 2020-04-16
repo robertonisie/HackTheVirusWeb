@@ -21,19 +21,23 @@ $pcantitate_aleasa='';
 if (isset($_POST['addtocart']))
 {
     $pcantitate_aleasa = $_POST['quantity'];
-    $puser_id = $_POST['user_id'];
     $ppoza_id = $_POST['poza'];
     $pnume_produs = $_POST['nume_produs'];
     $ppret = $_POST['pret'];
     $pdescriere = $_POST['descriere'];
 
+    $puser = $_SESSION["nume_sesiune"];
+    $sql = "SELECT * FROM users WHERE email='$puser'";
+    $result3 = mysqli_query($db, $sql);
+    $row3 = mysqli_fetch_assoc($result3);
+    $puser_id = $row3['id'];
+
     $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '$pcantitate_aleasa', '$ppoza_id', '$puser_id')";
     mysqli_query($db, $query);
 
-    echo $pnume_produs;
                     
-    //header("Location: cart.php");
-    //die("Already logged in"); 
+    header("Location: cart.php");
+    die("Already logged in"); 
 }
 
 ?>
