@@ -117,7 +117,7 @@ $query = "SELECT * FROM anunturi WHERE id='$pid'";
     		<div class="row">
     			<div class="col-lg-6 mb-5 ftco-animate">
             <?php echo ' 
-    				<a href="../uploads/'.$ppoza.'" class="image-popup"><img src="../uploads/'.$ppoza.'" class="img-fluid" alt=""></a>'; ?>
+    				<a href="../uploads/'.$ppoza.'" class="image-popup"><img src="../uploads/'.$ppoza.'" class="img-fluid" alt="" ></a>'; ?>
     			</div>
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
             
@@ -149,11 +149,11 @@ $query = "SELECT * FROM anunturi WHERE id='$pid'";
                 <?php 
                 if(isset($_SESSION['nume_sesiune']))                
                     echo '<input type="hidden" name="prod_id"  value="'.$pid.'">
-                    <p><button id="submit" class="btn btn-black py-3 px-5" type="submit" name="addtocart">Baga-n sac</button></p>
+                    <p><button id="submit" class="btn btn-black py-3 px-5" type="submit" name="addtocart">Cumpara acum</button></p>
                     </form>';
                 else
                   echo '</form>
-                    <p><button href=../register.php class="btn btn-black py-3 px-5" type="submit">Inregistreaza-te pentru a cumpara</button></p>';
+                    <p><a href="../login.php" class="btn btn-black py-3 px-5" type="submit">Logeaza-te pentru a cumpara</a></p>';
                 ?>
           	   
     			</div>
