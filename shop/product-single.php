@@ -18,6 +18,34 @@ $pcantitate = '';
 $pdescriere = '';
 $pcantitate_aleasa='';
 
+$query = "SELECT * FROM anunturi WHERE id='$pid'";
+            $result=mysqli_query($db, $query);
+            $row = mysqli_fetch_assoc($result);
+
+            $ppoza_id = $row["poza"];
+            $sql = "SELECT * FROM image_upload WHERE id='$ppoza_id'";
+            $result2 = mysqli_query($db, $sql);
+            $row2 = mysqli_fetch_assoc($result2);
+
+            $puser = $row["user_id"];
+            $sql = "SELECT * FROM users WHERE id='$puser'";
+            $result3 = mysqli_query($db, $sql);
+            $row3 = mysqli_fetch_assoc($result3);
+
+            $puser_id = $row3['id'];
+            $poras = $row3['oras'];
+            $pjudet = $row3['judet'];
+            $padresa = $row3['adresa'];
+            $pnume = $row3['nume'];
+            $pprenume = $row3['prenume'];
+            $pnume_afacere = $row3['nume_afacere'];
+            $ppoza = $row2['image'];
+            $pid = $row["id"];
+            $pnume_produs = $row["nume_produs"];
+            $ppret = $row["pret"];
+            $pcantitate = $row["cantitate"];
+            $pdescriere = $row['descriere'];
+
 if (isset($_POST['addtocart']))
 {
     $pcantitate_aleasa = $_POST['quantity'];
@@ -86,36 +114,6 @@ if (isset($_POST['addtocart']))
         </div>
       </div>
     </div>
-        <?php 
-            $query = "SELECT * FROM anunturi WHERE id='$pid'";
-            $result=mysqli_query($db, $query);
-            $row = mysqli_fetch_assoc($result);
-
-            $ppoza_id = $row["poza"];
-            $sql = "SELECT * FROM image_upload WHERE id='$ppoza_id'";
-            $result2 = mysqli_query($db, $sql);
-            $row2 = mysqli_fetch_assoc($result2);
-
-            $puser = $row["user_id"];
-            $sql = "SELECT * FROM users WHERE id='$puser'";
-            $result3 = mysqli_query($db, $sql);
-            $row3 = mysqli_fetch_assoc($result3);
-
-            $puser_id = $row3['id'];
-            $poras = $row3['oras'];
-            $pjudet = $row3['judet'];
-            $padresa = $row3['adresa'];
-            $pnume = $row3['nume'];
-            $pprenume = $row3['prenume'];
-            $pnume_afacere = $row3['nume_afacere'];
-            $ppoza = $row2['image'];
-            $pid = $row["id"];
-            $pnume_produs = $row["nume_produs"];
-            $ppret = $row["pret"];
-            $pcantitate = $row["cantitate"];
-            $pdescriere = $row['descriere'];
-
-            ?>
     <section class="ftco-section">
     	<div class="container">
     		<div class="row">
