@@ -22,67 +22,6 @@ $pidvector = array();
 $pdescriere = '';
 $ppretcantitate = '';
 
-if (isset($_POST['update_cart']))
-{
-   for($i = 1; $i <= $ct; $i++)
-  {
-      if($pcantitate[$i] > 0)
-        {
-
-            $sql = "UPDATE produse_cart SET cantitate = '$pcantitate[$i]' WHERE id = '$pidvector[$ct]'";
-            mysqli_query($db, $sql);
-        }
-              // else
-
-    }
-
-    $user_check_query = "SELECT * FROM produse_cart WHERE user_id='$pid'";
-    $result = mysqli_query($db, $user_check_query);
-
-     if ($result) {
-                    $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
-                    $ct = 1;
-                    foreach($user AS $row)
-                    {
-                         $ppoza = $row["poza"];
-                         $sql = "SELECT * FROM image_upload WHERE id='$ppoza'";
-                         $result2 = mysqli_query($db, $sql);
-                         $row2 = mysqli_fetch_assoc($result2);
-                                                
-                           $ppoza = $row2['image'];
-                           $pnume_produs = $row["nume_produs"];
-                           $ppret = $row["pret"];
-                           $pcantitate[$ct] = $row["cantitate"];
-                           $pidvector[$ct] = $row['id'];
-                           $pdescriere = $row['descriere'];
-                           $ppretcantitate = $pcantitate[$ct] * $ppret;
-
-                           echo '
-                                <tr class="text-center">
-                                  <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
-                                  
-                                  <td class="image-prod"><div class="img" style="background-image:url(../uploads/'.$ppoza.');"></div></td>
-                                  
-                                  <td class="product-name">
-                                    <h3> '.$pnume_produs.' </h3>
-                                    <p> '.$pdescriere.'</p>
-                                  </td>
-                                  
-                                  <td class="price"> '.$ppret.' RON </td>
-                                  
-                                  <td class="quantity">
-                                    <div class="input-group mb-3">
-                                      <input type="number" name="quantity" class="quantity form-control input-number" value="'. $pcantitate[$ct].'" min="0" max="100">
-                                    </div>
-                                  </td>
-                                
-                                <td class="total">'.$ppretcantitate.'</td>
-                              </tr>';
-                        }
-                        $ct++;
-                      }       
-
-}
 ?>
 
 <!DOCTYPE html>
@@ -185,6 +124,27 @@ if (isset($_POST['update_cart']))
                            $ppoza = $row2['image'];
                            $pnume_produs = $row["nume_produs"];
                            $ppret = $row["pret"];
+                           if (isset($_POST['update_cart']))
+                          {
+                            $ct_p = $_POST['ct'];
+                            $pidvector = $_POST['pidvector'];
+                            $pcantitate = $_POST['pcantitate'];
+                            $pidvector = unserialize($pidvector);
+                            $pcantitate = unserialize($pcantitate);
+
+                             for($i = 1; $i <= $ct_p; $i++)
+                            {
+                                if($pcantitate[$i] > 0)
+                                  {
+
+                                      $sql = "UPDATE produse_cart SET cantitate = '$pcantitate[$i]' WHERE id = '$pidvector[$ct]'";
+                                      mysqli_query($db, $sql);
+                                  }
+                                        // else
+
+                              }
+                            }
+                            
                            $pcantitate[$ct] = $row["cantitate"];
                            $pidvector[$ct] = $row['id'];
                            $pdescriere = $row['descriere'];
@@ -246,7 +206,20 @@ if (isset($_POST['update_cart']))
 
     				<p><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
             <form method="post" action="cart.php">
-              <p><button class="btn btn-primary py-3 px-4" name="update_cart">Proceed to Checkout</button></p>
+              <?php
+                  $pidvector = serialize($pidvector);
+                  $pcantitate = serialize($pcantitate);
+
+                  echo '
+                        <input type="hidden" name="pidvector"  value="'.$pidvector.'">
+                        <input type="hidden" name="pcantitate"  value="'.$pcantitate.'">
+                        <input type="hidden" name="ct"  value="'.$ct.'">
+
+
+              <p><button class="btn btn-primary py-3 px-4" name="update_cart">Update cart</button></p>
+
+
+              '; ?>
             </form>
     			</div>
     		</div>
