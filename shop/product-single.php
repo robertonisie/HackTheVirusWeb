@@ -20,18 +20,15 @@ $pcantitate_aleasa='';
 
 if (isset($_POST['addtocart']))
 {
-    echo '<script type="text/javascript">document.write(quantity)); 
-          </script>';
+    $pcantitate_aleasa = $_POST['quantity'];
 
     $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '$pcantitate_aleasa', '$ppoza_id', '$puser_id')";
     mysqli_query($db, $query);
 
     echo $pcantitate_aleasa;
-    echo '123';
                     
-
-    //header("Location: cart.php");
-    //die("Already logged in"); 
+    header("Location: cart.php");
+    die("Already logged in"); 
 }
 
 ?>
@@ -142,23 +139,23 @@ if (isset($_POST['addtocart']))
 							<div class="w-100"></div>
 							<div class="input-group col-md-6 d-flex mb-3">
 	             	<span class="input-group-btn mr-2">
-	                	<button type="button" class="quantity-left-minus btn"  data-type="minus" data-field="">
+	                	<!--<button type="button" class="quantity-left-minus btn"  data-type="minus" data-field="">
 	                   <i class="ion-ios-remove"></i>
-	                	</button>
+	                	</button>-->
 	            		</span>
+                  <form method="post">
 	             	<input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="100">
-	             	<span class="input-group-btn ml-2">
-	                	<button type="button" class="quantity-right-plus btn" data-type="plus" data-field="">
-	                     <i class="ion-ios-add"></i>
-	                 </button>
-	             	</span>
-	          	</div>
-	          	<div class="w-100"></div>
-	          	<div class="col-md-12">
-	          		<p style="color: #000;"><?php echo "$pcantitate kg disponibile pe stoc"; ?></p>
-	          	</div>
-          	</div>
-            <form method="post">
+    	             	<span class="input-group-btn ml-2">
+    	                	<!--<button type="button" class="quantity-right-plus btn" data-type="plus" data-field="">
+    	                     <i class="ion-ios-add"></i>
+    	                 </button>-->
+    	             	</span>
+    	          	</div>
+    	          	<div class="w-100"></div>
+    	          	<div class="col-md-12">
+    	          		<p style="color: #000;"><?php echo "$pcantitate kg disponibile pe stoc"; ?></p>
+    	          	</div>
+              	</div>
           	   <p><button id="submit" class="btn btn-black py-3 px-5" type="submit" name="addtocart">Baga-n sac</button></p>
             </form>
             <!--<?php// echo '<a href="cart.php?produs='.$pnume_produs.'&pret='.$ppret.'&desc='.$pdescriere.'&poza='.$ppoza.'" class="btn btn-black py-3 px-5">Baga-n sac</a>'; ?>--> 
@@ -205,8 +202,9 @@ if (isset($_POST['addtocart']))
   <script>
 		$(document).ready(function(){
 
-		    var quantitiy=0;
-		   $('.quantity-right-plus').click(function(e){
+		  
+        var quantitiy=0;
+		   /*$('.quantity-right-plus').click(function(e){
 		        
 		        var cantitate_max = "<?php echo $pcantitate ?>";
 		        e.preventDefault();
@@ -226,6 +224,7 @@ if (isset($_POST['addtocart']))
 		            $('#quantity').val(quantity - 1);
 		            }
 		    });
+        */
 
 		});
 	</script>

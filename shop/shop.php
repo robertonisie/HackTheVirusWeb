@@ -64,7 +64,7 @@ $errors = array();
     		<div class="row">
                 <?php
                     $ok = 0;
-                    $user_check_query = "SELECT * FROM anunturi2 ORDER BY id DESC";
+                    $user_check_query = "SELECT * FROM anunturi ORDER BY id DESC";
                     $result = mysqli_query($db, $user_check_query);
   
 
