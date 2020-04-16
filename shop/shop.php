@@ -115,7 +115,7 @@ $errors = array();
                                                 </a>
                                                 <div class="text py-3 pb-4 px-3 text-center">
                                                     <h3><a href="product-single.php?id='.$pid.'">'.$pname.'</a></h3>
-                                                    <div>
+                                                    <div class="d-flex">
                                                         <div class="pricing">
                                                             <p class="price"><span class="mr-2 price">'.$ppret.' RON</span></p>
                                                         </div>
