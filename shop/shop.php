@@ -110,7 +110,7 @@ if (isset($_POST['search_user']))
                 <?php
                     $index--;
                     $ok = 0;
-                    $user_check_query = "SELECT * FROM anunturi";
+                    $user_check_query = "SELECT * FROM anunturi ORDER BY id DESC";
                     $result = mysqli_query($db, $user_check_query);
   
 
