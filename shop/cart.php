@@ -19,6 +19,7 @@ $pnume_produs = '';
 $ppret = '';
 $pcantitate = '';
 $pdescriere = '';
+$ppretcantitate = '';
 
 ?>
 
@@ -113,7 +114,7 @@ $pdescriere = '';
                     $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     foreach($user AS $row)
                     {
-                        $ppoza = $row["poza"];
+                         $ppoza = $row["poza"];
                          $sql = "SELECT * FROM image_upload WHERE id='$ppoza'";
                          $result2 = mysqli_query($db, $sql);
                          $row2 = mysqli_fetch_assoc($result2);
@@ -123,8 +124,8 @@ $pdescriere = '';
                            $ppret = $row["pret"];
                            $pcantitate = $row["cantitate"];
                            $pdescriere = $row['descriere'];
+                           $ppretcantitate = $pcantitate * $ppret;
 
-                            echo '123';
                            echo '
                                 <tr class="text-center">
                                   <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
@@ -144,7 +145,7 @@ $pdescriere = '';
                                     </div>
                                   </td>
                                 
-                                <td class="total">$4.90</td>
+                                <td class="total">'.$ppretcantitate.'</td>
                               </tr>';
                         }
                       }
@@ -155,41 +156,7 @@ $pdescriere = '';
 					  </div>
     			</div>
     		</div>
-    		<div class="row justify-content-end">
-    			<div class="col-lg-4 mt-5 cart-wrap ftco-animate">
-    				<div class="cart-total mb-3">
-    					<h3>Coupon Code</h3>
-    					<p>Enter your coupon code if you have one</p>
-  						<form action="#" class="info">
-	              <div class="form-group">
-	              	<label for="">Coupon code</label>
-	                <input type="text" class="form-control text-left px-3" placeholder="">
-	              </div>
-	            </form>
-    				</div>
-    				<p><a href="checkout.html" class="btn btn-primary py-3 px-4">Apply Coupon</a></p>
-    			</div>
-    			<div class="col-lg-4 mt-5 cart-wrap ftco-animate">
-    				<div class="cart-total mb-3">
-    					<h3>Estimate shipping and tax</h3>
-    					<p>Enter your destination to get a shipping estimate</p>
-  						<form action="#" class="info">
-	              <div class="form-group">
-	              	<label for="">Country</label>
-	                <input type="text" class="form-control text-left px-3" placeholder="">
-	              </div>
-	              <div class="form-group">
-	              	<label for="country">State/Province</label>
-	                <input type="text" class="form-control text-left px-3" placeholder="">
-	              </div>
-	              <div class="form-group">
-	              	<label for="country">Zip/Postal Code</label>
-	                <input type="text" class="form-control text-left px-3" placeholder="">
-	              </div>
-	            </form>
-    				</div>
-    				<p><a href="checkout.html" class="btn btn-primary py-3 px-4">Estimate</a></p>
-    			</div>
+    		
     			<div class="col-lg-4 mt-5 cart-wrap ftco-animate">
     				<div class="cart-total mb-3">
     					<h3>Cart Totals</h3>
@@ -211,7 +178,9 @@ $pdescriere = '';
     						<span>$17.60</span>
     					</p>
     				</div>
+
     				<p><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+            <p><a href="cart.php" class="btn btn-primary py-3 px-4">Update cart</a></p>
     			</div>
     		</div>
 			</div>
