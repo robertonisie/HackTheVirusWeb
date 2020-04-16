@@ -21,6 +21,11 @@ $pcantitate_aleasa='';
 if (isset($_POST['addtocart']))
 {
     $pcantitate_aleasa = $_POST['quantity'];
+    $puser_id = $_POST['user_id'];
+    $ppoza_id = $_POST['poza'];
+    $pnume_produs = $_POST['nume_produs'];
+    $ppret = $_POST['pret'];
+    $pdescriere = $_POST['descriere'];
 
     $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '$pcantitate_aleasa', '$ppoza_id', '$puser_id')";
     mysqli_query($db, $query);
@@ -141,7 +146,7 @@ if (isset($_POST['addtocart']))
 	             	<span class="input-group-btn mr-2">
 	            		</span>
                   <form method="post">
-	             	<?php echo '<input type="number" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="'.$pcantitate.'">'; ?>
+	             	<?php echo '<input type="number" name="quantity" class="form-control input-number" value="1" min="1" max="'.$pcantitate.'">'; ?>
     	             	<span class="input-group-btn ml-2">
     	             	</span>
     	          	</div>
@@ -150,9 +155,17 @@ if (isset($_POST['addtocart']))
     	          		<p style="color: #000;"><?php echo "$pcantitate kg disponibile pe stoc"; ?></p>
     	          	</div>
               	</div>
+
+                <?php 
+                echo '
+                      <input type="hidden" name="nume_produs"  value="'.$pnume_produs.'">
+                      <input type="hidden" name="pret"  value="'.$ppret.'">
+                      <input type="hidden" name="descriere"  value="'.$pdescriere.'">
+                      <input type="hidden" name="poza"  value="'.$ppoza_id.'">
+                      <input type="hidden" name="user_id"  value="'.$puser_id.'">';
+                ?>
           	   <p><button id="submit" class="btn btn-black py-3 px-5" type="submit" name="addtocart">Baga-n sac</button></p>
             </form>
-            <!--<?php// echo '<a href="cart.php?produs='.$pnume_produs.'&pret='.$ppret.'&desc='.$pdescriere.'&poza='.$ppoza.'" class="btn btn-black py-3 px-5">Baga-n sac</a>'; ?>--> 
     			</div>
     		</div>
     	</div>
@@ -196,8 +209,6 @@ if (isset($_POST['addtocart']))
   <script>
 		$(document).ready(function(){
 
-		  var cantitate_max = "<?php echo $pcantitate ?>";
-
       var input = document.querySelectorAll("input[type=number]")[0];
 
       var last = '';
@@ -207,29 +218,6 @@ if (isset($_POST['addtocart']))
         } else {
           this.value = last;
         }
-        /*var quantitiy=0;
-		   $('.quantity-right-plus').click(function(e){
-		        
-		        v
-		        e.preventDefault();
-		        var quantity = parseInt($('#quantity').val());
-		        
-		            if(quantity < cantitate_max)
-		               $('#quantity').val(quantity + 1);
-		    });
-
-		     $('.quantity-left-minus').click(function(e){
-
-		        e.preventDefault();
-		       
-		        var quantity = parseInt($('#quantity').val());
-		        
-		            if(quantity>0){
-		            $('#quantity').val(quantity - 1);
-		            }
-		    });
-        */
-
 		});
 	</script>
   </body>
