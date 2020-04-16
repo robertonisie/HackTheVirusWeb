@@ -124,14 +124,15 @@ $ptotal = 0;
                            $ppoza = $row2['image'];
                            $pnume_produs = $row["nume_produs"];
                            $ppret = $row["pret"];
+
                            if (isset($_POST['update_cart']))
-                          {
+                           {
 
                             $ct_p = $_POST['ct'];
                             $pidvector = json_decode($_POST['pidvector'] ,true);
                             $pcantitate = json_decode($_POST['pcantitate'] ,true);
-                            echo $pidvector;
-                            echo $pidvector;
+                            echo $pidvector[1];
+                            echo $pidvector[2];
 
                              for($i = 1; $i <= $ct_p; $i++)
                             {
@@ -196,7 +197,7 @@ $ptotal = 0;
 
              <input type="hidden" name="pidvector"  value="<?php echo json_encode($pidvector); ?>">
              <input type="hidden" name="pcantitate"  value="<?php echo json_encode($pcantitate); ?>">
-              <input type="hidden" name="ct"  value="<?php echo $ct ?>">
+             <input type="hidden" name="ct"  value="<?php echo $ct ?>">
               <p><button class="btn btn-primary py-3 px-4" name="update_cart">Update cart</button></p>
             </form>
     			</div>
