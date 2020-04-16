@@ -111,6 +111,7 @@ input.email, input.text.w3lpass, input.text{
 }
 
 button[type="submit"] {
+  font-family: 'Roboto', sans-serif;
   font-size: .9em;
   color: #fff;
   background: #000;
@@ -123,7 +124,7 @@ button[type="submit"] {
   width: 30%;
   margin: 1.0em 0;
   margin-left:14.5em;
-  letter-spacing: 4px;
+  letter-spacing: 0.5px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
