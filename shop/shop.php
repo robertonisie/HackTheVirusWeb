@@ -116,7 +116,7 @@ $errors = array();
                                                     <div class="overlay"></div>
                                                 </a>
                                                 <div class="text py-3 pb-4 px-3 text-center">
-                                                    <h3><a href="product-single?id='.$pid.'.php">'.$pname.'</a></h3>
+                                                    <h3><a href="product-single.php?id='.$pid.'">'.$pname.'</a></h3>
                                                     <div class="d-flex">
                                                         <div class="pricing">
                                                             <p class="price"><span class="mr-2 price">'.$ppret.'</span></p>
