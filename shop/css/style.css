@@ -385,8 +385,7 @@ mark,
 
 .img-fluid {
   max-width: 450px;    
-  height: 300px; 
-  border:2px solid grey;	
+  height: 300px; 	
  }
 
 .img-thumbnail {
@@ -491,7 +490,7 @@ pre {
   position: relative;
   width: 100%;
   padding-right: 15px;
-  padding-left: 15px; }
+  }
 
 .col {
   -ms-flex-preferred-size: 0;
@@ -2030,9 +2029,7 @@ textarea.form-control {
       justify-content: center;
       width: auto;
       padding-left: 0; }
-#idunu{
-	margin-left:300px;
-}
+	  
     .form-inline .form-check-input {
       position: relative;
       margin-top: 0;
@@ -8572,7 +8569,7 @@ h1, h2, h3, h4, h5,
     border: 1px solid #000000;
     color: #fff; 
 	margin:0px;
-	margin-left:617px;
+	margin-left:610px;
 }
     .btn.btn-black:hover {
       background: #000000;
