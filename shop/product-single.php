@@ -2,6 +2,17 @@
 include ("/var/db/dbconfig.php");
 $pid = $_GET["id"];
 
+if (isset($_POST['addtocart']))
+{
+    
+    echo "<script type='text/javascript'>
+          alert('Nu s-au gasit anunturi.');
+          window.location = 'index.php';
+          </script>";
+  
+
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -125,7 +136,7 @@ $pid = $_GET["id"];
 	          		<p style="color: #000;"><?php echo "$pcantitate kg disponibile pe stoc"; ?></p>
 	          	</div>
           	</div>
-          	<p> <?php echo '<a href="cart.php?produs='.$pnume_produs.'&pret='.$ppret.'&desc='.$pdescriere.'&poza='.$ppoza.'" class="btn btn-black py-3 px-5">Baga-n sac</a>'; ?> </p>
+          	<p><button type="submit" name="addtocart">Baga-n sac</button></p><!--<?php// echo '<a href="cart.php?produs='.$pnume_produs.'&pret='.$ppret.'&desc='.$pdescriere.'&poza='.$ppoza.'" class="btn btn-black py-3 px-5">Baga-n sac</a>'; ?>--> 
     			</div>
     		</div>
     	</div>
