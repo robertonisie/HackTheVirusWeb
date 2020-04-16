@@ -92,17 +92,15 @@ input.email, input.text.w3lpass, input.text{
 }
 
 ::-webkit-input-placeholder {
-  color: #fff;
+  color: #000;
   font-weight: 100;
 }
 
 :-moz-placeholder {
-  /* Firefox 18- */
   color: #000;
 }
 
 ::-moz-placeholder {
-  /* Firefox 19+ */
   color: #000;
 }
 
