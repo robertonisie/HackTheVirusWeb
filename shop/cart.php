@@ -24,7 +24,7 @@ $ppretcantitate = '';
 
 if (isset($_POST['update_cart']))
 {
-   for($i = 1; $i <= $ct; i++)
+   for($i = 1; $i <= $ct; $i++)
   {
       if($pcantitate[$i] > 0)
         {
