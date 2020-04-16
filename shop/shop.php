@@ -102,7 +102,7 @@ $errors = array();
                                                     <div class="bottom-area d-flex px-3">
                                                         <div class="m-auto d-flex">
                                                         <form>
-                                                            <input type="submit" name="" value="submit" onclick="return clickButton();" href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                                            <button type="submit" name="" value="submit" onclick="return clickButton();" href="#" class="buy-now d-flex justify-content-center align-items-center mx-1"></button>
                                                                 <span><i class="ion-ios-cart"></i></span>
                                                             <a href="#" class="heart d-flex justify-content-center align-items-center ">
                                                                 <span><i class="ion-ios-heart"></i></span>
