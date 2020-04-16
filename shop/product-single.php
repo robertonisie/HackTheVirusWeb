@@ -20,8 +20,7 @@ $pcantitate_aleasa='';
 
 if (isset($_POST['addtocart']))
 {
-    echo '<script type="text/javascript">document.write(quantity)); 
-          </script>';
+    $pcantitate_aleasa = $_POST['cantitate'];
 
     $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '$pcantitate_aleasa', '$ppoza_id', '$puser_id')";
     mysqli_query($db, $query);
