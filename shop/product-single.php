@@ -155,7 +155,7 @@ $query = "SELECT * FROM anunturi WHERE id='$pid'";
                     </form>';
                 else
                   echo '</form>
-                    <p><a href="../register.php" class="btn btn-black py-3 px-5" type="submit">Inregistreaza-te pentru a cumpara</a></p>';
+                    <p><a href="../login.php" class="btn btn-black py-3 px-5" type="submit">Logeaza-te pentru a cumpara</a></p>';
                 ?>
           	   
     			</div>
