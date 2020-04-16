@@ -126,11 +126,12 @@ $ppretcantitate = '';
                            $ppret = $row["pret"];
                            if (isset($_POST['update_cart']))
                           {
+                            echo '123';
                             $ct_p = $_POST['ct'];
                             $pidvector = $_POST['pidvector'];
                             $pcantitate = $_POST['pcantitate'];
-                            $pidvector = unserialize($pidvector);
-                            $pcantitate = unserialize($pcantitate);
+                            json_decode($pidvector ,true);
+                            json_decode($pcantitate ,true);
 
                              for($i = 1; $i <= $ct_p; $i++)
                             {
@@ -141,10 +142,9 @@ $ppretcantitate = '';
                                       mysqli_query($db, $sql);
                                   }
                                         // else
-
                               }
                             }
-                            
+
                            $pcantitate[$ct] = $row["cantitate"];
                            $pidvector[$ct] = $row['id'];
                            $pdescriere = $row['descriere'];
@@ -206,20 +206,14 @@ $ppretcantitate = '';
 
     				<p><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
             <form method="post" action="cart.php">
-              <?php
-                  $pidvector = serialize($pidvector);
-                  $pcantitate = serialize($pcantitate);
 
-                  echo '
-                        <input type="hidden" name="pidvector"  value="'.$pidvector.'">
-                        <input type="hidden" name="pcantitate"  value="'.$pcantitate.'">
-                        <input type="hidden" name="ct"  value="'.$ct.'">
+             <input type="hidden" name="pidvector"  value="<?php echo json_encode($pidvector); ?>">
+             <input type="hidden" name="pcantitate"  value="<?php echo json_encode($pcantitate); ?>">
+              <input type="hidden" name="ct"  value="'.$ct.'">
 
 
               <p><button class="btn btn-primary py-3 px-4" name="update_cart">Update cart</button></p>
 
-
-              '; ?>
             </form>
     			</div>
     		</div>
