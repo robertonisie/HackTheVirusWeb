@@ -4,8 +4,6 @@ include('/var/www/html/HackTheVirusWeb/db/errors.php');
 
 $errors = array(); 
 
-if (isset($_POST['search_user']))
-{
     /*
   $nume_produs = mysqli_real_escape_string($db, $_POST['nume_produs']);
   $pret = mysqli_real_escape_string($db, $_POST['pret']);
@@ -16,29 +14,7 @@ if (isset($_POST['search_user']))
   if (empty($pret)) { array_push($errors, "Specificati de cand"); }
   if (empty($descriere)) { array_push($errors, "Specificati pana cand"); }
   if (empty($cantitate)) { array_push($errors, "Specificati talia animalului"); } */
-  
 
-  $user_check_query = "SELECT * FROM anunturi";
-  $result = mysqli_query($db, $user_check_query);
-  
-
-  if ($result) {
-    $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    foreach($user AS $row)
-    {
-        $available_users[$index]=$row['id'];
-        $index++;
-    }
-  }
-  else
-    { //echo un text html
-    echo "<script type='text/javascript'>
-          alert('Nu s-au gasit anunturi.');
-          window.location = '../index.html';
-          </script>";
-  }
-
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -106,7 +82,6 @@ if (isset($_POST['search_user']))
     		</div>
     		<div class="row">
                 <?php
-                    $index--;
                     $ok = 0;
                     $user_check_query = "SELECT * FROM anunturi ORDER BY id DESC";
                     $result = mysqli_query($db, $user_check_query);
@@ -166,7 +141,7 @@ if (isset($_POST['search_user']))
                     {
                       ?><script type="text/javascript">
                               window.location='../index.html';
-                              alert("Nu s-a gasit anunt.");
+                              alert("Nu s-au gasit anunturi.");
 
                               </script><?php
                     }

@@ -1,6 +1,12 @@
 <?php
 session_start();
 include ("/var/db/dbconfig.php");
+
+if(!isset($_SESSION['nume_sesiune']))
+{
+ header("Location: ../index.html");
+ die("Not logged in"); 
+}  
 $get_id = $_SESSION['addedtocart'];
 
 if(isset($_SESSION['addedtocart'])){
