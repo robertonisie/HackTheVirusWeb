@@ -179,7 +179,7 @@ if (isset($_POST['addtocart']))
     mysqli_query($db, $query);
 
                     
-    header("Location: cart.php");
+    header("Location: ../shop/cart.php");
     die("Already logged in"); 
 }
 
