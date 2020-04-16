@@ -28,6 +28,8 @@ session_start();
 <?php 
                 if(!isset($_SESSION['nume_sesiune']))
                     echo '
+	  <div id="sticky-header" class="main-header-area">
+         <div class="container">
 		<div class="header-area ">
                  <div id="sticky-header" class="main-header-area">
                     <div class="container">
@@ -71,6 +73,8 @@ session_start();
 
 			 else
                   echo '
+			  <div id="sticky-header" class="main-header-area">
+                    <div class="container">
                         <div class="header_bottom_border">
                             <div class="row align-items-center">
                                 <div class="col-xl-3 col-lg-2">          
