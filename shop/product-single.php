@@ -131,8 +131,18 @@ $query = "SELECT * FROM anunturi WHERE id='$pid'";
               	</div>
 
                 <?php 
-                echo '<input type="hidden" name="prod_id"  value="'.$pid.'">
-                <p><button id="submit" class="btn btn-black py-3 px-5" type="submit" name="addtocart">Baga-n sac</button></p>';
+                if(isset($_SESSION['nume_sesiune']))
+                {
+                    echo '<input type="hidden" name="prod_id"  value="'.$pid.'">
+                    <p><button id="submit" class="btn btn-black py-3 px-5" type="submit" name="addtocart">Baga-n sac</button></p>';
+                }
+
+                else
+                {
+                  echo "<script type='text/javascript'>
+                  alert('Plese login/register first.');
+                  </script>";
+                }
                 ?>
           	   
             </form>
