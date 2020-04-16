@@ -46,28 +46,6 @@ $query = "SELECT * FROM anunturi WHERE id='$pid'";
             $pcantitate = $row["cantitate"];
             $pdescriere = $row['descriere'];
 
-if (isset($_POST['addtocart']))
-{
-    $pcantitate_aleasa = $_POST['quantity'];
-    $ppoza_id = $_POST['poza'];
-    $pnume_produs = $_POST['nume_produs'];
-    $ppret = $_POST['pret'];
-    $pdescriere = $_POST['descriere'];
-
-    $puser = $_SESSION["nume_sesiune"];
-    $sql = "SELECT * FROM users WHERE email='$puser'";
-    $result3 = mysqli_query($db, $sql);
-    $row3 = mysqli_fetch_assoc($result3);
-    $puser_id = $row3['id'];
-
-    $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '$pcantitate_aleasa', '$ppoza_id', '$puser_id')";
-    mysqli_query($db, $query);
-
-                    
-    header("Location: cart.php");
-    die("Already logged in"); 
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -151,12 +129,7 @@ if (isset($_POST['addtocart']))
               	</div>
 
                 <?php 
-                echo '
-                      <input type="hidden" name="nume_produs"  value="'.$pnume_produs.'">
-                      <input type="hidden" name="pret"  value="'.$ppret.'">
-                      <input type="hidden" name="descriere"  value="'.$pdescriere.'">
-                      <input type="hidden" name="poza"  value="'.$ppoza_id.'">
-                      <input type="hidden" name="user_id"  value="'.$puser_id.'">';
+                echo '<input type="hidden" name="prod_id"  value="'.$pid.'">';
                 ?>
           	   <p><button id="submit" class="btn btn-black py-3 px-5" type="submit" name="addtocart">Baga-n sac</button></p>
             </form>
