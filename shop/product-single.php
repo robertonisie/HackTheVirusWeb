@@ -29,7 +29,7 @@ if (isset($_POST['addtocart']))
     echo '<script type="text/javascript">
                               alert("'.$pcantitate_aleasa.'");
                               </script>';
-                    }
+                    
 
     //header("Location: cart.php");
     //die("Already logged in"); 
