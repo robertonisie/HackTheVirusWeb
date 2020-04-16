@@ -25,11 +25,10 @@ session_start();
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+</header> 
 <?php 
                 if(!isset($_SESSION['nume_sesiune']))
-                    echo '
-	  <div id="sticky-header" class="main-header-area">
-         <div class="container">
+                    echo '	 
 		<div class="header-area ">
                  <div id="sticky-header" class="main-header-area">
                     <div class="container">
@@ -49,7 +48,7 @@ session_start();
                                                             <li><a href="#recenzii">Recenzii</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a class="active" href="shop/shop.php">Cumpara</a></li>
+                                                <li><a href="shop/shop.php">Cumpara</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -70,10 +69,10 @@ session_start();
                     </div>
                 </div>
             </div>';
-
-			 else
+		else
                   echo '
-			  <div id="sticky-header" class="main-header-area">
+				<div class="header-area ">
+                 <div id="sticky-header" class="main-header-area">
                     <div class="container">
                         <div class="header_bottom_border">
                             <div class="row align-items-center">
@@ -91,7 +90,7 @@ session_start();
                                                             <li><a href="#recenzii">Recenzii</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a class="active" href="shop/shop.php">Cumpara</a></li>
+                                                <li><a href="shop/shop.php">Cumpara</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -112,9 +111,9 @@ session_start();
                     </div>
                 </div>
             </div>';
-			?>
-        
-</header>        
+		?>			
+		
+       
     <div class="slider_area">
         <div class="slider_active owl-carousel">
             <div class="single_slider  d-flex align-items-center slider_bg_1 overlay2">
