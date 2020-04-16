@@ -8,6 +8,7 @@ include('/var/www/html/HackTheVirusWeb/db/server.php');
 <title>Adauga un produs</title>
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
 <link href="css/sell.css" rel="stylesheet" type="text/css" media="all"/>
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 </head>
 <body>
  <a><img src="img/service/13.png" alt=""></a> 
