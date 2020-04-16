@@ -141,7 +141,6 @@ $ppretcantitate = '';
                                       mysqli_query($db, $sql);
                                   }
                                         // else
-
                               }
                             }
 
