@@ -20,16 +20,15 @@ $pcantitate_aleasa='';
 
 if (isset($_POST['addtocart']))
 {
-    $pcantitate_aleasa = $_POST['cantitate'];
+    $pcantitate_aleasa = $_POST['quantity'];
 
     $query = "INSERT INTO produse_cart(nume_produs, pret, descriere, cantitate, poza, user_id) VALUES('$pnume_produs', '$ppret', '$pdescriere', '$pcantitate_aleasa', '$ppoza_id', '$puser_id')";
     mysqli_query($db, $query);
 
     echo $pcantitate_aleasa;
                     
-
-    //header("Location: cart.php");
-    //die("Already logged in"); 
+    header("Location: cart.php");
+    die("Already logged in"); 
 }
 
 ?>
