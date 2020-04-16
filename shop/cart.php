@@ -137,7 +137,7 @@ $pdescriere = '';
                                   <p> '.$pdescriere.'</p>
                                 </td>
                                 
-                                <td class="price"> <?php echo "$ppret RON"?> </td>
+                                <td class="price"> '.$ppret.' RON </td>
                                 
                                 <td class="quantity">
                                   <div class="input-group mb-3">
