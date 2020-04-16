@@ -149,11 +149,12 @@ $query = "SELECT * FROM anunturi WHERE id='$pid'";
               	</div>
 
                 <?php 
-                if(isset($_SESSION['nume_sesiune']))
-                {
+                if(isset($_SESSION['nume_sesiune']))                
                     echo '<input type="hidden" name="prod_id"  value="'.$pid.'">
                     <p><button id="submit" class="btn btn-black py-3 px-5" type="submit" name="addtocart">Baga-n sac</button></p>';
-                }
+                else
+                  echo '<input type="hidden" name="prod_id"  value="'.$pid.'">
+                    <p><button id="submit" href=../register.php class="btn btn-black py-3 px-5" type="submit" name="inreg">Inregistreaza-te pentru a cumpara</button></p>';
                 ?>
           	   
             </form>
