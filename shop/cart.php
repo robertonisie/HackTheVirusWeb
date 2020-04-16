@@ -107,7 +107,7 @@ $pdescriere = '';
 
                 <?php
 
-                  $user_check_query = "SELECT * FROM produse_cart WHERE id='$pid'";
+                  $user_check_query = "SELECT * FROM produse_cart WHERE user_id='$pid'";
                   $result = mysqli_query($db, $user_check_query);
                   
 
